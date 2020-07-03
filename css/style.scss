@@ -1,0 +1,177 @@
+// 変数
+$textBlack: #333333;
+$textWhite: #ffffff;
+// html 
+html {
+  height: 100%;
+}
+// body
+body {
+  font-family: 'Arca Majora 3', '游ゴシック体';
+}
+// *
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+// 
+#works, #about, #skills {
+  padding-top: 100px;
+}
+// inner
+.inner {
+  width: 1096px;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+// h1, h2, h3
+h1, h2 {
+  font-size: 70px;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 100px;
+}
+h3 {
+  font-size: 30px;
+}
+// txt 
+.txtl {
+  font-size: 30px;
+}
+.txtm {
+  font-size: 16px;
+}
+.txts {
+  font-size: 12px;
+}
+// Header
+header {
+  margin: 30px;
+  position: fixed;
+  height: 100px;
+  ul {
+    li {
+      display: inline;
+      padding: 20px;
+      a {
+        text-decoration: none;
+        color: #222;
+      }
+    }
+  }
+}
+// Main Visual
+#mv {
+  background-image: url(../image/mv-bg.png);
+  height: 800px;
+  .container {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    padding: 350px 0px 350px 0px;
+  }
+}
+// works.
+#works {
+  background-color: #000;
+  background-image: url(../image/works-bg.png);
+  height: 1000px;
+  h2 {
+    color: #fff;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    img {
+      width: 33.3333%;
+      margin: 0 10% 10% 0;
+      width: calc(33.3333% - 10%);
+    }
+    img:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+// about.
+#about {
+  background-image: url(../image/about-bg.png);
+  height: 900px;
+  color: #fff;
+  .about-container {
+    display: flex;
+    .about-left, .about-right {
+      width: 45%;
+      img {
+        width: 100%;
+      }
+      h3 {
+        margin-bottom: 30px;
+      }
+    }
+    .about-right {
+      padding: 5%;
+    }
+  }
+}
+// skills.
+#skills {
+  background-image: url(../image/skills-bg.png);
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    figure {
+      width: 228px; 
+      height: 228px;
+      margin: 0 4% 4% 0;
+      background-color: #f6f6f6;
+      box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+    figure:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+// Footer
+footer {
+  background-color: #222222;
+  height: 100px;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    .footer-left {
+      .copyright {
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .footer-right {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          list-style: none;
+          margin-right: 30px;
+          a {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+
