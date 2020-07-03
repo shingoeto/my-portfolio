@@ -20,5 +20,8 @@
   "devDependencies": {
     "cssnano": "^4.1.10",
     "sass": "^1.26.9"
+  },
+  "dependencies": {
+    "eslint": "^7.3.1"
   }
 }
