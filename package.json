@@ -9,7 +9,8 @@
     "build": "npx parcel build index.html",
     "lint:html": "npx htmllint *.html",
     "lint:script": "npx eslint --fix script/**/*",
-    "lint:scss": "npx stylelint --fix scss/**/*"
+    "lint:scss": "npx stylelint --fix scss/**/*",
+    "format": "prettier-eslint --write 'src/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,10 @@
   "homepage": "https://github.com/etsng/my-portfolio#readme",
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "eslint-config-google": "^0.14.0",
     "prettier": "^2.0.5",
+    "prettier-eslint": "^11.0.0",
+    "prettier-eslint-cli": "^5.0.0",
     "sass": "^1.26.9"
   },
   "dependencies": {
