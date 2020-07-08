@@ -120,11 +120,12 @@ header ul li a {
 
 #skills {
   background-image: url(/skills-bg.f7375fdd.png);
+  padding-bottom: 100px;
 }
 #skills .skills-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 #skills .skills-container figure {
   width: 228px;
@@ -142,6 +143,9 @@ header ul li a {
 }
 #skills .skills-container figure:nth-child(4n) {
   margin-right: 0;
+}
+#skills .skills-container figure:nth-child(n+13) {
+  margin-bottom: 0;
 }
 
 footer {
