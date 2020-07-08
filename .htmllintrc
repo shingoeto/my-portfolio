@@ -17,7 +17,7 @@
         "width"
     ],
     "indent-delta": false,
-    "indent-style": "tabs",
+    "indent-style": "spaces",
     "indent-width": 2,
     "indent-width-cont": false,
     "spec-char-escape": true,
