@@ -1,13 +1,13 @@
 // 変数
 $textBlack: #333333;
 $textWhite: #ffffff;
-// html 
+// html
 html {
   height: 100%;
 }
 // body
 body {
-  font-family: 'Arca Majora 3', '游ゴシック体';
+  font-family: 'Garton', '游ゴシック体';
 }
 // *
 * {
@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
 }
-// 
+//
 #works, #about, #skills {
   padding-top: 100px;
 }
@@ -38,7 +38,7 @@ h2 {
 h3 {
   font-size: 30px;
 }
-// txt 
+// txt
 .txtl {
   font-size: 30px;
 }
@@ -126,7 +126,7 @@ header {
     flex-wrap: wrap;
     justify-content: flex-start;
     figure {
-      width: 228px; 
+      width: 228px;
       height: 228px;
       margin: 0 4% 4% 0;
       background-color: #f6f6f6;
@@ -148,26 +148,22 @@ header {
 footer {
   background-color: #222222;
   height: 100px;
-  .inner {
+  .footer-text {
     display: flex;
     justify-content: space-between;
-    .footer-left {
-      .copyright {
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-      }
+    padding-top: 40px;
+    .copyright {
+      color: #ffffff;
     }
-    .footer-right {
-      ul {
-        display: flex;
-        justify-content: space-between;
-        li {
-          list-style: none;
-          margin-right: 30px;
-          a {
-            color: #ffffff;
-          }
+    .footer-menu {
+      display: flex;
+      li {
+        color: #fff;
+        list-style: none;
+        margin-left: 30px;
+        a {
+          color: #fff;
+          text-decoration: none;
         }
       }
     }

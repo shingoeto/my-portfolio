@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "Arca Majora 3", "游ゴシック体";
+  font-family: "Garton", "游ゴシック体";
 }
 
 * {
@@ -148,25 +148,25 @@ footer {
   background-color: #222222;
   height: 100px;
 }
-footer .inner {
+footer .footer-text {
   display: flex;
   justify-content: space-between;
+  padding-top: 40px;
 }
-footer .inner .footer-left .copyright {
+footer .footer-text .copyright {
   color: #ffffff;
-  display: flex;
-  justify-content: center;
 }
-footer .inner .footer-right ul {
+footer .footer-text .footer-menu {
   display: flex;
-  justify-content: space-between;
 }
-footer .inner .footer-right ul li {
+footer .footer-text .footer-menu li {
+  color: #fff;
   list-style: none;
-  margin-right: 30px;
+  margin-left: 30px;
 }
-footer .inner .footer-right ul li a {
-  color: #ffffff;
+footer .footer-text .footer-menu li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=/app.25d4b319.css.map */
