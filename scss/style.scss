@@ -127,9 +127,9 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     figure {
-      width: 228px;
-      height: 228px;
-      margin: 0 4% 4% 0;
+      width: 200px;
+      height: 200px;
+      margin: 0 2% 2% 0;
       background-color: #f6f6f6;
       box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
       display: flex;
@@ -140,7 +140,7 @@ header {
         height: 50%;
       }
     }
-    figure:nth-child(4n) {
+    figure:nth-child(5n) {
       margin-right: 0;
     }
     figure:nth-child(n + 13) {
