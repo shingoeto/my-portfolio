@@ -155,23 +155,24 @@ footer {
   .inner {
     display: flex;
     justify-content: space-between;
-    .footer-left {
-      .copyright {
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-      }
+    line-height: 100px;
+    .copyright {
+      color: #ffffff;
+      display: flex;
     }
-    .footer-right {
-      ul {
-        display: flex;
-        justify-content: space-between;
-        li {
-          list-style: none;
-          margin-right: 30px;
-          a {
-            color: #ffffff;
-          }
+    .footer-menu {
+      display: flex;
+      justify-content: space-between;
+      li {
+        list-style: none;
+        margin-right: 30px;
+        a {
+          color: #ffffff;
+          text-decoration: none;
+        }
+        a:hover {
+          opacity: 0.6;
+          transition: all .3s;
         }
       }
     }
