@@ -129,7 +129,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    figure {
+    div {
       width: 180px;
       height: 180px;
       margin: 0 2% 4% 0;
@@ -143,10 +143,10 @@ header {
         height: 50%;
       }
     }
-    figure:nth-child(5n) {
+    div:nth-child(5n) {
       margin-right: 0;
     }
-    figure:nth-child(n + 13) {
+    div:nth-child(n + 13) {
       margin-bottom: 0;
     }
   }
