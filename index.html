@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="scss/style.css">
   <title>エトーシンゴ</title>
 </head>
 <body>
@@ -64,67 +65,86 @@
   <section id="skills">
     <div class="inner">
       <h2>skills.</h2>
-      <div class="skills-container">
-          <div>
-            <img src="image/html5.png" alt="HTML5">
+      <div class="skills">
+        <div class="skills-left">
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+        <div class="skills-right">
+          <!-- HTML -->
+          <div class="skill-container">
+            <div class="skill-title">HTML5</div>
+            <div class="skill-bar-container">
+              <div class="skill-html5"></div>
+            </div>
+            <div class="skill-per-html5" data-value="80"></div>
           </div>
-          <div>
-            <img src="image/css3.png" alt="CSS3">
+          <!-- CSS -->
+          <div class="skill-container">
+            <div class="skill-title">CSS3</div>
+            <div class="skill-bar-container">
+              <div class="skill-css3"></div>
+            </div>
+            <div class="skill-per-css3" data-value="80"></div>
           </div>
-          <div>
-            <img src="image/js.png" alt="JavaScript">
+          <!-- JavaScript -->
+          <div class="skill-container">
+            <div class="skill-title">JavaScript</div>
+            <div class="skill-bar-container">
+              <div class="skill-js"></div>
+            </div>
+            <div class="skill-per-js" data-value="50"></div>
           </div>
-          <div>
-            <img src="image/php.png" alt="PHP">
+          <!-- PHP -->
+          <div class="skill-container">
+            <div class="skill-title">PHP</div>
+            <div class="skill-bar-container">
+              <div class="skill-php"></div>
+            </div>
+            <div class="skill-per-php" data-value="30"></div>
           </div>
-          <div>
-            <img src="image/sass.png" alt="SASS">
+          <!-- After Effects -->
+          <div class="skill-container">
+            <div class="skill-title">After Effects</div>
+            <div class="skill-bar-container">
+              <div class="skill-ae"></div>
+            </div>
+            <div class="skill-per-ae" data-value="65"></div>
           </div>
-          <div>
-            <img src="image/bootstrap.png" alt="Bootstrap">
+          <!-- Vue.js -->
+          <div class="skill-container">
+            <div class="skill-title">Vue.js</div>
+            <div class="skill-bar-container">
+              <div class="skill-vue"></div>
+            </div>
+            <div class="skill-per-vue" data-value="50"></div>
           </div>
-          <div>
-            <img src="image/vue.png" alt="Vue.js">
+          <!-- Photoshop -->
+          <div class="skill-container">
+            <div class="skill-title">Photoshop</div>
+            <div class="skill-bar-container">
+              <div class="skill-ps"></div>
+            </div>
+            <div class="skill-per-ps" data-value="50"></div>
           </div>
-          <div>
-            <img src="image/ae.png" alt="After Effects">
+          <!-- Illustrator -->
+          <div class="skill-container">
+            <div class="skill-title">Illustrator</div>
+            <div class="skill-bar-container">
+              <div class="skill-ai"></div>
+            </div>
+            <div class="skill-per-ai" data-value="25"></div>
           </div>
-          <div>
-            <img src="image/ps.png" alt="Photoshop">
+          <div class="ai">
           </div>
-          <div>
-            <img src="image/ai.png" alt="Illustrator">
+          <!-- XD -->
+          <div class="skill-container">
+            <div class="skill-title">XD</div>
+            <div class="skill-bar-container">
+              <div class="skill-xd"></div>
+            </div>
+            <div class="skill-per-xd" data-value="40"></div>
           </div>
-          <div>
-            <img src="image/xd.png" alt="XD">
-          </div>
-          <div>
-            <img src="image/apple.png" alt="Apple">
-          </div>
-          <div>
-            <img src="image/git.png" class="" alt="Git">
-          </div>
-          <div>
-            <img src="image/github.png" alt="GitHub">
-          </div>
-          <div>
-            <img src="image/parcel.png" alt="Parcel">
-          </div>
-          <div>
-            <img src="image/eslint.png" alt="ESLint">
-          </div>
-          <div>
-            <img src="image/prettier.png" alt="Prettier">
-          </div>
-          <div>
-            <img src="image/editorconfig.png" alt="EditorConfig">
-          </div>
-          <div>
-            <img src="image/vscode.png" alt="VSCode">
-          </div>
-          <div>
-            <img src="image/todoist.png" alt="Todoist">
-          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -143,6 +163,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="script/app.js"></script>
+  <script src="script/main.js"></script>
 </body>
 </html>

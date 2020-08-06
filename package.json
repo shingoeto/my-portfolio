@@ -29,7 +29,7 @@
     "prettier": "^2.0.5",
     "prettier-eslint": "^11.0.0",
     "prettier-eslint-cli": "^5.0.0",
-    "sass": "^1.26.9"
+    "sass": "^1.26.10"
   },
   "dependencies": {
     "eslint": "^7.3.1"

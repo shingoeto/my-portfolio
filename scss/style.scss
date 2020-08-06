@@ -104,51 +104,58 @@ header {
   color: #fff;
   .about-container {
     display: flex;
-    .about-left, .about-right {
-      width: 45%;
-      img {
-        width: 100%;
-      }
-      h3, .txtm {
-        margin-bottom: 30px;
-      }
-      a {
-        color: #fff;
-      }
+  }
+  .about-left, .about-right {
+    width: 45%;
+    img {
+      width: 100%;
     }
-    .about-right {
-      padding: 5%;
+    h3, .txtm {
+      margin-bottom: 30px;
     }
+    a {
+      color: #fff;
+    }
+  }
+  .about-right {
+    padding: 5%;
   }
 }
 // skills.
 #skills {
   background-image: url(../image/skills-bg.png);
   padding-bottom: 100px;
-  .skills-container {
+  .skills {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    div {
-      width: 180px;
-      height: 180px;
-      margin: 0 2% 4% 0;
-      background-color: #f6f6f6;
-      box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img {
-        width: 50%;
-        height: 50%;
-      }
-    }
-    div:nth-child(5n) {
-      margin-right: 0;
-    }
-    div:nth-child(n + 13) {
-      margin-bottom: 0;
-    }
+  }
+  .skills-left {
+    width: 45%;
+  }
+  .skills-right {
+    width: 45%;
+  }
+  .skill-title {
+    margin-bottom: 5px;
+  }
+  .skill-bar-container {
+    height: 13px;
+    background: #fff;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .skill-html5,
+  .skill-css3,
+  .skill-js,
+  .skill-php,
+  .skill-ae,
+  .skill-vue,
+  .skill-ps,
+  .skill-ai,
+  .skill-xd {
+    height: 13px;
+    background: #333;
+    width: 0%;
   }
 }
 // Footer
