@@ -37,6 +37,10 @@ h2 {
 }
 h3 {
   font-size: 30px;
+  margin-bottom: 50px;
+}
+h4 {
+  font-size: 20px;
 }
 // txt
 .txtl {
@@ -130,30 +134,41 @@ header {
     justify-content: space-between;
   }
   .skills-left {
-    width: 45%;
+    width: 48%;
+    p {
+      margin-bottom: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: $textBlack;
+    }
   }
   .skills-right {
     width: 45%;
+  }
+  .skill-container {
+    margin-bottom: 10px;
   }
   .skill-title {
     margin-bottom: 5px;
   }
   .skill-bar-container {
-    height: 13px;
+    height: 5px;
     background: #fff;
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .skill-html5,
   .skill-css3,
   .skill-js,
+  .skill-jquery,
+  .skill-vue,
   .skill-php,
   .skill-ae,
-  .skill-vue,
   .skill-ps,
   .skill-ai,
   .skill-xd {
-    height: 13px;
+    height: 7px;
     background: #333;
     width: 0%;
   }

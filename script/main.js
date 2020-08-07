@@ -61,6 +61,46 @@ $(function () {
       }
     });
   });
+  // jQuery
+  $(window).scroll(function () {
+    $('.skill-jquery').each(function () {
+      let scroll = $(window).scrollTop();
+      let position = $(this).offset().top;
+      let windowHeight = $(window).height();
+      let per = $('.skill-per-jquery')
+      let value = $(per).data('value') + '%';
+      if (scroll > position - windowHeight) {
+        $(this).addClass('value').animate(
+          {
+            width: value,
+          },
+          3000,
+          'swing'
+        );
+        $(per).text(value).animate();
+      }
+    });
+  });
+  // Vue.js
+  $(window).scroll(function () {
+    $('.skill-vue').each(function () {
+      let scroll = $(window).scrollTop();
+      let position = $(this).offset().top;
+      let windowHeight = $(window).height();
+      let per = $('.skill-per-vue');
+      let value = $(per).data('value') + '%';
+      if (scroll > position - windowHeight) {
+        $(this).addClass('value').animate(
+          {
+            width: value,
+          },
+          3000,
+          'swing'
+        );
+        $(per).text(value).animate();
+      }
+    });
+  });
   // PHP
   $(window).scroll(function () {
     $('.skill-php').each(function () {
@@ -88,26 +128,6 @@ $(function () {
       let position = $(this).offset().top;
       let windowHeight = $(window).height();
       let per = $('.skill-per-ae');
-      let value = $(per).data('value') + '%';
-      if (scroll > position - windowHeight) {
-        $(this).addClass('value').animate(
-          {
-            width: value,
-          },
-          3000,
-          'swing'
-        );
-        $(per).text(value).animate();
-      }
-    });
-  });
-  // Vue.js
-  $(window).scroll(function () {
-    $('.skill-vue').each(function () {
-      let scroll = $(window).scrollTop();
-      let position = $(this).offset().top;
-      let windowHeight = $(window).height();
-      let per = $('.skill-per-vue');
       let value = $(per).data('value') + '%';
       if (scroll > position - windowHeight) {
         $(this).addClass('value').animate(
