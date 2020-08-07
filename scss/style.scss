@@ -143,6 +143,18 @@ header {
       color: $textBlack;
     }
   }
+  .others-title {
+    margin-top: 50px;
+  }
+  .skill-others {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    img {
+      width: 20%;
+      padding: 0 8% 8% 0;
+    }
+  }
   .skills-right {
     width: 45%;
   }
