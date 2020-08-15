@@ -18,7 +18,7 @@ body {
 }
 //
 #works, #about, #skills {
-  padding-top: 100px;
+  padding: 100px 0;
 }
 // inner
 .inner {
@@ -71,9 +71,9 @@ header {
 // Main Visual
 #mv {
   background-image: url(../image/mv-bg.png);
-  height: 800px;
+  height: 100vh;
   .container {
-    height: 100px;
+    height: 100vh;
     width: 100%;
     text-align: center;
     padding: 350px 0px 350px 0px;
@@ -83,7 +83,6 @@ header {
 #works {
   background-color: #000;
   background-image: url(../image/works-bg.png);
-  height: 1000px;
   h2 {
     color: #fff;
   }
@@ -99,15 +98,18 @@ header {
     img:nth-child(3n) {
       margin-right: 0;
     }
+    img:nth-child(n+4) {
+      margin-bottom: 0;
+    }
   }
 }
 // about.
 #about {
   background-image: url(../image/about-bg.png);
-  height: 900px;
   color: #fff;
   .about-container {
     display: flex;
+    justify-content: space-between;
   }
   .about-left, .about-right {
     width: 45%;
@@ -215,5 +217,32 @@ footer {
     }
   }
 }
+// Responsive Layout
+// Tab
+@media screen and (max-width: 1095px) {
+  .inner {
+    width: 80%;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  #works, #about, #skills {
+    padding-top: 75px;
+  }
+  #about {
+    background-image: url(../image/me-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .about-left {
+      display: none;
+    }
+    .about-right {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+}
+
 
 
