@@ -92,7 +92,7 @@ header {
     justify-content: space-between;
     img {
       width: 33.3333%;
-      margin: 0 10% 10% 0;
+      margin: 0 10% 13% 0;
       width: calc(33.3333% - 10%);
     }
     img:nth-child(3n) {
@@ -218,21 +218,23 @@ footer {
   }
 }
 // Responsive Layout
-// Tab
+// Tablet
 @media screen and (max-width: 1095px) {
   .inner {
     width: 80%;
   }
   h2 {
     font-size: 50px;
+    margin-bottom: 75px;
   }
   #works, #about, #skills {
-    padding-top: 75px;
+    padding: 75px 0;
   }
   #about {
     background-image: url(../image/me-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     .about-left {
       display: none;
     }
@@ -241,7 +243,36 @@ footer {
       width: 100%;
     }
   }
+}
+// Smart Phone
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 40px;
+  }
+  #works {
+    .container {
+      justify-content: center;
+      img {
+        width: calc(40% - 10% / 2);
+        margin-bottom: 10%;
+      }
+      img:nth-child(3n) {
+        margin-right: 10%;
+      }
+      img:nth-child(2n) {
+        margin-right: 0;
+      }
+      img:nth-child(n+4) {
+        margin-bottom: 10%;
+      }
+      img:nth-child(n+5) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  #skills {
 
+  }
 }
 
 
