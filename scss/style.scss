@@ -92,6 +92,7 @@ header {
     justify-content: space-between;
     img {
       width: 33.3333%;
+      height: 33.3333%;
       margin: 0 10% 13% 0;
       width: calc(33.3333% - 10%);
     }
@@ -103,30 +104,6 @@ header {
     }
   }
 }
-// about.
-#about {
-  background-image: url(../image/about-bg.png);
-  color: #fff;
-  .about-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .about-left, .about-right {
-    width: 45%;
-    img {
-      width: 100%;
-    }
-    h3, .txtm {
-      margin-bottom: 30px;
-    }
-    a {
-      color: #fff;
-    }
-  }
-  .about-right {
-    padding: 5%;
-  }
-}
 // skills.
 #skills {
   background-image: url(../image/skills-bg.png);
@@ -135,7 +112,7 @@ header {
     display: flex;
     justify-content: space-between;
   }
-  .skills-left {
+  .skills-right {
     width: 48%;
     p {
       margin-bottom: 20px;
@@ -154,10 +131,11 @@ header {
     flex-wrap: wrap;
     img {
       width: 20%;
+      height: 20%;
       padding: 0 8% 8% 0;
     }
   }
-  .skills-right {
+  .skills-left {
     width: 45%;
   }
   .skill-container {
@@ -185,6 +163,30 @@ header {
     height: 7px;
     background: #333;
     width: 0%;
+  }
+}
+// about.
+#about {
+  background-image: url(../image/about-bg.png);
+  color: #fff;
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-left, .about-right {
+    width: 45%;
+    img {
+      width: 100%;
+    }
+    h3, .txtm {
+      margin-bottom: 30px;
+    }
+    a {
+      color: #fff;
+    }
+  }
+  .about-right {
+    padding: 5%;
   }
 }
 // Footer
@@ -271,7 +273,15 @@ footer {
     }
   }
   #skills {
-
+    .skills {
+      display: block;
+      .skills-left, .skills-right {
+        width: 100%;
+      }
+      .skills-left {
+        margin-bottom: 50px;
+      }
+    }
   }
 }
 
