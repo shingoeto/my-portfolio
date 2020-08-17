@@ -18,7 +18,7 @@ body {
 }
 //
 #works, #about, #skills {
-  padding-top: 100px;
+  padding: 100px 0;
 }
 // inner
 .inner {
@@ -71,9 +71,9 @@ header {
 // Main Visual
 #mv {
   background-image: url(../image/mv-bg.png);
-  height: 800px;
+  height: 100vh;
   .container {
-    height: 100px;
+    height: 100vh;
     width: 100%;
     text-align: center;
     padding: 350px 0px 350px 0px;
@@ -83,7 +83,6 @@ header {
 #works {
   background-color: #000;
   background-image: url(../image/works-bg.png);
-  height: 1000px;
   h2 {
     color: #fff;
   }
@@ -93,36 +92,16 @@ header {
     justify-content: space-between;
     img {
       width: 33.3333%;
-      margin: 0 10% 10% 0;
+      height: 33.3333%;
+      margin: 0 10% 13% 0;
       width: calc(33.3333% - 10%);
     }
     img:nth-child(3n) {
       margin-right: 0;
     }
-  }
-}
-// about.
-#about {
-  background-image: url(../image/about-bg.png);
-  height: 900px;
-  color: #fff;
-  .about-container {
-    display: flex;
-  }
-  .about-left, .about-right {
-    width: 45%;
-    img {
-      width: 100%;
+    img:nth-child(n+4) {
+      margin-bottom: 0;
     }
-    h3, .txtm {
-      margin-bottom: 30px;
-    }
-    a {
-      color: #fff;
-    }
-  }
-  .about-right {
-    padding: 5%;
   }
 }
 // skills.
@@ -133,7 +112,7 @@ header {
     display: flex;
     justify-content: space-between;
   }
-  .skills-left {
+  .skills-right {
     width: 48%;
     p {
       margin-bottom: 20px;
@@ -152,10 +131,11 @@ header {
     flex-wrap: wrap;
     img {
       width: 20%;
+      height: 20%;
       padding: 0 8% 8% 0;
     }
   }
-  .skills-right {
+  .skills-left {
     width: 45%;
   }
   .skill-container {
@@ -183,6 +163,30 @@ header {
     height: 7px;
     background: #333;
     width: 0%;
+  }
+}
+// about.
+#about {
+  background-image: url(../image/about-bg.png);
+  color: #fff;
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-left, .about-right {
+    width: 45%;
+    img {
+      width: 100%;
+    }
+    h3, .txtm {
+      margin-bottom: 30px;
+    }
+    a {
+      color: #fff;
+    }
+  }
+  .about-right {
+    padding: 5%;
   }
 }
 // Footer
@@ -215,5 +219,71 @@ footer {
     }
   }
 }
+// Responsive Layout
+// Tablet
+@media screen and (max-width: 1095px) {
+  .inner {
+    width: 80%;
+  }
+  h2 {
+    font-size: 50px;
+    margin-bottom: 75px;
+  }
+  #works, #about, #skills {
+    padding: 75px 0;
+  }
+  #about {
+    background-image: url(../image/me-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    .about-left {
+      display: none;
+    }
+    .about-right {
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
+// Smart Phone
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 40px;
+  }
+  #works {
+    .container {
+      justify-content: center;
+      img {
+        width: calc(40% - 10% / 2);
+        margin-bottom: 10%;
+      }
+      img:nth-child(3n) {
+        margin-right: 10%;
+      }
+      img:nth-child(2n) {
+        margin-right: 0;
+      }
+      img:nth-child(n+4) {
+        margin-bottom: 10%;
+      }
+      img:nth-child(n+5) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  #skills {
+    .skills {
+      display: block;
+      .skills-left, .skills-right {
+        width: 100%;
+      }
+      .skills-left {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
 
 
