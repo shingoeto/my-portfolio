@@ -1,10 +1,6 @@
 // 変数
 $textBlack: #333333;
 $textWhite: #ffffff;
-// html
-html {
-  height: 100%;
-}
 // body
 body {
   font-family: 'Arca Majora 3', '游ゴシック体';
@@ -192,7 +188,7 @@ header {
 // Footer
 footer {
   background-color: #222222;
-  height: 100px;
+  height: auto;
   .inner {
     display: flex;
     justify-content: space-between;
@@ -280,6 +276,16 @@ footer {
       }
       .skills-left {
         margin-bottom: 50px;
+      }
+    }
+  }
+  footer {
+    .inner {
+      .copyright {
+        margin: 0 auto;
+      }
+      .footer-menu {
+        display: none;
       }
     }
   }
