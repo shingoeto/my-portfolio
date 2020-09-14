@@ -8,7 +8,6 @@ html {
 // body
 body {
   font-family: "Josefin Slab", YuGothic, "Yu Gothic Medium", "Yu Gothic", serif;
-
 }
 // *
 * {
@@ -96,12 +95,18 @@ header {
       height: 33.3333%;
       margin: 0 10% 13% 0;
       width: calc(33.3333% - 10%);
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+      transition: box-shadow 1s;
     }
     img:nth-child(3n) {
       margin-right: 0;
     }
     img:nth-child(n+4) {
       margin-bottom: 0;
+    }
+    img:hover {
+      box-shadow: 0 0 120px rgba(255, 255, 255, 0.5);
+      transition: box-shadow 1s;
     }
   }
 }
