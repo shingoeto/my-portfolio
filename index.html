@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
+  <title>エトーシンゴ</title>
+</head>
+<body>
   <!-- Header -->
   <header id="header">
     <nav>
@@ -17,7 +20,7 @@
   <!-- Main Visual -->
   <section id="mv">
     <div class="inner">
-      <div class="container">
+      <div class="mv-container">
         <h1><a href="#">shingo eto.<br><span>PORTFOLIO</span></a></h1>
       </div>
     </div>
@@ -26,7 +29,7 @@
   <section id="works">
     <div class="inner">
       <h2>works.</h2>
-      <div class="container">
+      <div class="works-container">
         <img src="image/expl.jpg" alt="地球探検隊 Webページ">
         <img src="image/miratabi.jpg" alt="ミラタビ Webページ">
         <img src="image/thai.jpg" alt="Thailand">
@@ -142,8 +145,8 @@
               ・案件獲得 (<a href="">HONEYSPOT ハニスポ Webページ</a>)<br>
               就職活動開始
             </p>
-            <h3 class="others-title">others.</h3>
-            <div class="skill-others">
+            <h3 class="skills-others-title">others.</h3>
+            <div class="skills-others">
               <img src="image/apple.png" alt="Apple">
               <img src="image/vscode.png" alt="VSCode">
               <img src="image/git.png" alt="Git">
@@ -167,7 +170,7 @@
           <div class="about-left"><img src="image/me.png" alt="Me"></div>
           <div class="about-right">
             <h3>エトーシンゴ</h3>
-            <p class="txtm">美容専門学校卒業後、東京青山、香港で美容師として1年7ヶ月従事後、Web業界への転職を試みる23歳。
+            <p class="about-text">美容専門学校卒業後、東京青山、香港で美容師として1年7ヶ月従事後、Web業界への転職を試みる23歳。
               最近は動画編集も学んでいます。心と本物を提供出来るWebデザイナーを目指しています。
               まだまだ駆け出しですが、デザインからコーディングまで出来る様になりたいと思っています。
               デザインこそコード、コードこそデザインだと思っています。
@@ -181,14 +184,16 @@
       </div>
     </section>
     <!-- Footer -->
-    <footer>
+    <footer id="footer">
     <div class="inner">
-      <p class="copyright">© 2019 - 2020 Shingo Eto.</p>
-      <ul class="footer-menu">
-        <li><a href="#works">works</a></li>
-        <li><a href="#skills">skills</a></li>
-        <li><a href="#about">about</a></li>
-      </ul>
+      <div class="footer">
+        <p class="footer-copyright">© 2019 - 2020 Shingo Eto.</p>
+        <ul class="footer-menu">
+          <li><a href="#works">works</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#about">about</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
