@@ -47,7 +47,7 @@ h4 {
   font-size: 30px;
 }
 .txtm {
-  font-size: 16px;
+  font-size: 20px;
 }
 .txts {
   font-size: 12px;
@@ -65,6 +65,10 @@ header {
     li {
       display: inline;
       padding: 20px;
+      a {
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+        font-weight: bold;
+      }
     }
   }
 }
