@@ -1,13 +1,13 @@
 // 変数
-$textBlack: #333333;
-$textWhite: #ffffff;
+$textBlack: #222;
+$textWhite: #fff;
 // html
 html {
   height: 100%;
 }
 // body
 body {
-  font-family: 'Arca Majora 3', '游ゴシック体';
+  font-family: "Josefin Slab", YuGothic, "Yu Gothic Medium", "Yu Gothic", Meiryo, sans-serif;
 }
 // *
 * {
@@ -47,10 +47,14 @@ h4 {
   font-size: 30px;
 }
 .txtm {
-  font-size: 16px;
+  font-size: 20px;
 }
 .txts {
   font-size: 12px;
+}
+a {
+  text-decoration: none;
+  color: $textBlack;
 }
 // Header
 header {
@@ -62,8 +66,8 @@ header {
       display: inline;
       padding: 20px;
       a {
-        text-decoration: none;
-        color: #222;
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+        font-weight: bold;
       }
     }
   }
@@ -76,7 +80,12 @@ header {
     height: 100vh;
     width: 100%;
     text-align: center;
-    padding: 350px 0px 350px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 20px;
+    }
   }
 }
 // works.
@@ -95,12 +104,18 @@ header {
       height: 33.3333%;
       margin: 0 10% 13% 0;
       width: calc(33.3333% - 10%);
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+      transition: box-shadow 1s;
     }
     img:nth-child(3n) {
       margin-right: 0;
     }
     img:nth-child(n+4) {
       margin-bottom: 0;
+    }
+    img:hover {
+      box-shadow: 0 0 120px rgba(255, 255, 255, 0.5);
+      transition: box-shadow 1s;
     }
   }
 }
