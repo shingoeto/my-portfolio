@@ -42,22 +42,12 @@ h3 {
 h4 {
   font-size: 20px;
 }
-// txt
-.txtl {
-  font-size: 30px;
-}
-.txtm {
-  font-size: 20px;
-}
-.txts {
-  font-size: 12px;
-}
 a {
   text-decoration: none;
   color: $textBlack;
 }
 // Header
-header {
+#header {
   margin: 30px;
   position: fixed;
   height: 100px;
@@ -74,60 +64,62 @@ header {
 }
 // Main Visual
 #mv {
-  background-image: url(../image/mv-bg.png);
+  background-image: url(../image/hero-bg.jpg);
   height: 100vh;
-  .container {
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    span {
-      font-size: 20px;
-    }
+}
+.mv-container {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-size: 20px;
   }
 }
-// works.
+// Works
 #works {
-  background-color: #000;
-  background-image: url(../image/works-bg.png);
+  background-image: url(../image/works-bg.jpg);
   h2 {
     color: #fff;
   }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    img {
-      width: 33.3333%;
-      height: 33.3333%;
-      margin: 0 10% 13% 0;
-      width: calc(33.3333% - 10%);
-      box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
-      transition: box-shadow 1s;
-    }
-    img:nth-child(3n) {
+}
+.works-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  img {
+    width: 33.3333%;
+    height: 33.3333%;
+    margin: 0 10% 13% 0;
+    width: calc(33.3333% - 10%);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 1s;
+    &:nth-child(3n) {
       margin-right: 0;
     }
-    img:nth-child(n+4) {
+    &:nth-child(n+4) {
       margin-bottom: 0;
     }
-    img:hover {
+    &:hover {
       box-shadow: 0 0 120px rgba(255, 255, 255, 0.5);
       transition: box-shadow 1s;
     }
   }
 }
-// skills.
+// Skills
 #skills {
-  background-image: url(../image/skills-bg.png);
+  background-image: url(../image/skills-bg.jpg);
   padding-bottom: 100px;
-  .skills {
-    display: flex;
-    justify-content: space-between;
+}
+.skills {
+  display: flex;
+  justify-content: space-between;
+  &-left {
+    width: 45%;
   }
-  .skills-right {
+  &-right {
     width: 48%;
     p {
       margin-bottom: 20px;
@@ -137,10 +129,10 @@ header {
       color: $textBlack;
     }
   }
-  .others-title {
+  &-others-title {
     margin-top: 50px;
   }
-  .skill-others {
+  &-others {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -150,91 +142,94 @@ header {
       padding: 0 8% 8% 0;
     }
   }
-  .skills-left {
-    width: 45%;
-  }
-  .skill-container {
+}
+.skill {
+  &-container {
     margin-bottom: 10px;
   }
-  .skill-title {
+  &-title {
     margin-bottom: 5px;
   }
-  .skill-bar-container {
+  &-bar-container {
     height: 5px;
-    background: #fff;
+    background: $textWhite;
     width: 100%;
     margin-bottom: 10px;
   }
-  .skill-html5,
-  .skill-css3,
-  .skill-js,
-  .skill-jquery,
-  .skill-vue,
-  .skill-php,
-  .skill-ae,
-  .skill-ps,
-  .skill-ai,
-  .skill-xd {
+  &-html5,
+  &-css3,
+  &-js,
+  &-jquery,
+  &-vue,
+  &-php,
+  &-ae,
+  &-ps,
+  &-ai,
+  &-xd {
     height: 7px;
-    background: #333;
+    background: $textBlack;
     width: 0%;
   }
 }
-// about.
+// About
 #about {
-  background-image: url(../image/about-bg.png);
-  color: #fff;
-  .about-container {
+  background-image: url(../image/about-bg.jpg);
+  color: $textWhite;
+}
+.about {
+  &-container {
     display: flex;
     justify-content: space-between;
   }
-  .about-left, .about-right {
+  &-left, &-right {
     width: 45%;
     img {
       width: 100%;
     }
-    h3, .txtm {
+    h3, .about-text {
       margin-bottom: 30px;
     }
     a {
-      color: #fff;
+      color: $textWhite;
     }
   }
-  .about-right {
+  &-right {
     padding: 5%;
+  }
+  &-text {
+    font-size: 16px;
   }
 }
 // Footer
-footer {
-  background-color: #222222;
+#footer {
+  background-color: $textBlack;
   height: 100px;
-  .inner {
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  line-height: 100px;
+  &-copyright {
+    color: $textWhite;
+    display: flex;
+  }
+  &-menu {
     display: flex;
     justify-content: space-between;
-    line-height: 100px;
-    .copyright {
-      color: #ffffff;
-      display: flex;
-    }
-    .footer-menu {
-      display: flex;
-      justify-content: space-between;
-      li {
-        list-style: none;
-        margin-right: 30px;
-        a {
-          color: #ffffff;
-          text-decoration: none;
-        }
-        a:hover {
-          opacity: 0.6;
-          transition: all .3s;
-        }
+    li {
+      list-style: none;
+      margin-right: 30px;
+      a {
+        color: $textWhite;
+        text-decoration: none;
+      }
+      a:hover {
+        opacity: 0.6;
+        transition: all .3s;
       }
     }
   }
 }
-// Responsive Layout
 // Tablet
 @media screen and (max-width: 1095px) {
   .inner {
@@ -247,15 +242,12 @@ footer {
   #works, #about, #skills {
     padding: 75px 0;
   }
-  #about {
-    background-image: url(../image/me-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    .about-left {
+  // About
+  .about {
+    &-left {
       display: none;
     }
-    .about-right {
+    &-right {
       padding: 0;
       width: 100%;
     }
@@ -266,36 +258,43 @@ footer {
   h2 {
     font-size: 40px;
   }
-  #works {
-    .container {
-      justify-content: center;
-      img {
-        width: calc(40% - 10% / 2);
-        margin-bottom: 10%;
-      }
-      img:nth-child(3n) {
+  // Works
+  .works-container {
+    justify-content: center;
+    img {
+      width: calc(40% - 10% / 2);
+      margin-bottom: 10%;
+      &:nth-child(3n) {
         margin-right: 10%;
       }
-      img:nth-child(2n) {
+      &:nth-child(2n) {
         margin-right: 0;
       }
-      img:nth-child(n+4) {
+      &:nth-child(n+4) {
         margin-bottom: 10%;
       }
-      img:nth-child(n+5) {
+      &:nth-child(n+5) {
         margin-bottom: 0;
       }
     }
   }
-  #skills {
-    .skills {
-      display: block;
-      .skills-left, .skills-right {
-        width: 100%;
-      }
-      .skills-left {
-        margin-bottom: 50px;
-      }
+  // Skills
+  .skills {
+    display: block;
+    &-left, &-right {
+      width: 100%;
+    }
+    &-left {
+      margin-bottom: 50px;
+    }
+  }
+  // Footer
+  .footer {
+    &-copyright {
+      margin: 0 auto;
+    }
+    &-menu {
+      display: none;
     }
   }
 }
