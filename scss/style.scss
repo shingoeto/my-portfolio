@@ -64,7 +64,7 @@ a {
 }
 // Main Visual
 #mv {
-  background-image: url(../image/mv-bg.png);
+  background-image: url(../image/hero-bg.jpg);
   height: 100vh;
 }
 .mv-container {
@@ -80,8 +80,7 @@ a {
 }
 // Works
 #works {
-  background-color: #000;
-  background-image: url(../image/works-bg.png);
+  background-image: url(../image/works-bg.jpg);
   h2 {
     color: #fff;
   }
@@ -111,7 +110,7 @@ a {
 }
 // Skills
 #skills {
-  background-image: url(../image/skills-bg.png);
+  background-image: url(../image/skills-bg.jpg);
   padding-bottom: 100px;
 }
 .skills {
@@ -153,7 +152,7 @@ a {
   }
   &-bar-container {
     height: 5px;
-    background: #fff;
+    background: $textWhite;
     width: 100%;
     margin-bottom: 10px;
   }
@@ -168,14 +167,14 @@ a {
   &-ai,
   &-xd {
     height: 7px;
-    background: #333;
+    background: $textBlack;
     width: 0%;
   }
 }
 // About
 #about {
-  background-image: url(../image/about-bg.png);
-  color: #fff;
+  background-image: url(../image/about-bg.jpg);
+  color: $textWhite;
 }
 .about {
   &-container {
@@ -191,7 +190,7 @@ a {
       margin-bottom: 30px;
     }
     a {
-      color: #fff;
+      color: $textWhite;
     }
   }
   &-right {
@@ -203,7 +202,7 @@ a {
 }
 // Footer
 #footer {
-  background-color: #222222;
+  background-color: $textBlack;
   height: 100px;
 }
 .footer {
@@ -211,7 +210,7 @@ a {
   justify-content: space-between;
   line-height: 100px;
   &-copyright {
-    color: #ffffff;
+    color: $textWhite;
     display: flex;
   }
   &-menu {
@@ -221,7 +220,7 @@ a {
       list-style: none;
       margin-right: 30px;
       a {
-        color: #ffffff;
+        color: $textWhite;
         text-decoration: none;
       }
       a:hover {
@@ -243,13 +242,7 @@ a {
   #works, #about, #skills {
     padding: 75px 0;
   }
-  // about
-  #about {
-    background-image: url(../image/me-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
+  // About
   .about {
     &-left {
       display: none;
