@@ -206,3 +206,18 @@ $(function () {
 var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
 });
+// Modal Window
+new Vue({
+  el: '#app',
+  data: {
+    showModal: false
+  },
+  methods: {
+    openModal: function () {
+      this.showModal = true
+    },
+    closeModal: function () {
+      this.showModal = false
+    }
+  }
+})

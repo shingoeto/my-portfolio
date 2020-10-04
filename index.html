@@ -29,8 +29,27 @@
   <section id="works">
     <div class="inner">
       <h2>works.</h2>
-      <div class="works-container">
-        <img src="image/expl.jpg" alt="地球探検隊 Webページ">
+
+      <div id="app">
+        <div class="works-container">
+          <img src="image/expl.jpg" alt="地球探検隊 Webページ" v-on:click="openModal">
+          <div id="overlay" v-show="showModal" v-on:click="closeModal">
+            <div id="works-details">
+              <h4>
+                <span class="works-title-ja">地球探検隊</span><br>
+                <span class="works-title-en">
+                  <a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a>
+                </span>
+              </h4>
+              <img src="image/expl-details.jpg" alt="地球探検隊 Webサイト">
+              <div class="works-scope">Client: Chikyu Tankentai<br>Design: Shingo Eto<br>Coding (HTML & CSS): Shingo Eto </div>
+              <p class="works-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなWebサイトをイメージしました。どこか柔らかさを感じる配色と。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。コーディングは、DRYの法則を意識しました。</p>
+              <button v-on:click="closeModal">CLOSE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
         <img src="image/miratabi.jpg" alt="ミラタビ Webページ">
         <img src="image/thai.jpg" alt="Thailand">
         <img src="image/aw.jpg" alt="Hazuki Kondo - AW Collection">
@@ -198,6 +217,7 @@
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="script/app.js"></script>
   <script src="script/main.js"></script>
 </body>
