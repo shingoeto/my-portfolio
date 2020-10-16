@@ -115,33 +115,54 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
   }
-  #works-details {
+  #works-content {
     z-index: 100;
-    background-color: #FFF8F1;
-    padding: 2% 2%;
-    height: auto;
+    background-color: #fff;
+    padding: 5%;
+    max-height: 100%;
     margin:  0 10%;
-    width: 50%;
+    width: 60%;
     position: relative;
     box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
-    border-radius: 2%;
-
+    border-radius: 10px;
+    overflow-y: auto;
+    text-align: center;
     img {
       width: 100%;
-      height: auto;
-      margin: 0 0 2% 0;
+      margin-bottom: 6%;
+    }
+    .works-scope, .works-about, h3 {
+      margin-bottom: 6%;
+    }
+    .work {
+      &-captures {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6%;
+      }
+      &-capture-tab, &-capture-sp {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &-capture-tab {
+        width: 60%;
+        height: 10%;
+      }
+      &-capture-sp {
+        width: 30%;
+      }
     }
     button {
       font-size: 16px;
       color: #fff;
-      background-color: #222;
+      background-color: #333;
       padding: 10px 50px;
       cursor: pointer;
       border: none;
-      &:hover {
-        transition: box-shadow 1s;
-      }
     }
   }
   .works {
@@ -292,7 +313,18 @@ a {
   #works, #about, #skills {
     padding: 75px 0;
   }
+  // Works
+  #overlay {
+    padding: 10% 0;
+  }
+  #works-content {
+    width: 90%;
+  }
   // About
+  #about {
+    background-image: url(../image/shingoeto.jpg);
+    background-size: cover;
+  }
   .about {
     &-left {
       display: none;
@@ -327,6 +359,12 @@ a {
         margin-bottom: 0;
       }
     }
+  }
+  #overlay {
+    padding: 20% 0;
+  }
+  #works-content {
+    padding: 10%;
   }
   // Skills
   .skills {
