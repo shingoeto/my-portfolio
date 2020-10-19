@@ -33,30 +33,26 @@
       <div id="app">
         <div class="works-container">
           <img src="image/expl.jpg" alt="地球探検隊 Webページ" v-on:click="openModal">
-          <div id="overlay" v-show="showModal" v-on:click="closeModal">
-            <div id="works-content">
-              <h3>
-                <span class="works-title-ja">地球探検隊</span><br>
-                <span class="works-title-en">
-                  <a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a>
-                </span>
-              </h3>
-              <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
-                <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト">
-              </a>
-              <div class="work-scope">Client: 地球探検隊様<br>Design: Shingo Eto<br>Coding (HTML & CSS): Shingo Eto </div>
-              <p class="work-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなwebサイトをイメージしました。どこか柔らかさを感じる配色と。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。コーディングは、DRYの法則を意識しました。</p>
-              <div class="work-captures">
-                <div class="work-capture-tab">
-                  <img src="image/expl-tab.jpg" alt="地球探検隊 webサイト タブレット">
-                </div>
-                <div class="work-capture-sp">
-                  <img src="image/expl-sp.jpg" alt="地球探検隊 webサイト スマートフォン">
-                </div>
-                </div>
-              <button v-on:click="closeModal">CLOSE</button>
+
+          <open-modal v-show="showModal" v-on:from-child="closeModal">
+            <span class="work-title-ja" slot="work-title-ja">地球探検隊</span>
+            <a href="https://expl.co.jp/" rel="noopenner" target="_blank" slot="work-title-en">expl.co.jp</a>
+            <a href="https://expl.co.jp/" rel="noopenner" target="_blank" slot="work-capture-pc">
+              <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト">
+            </a>
+            <div class="work-scope" slot="work-scope">Client: 地球探検隊様
+              <br>Design: Shingo Eto<br>Coding (HTML & CSS): Shingo Eto
             </div>
-          </div>
+            <p class="work-about" slot="work-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなwebサイトをイメージしました。どこか柔らかさを感じる配色と。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。コーディングは、DRYの法則を意識しました。</p>
+            <div class="work-captures" slot="work-captures">
+              <div class="work-capture-tab">
+                <img src="image/expl-tab.jpg" alt="地球探検隊 webサイト タブレット">
+              </div>
+              <div class="work-capture-sp">
+                <img src="image/expl-sp.jpg" alt="地球探検隊 webサイト スマートフォン">
+              </div>
+            </div>
+          </open-modal>
 
           <img src="image/miratabi.jpg" alt="ミラタビ Webページ">
           <img src="image/thai.jpg" alt="Thailand">
@@ -66,7 +62,6 @@
 
         </div>
       </div>
-
     </div>
   </section>
   <!-- Skills -->

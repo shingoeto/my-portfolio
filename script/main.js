@@ -207,6 +207,33 @@ var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
 });
 // Modal Window
+Vue.component("open-modal", {
+  template: `
+    <div id="overlay" v-show="showModal" v-on:click="closeModal">
+      <div id="works-content">
+        <h3>
+          <slot name="work-title-ja"></slot><br>
+          <span class="work-title-en">
+            <slot name="work-title-en"></slot>
+          </span>
+        </h3>
+        <slot name="work-capture-pc"></slot>
+        <slot name="work-scope"></slot>
+        <slot name="work-about"></slot>
+        <slot name="work-captures"></slot>
+        <button v-on:click="closeModal">CLOSE</button>
+      </div>
+    </div>
+  `,
+  methods: {
+    clickEvent: function() {
+      this.$emit('from-child')
+    },
+    stopEvent: function () {
+      event.stopPropagation()
+    }
+  }
+})
 new Vue({
   el: '#app',
   data: {
