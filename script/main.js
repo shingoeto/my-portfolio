@@ -211,32 +211,41 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 // Modal Window
 Vue.component('open-modal', {
   template: `
-    <div id="overlay" v-show="showModal" @click="exitModal">
-      <div id="works-content" @click="stopModal" @click="keepModal">
-      <slot name="expl"></slot>
-      <slot name="miratabi"></slot>
-      <button type="button" @click="exitModal">CLOSE</button>
+    <div class="overlay" @click="exitModal">
+      <div class="works-content" @click="stopModal" @click="keepModal">
+        <slot name="img" :img-info="imgInfo"></slot>
+        <button type="button" @click="exitModal">CLOSE</button>
       </div>
     </div>
   `,
+  props: {
+    imgInfo: Object
+  },
   methods: {
     exitModal: function () {
-      this.$emit('from-child')
+      this.$emit('from-child');
     },
     keepModal: function () {
-      event.stopPropagation()
+      event.stopPropagation();
     },
+    stopModal: function () {
+      // do something.
+    }
   },
 });
 
 new Vue({
   el: '#app',
-  data: {
-    showModal: false
+  data: function () {
+    return {
+      showModal: null,
+    };
   },
   methods: {
-    openModal: function () {
-      this.showModal = true
+    openModal: function (e) {
+      this.showModal = {
+        modal: this.$refs.expl.innerHTML,
+      };
     },
     closeModal: function () {
       this.showModal = false
