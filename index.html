@@ -33,8 +33,9 @@
       <div id="app">
         <div class="works-container">
           <!-- 地球探検隊 -->
-          <img src="image/expl.jpg" alt="地球探検隊 webサイト" v-on:click="openModal">
-          <div ref="expl" class="work-container">
+          <img src="image/expl.jpg" alt="地球探検隊 webサイト" @click="openModal1">
+          <div ref="work1" class="work-container">
+
             <h3>
               <span class="work-title-ja">地球探検隊</span>
               <a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a>
@@ -56,23 +57,46 @@
               </div>
             </div>
           </div>
-
           <!-- ミラタビ -->
-          <img src="image/miratabi.jpg" alt="ミラタビ webサイト" v-on:click="openModal2">
+          <img src="image/miratabi.jpg" alt="ミラタビ webサイト" @click="openModal2">
+          <div ref="work2" class="work-container">
+
+            <h3>
+              <span class="work-title-ja">地球検隊</span>
+              <a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a>
+            </h3>
+
+            <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
+              <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト">
+            </a>
+            <div class="work-scope">Client: 地球探検隊様
+              <br>Design: Shingo Eto<br>Coding (HTML & CSS): Shingo Eto
+            </div>
+            <p class="work-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなwebサイトをイメージしました。どこか柔らかさを感じる配色と。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。コーディングは、DRYの法則を意識しました。</p>
+            <div class="work-captures">
+              <div class="work-capture-tab">
+                <img src="image/expl-tab.jpg" alt="地球探検隊 webサイト タブレット">
+              </div>
+              <div class="work-capture-sp">
+                <img src="image/expl-sp.jpg" alt="地球探検隊 webサイト スマートフォン">
+              </div>
+            </div>
+          </div>
           <!-- Thailand Vlog -->
-          <img src="image/thai.jpg" alt="Thailand"  v-on:click="openModal3">
+          <img src="image/thai.jpg" alt="Thailand">
           <!-- AW -->
-          <img src="image/aw.jpg" alt="Hazuki Kondo - AW Collection"  v-on:click="openModal4">
+          <img src="image/aw.jpg" alt="Hazuki Kondo - AW Collection">
           <!-- USA Short Vlog -->
-          <img src="image/usa.jpg" alt="USA - Short Vlog"  v-on:click="openModal5">
+          <img src="image/usa.jpg" alt="USA - Short Vlog">
           <!-- Trek America -->
-          <img src="image/trek.jpg" alt="United States - Trek America"  v-on:click="openModal6">
+          <img src="image/trek.jpg" alt="United States - Trek America">
 
           <!-- Modal Window -->
           <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
             <template v-slot:img="slotProps">
+
               <div v-html="slotProps.imgInfo.modal"></div>
-              <div v-html="slotProps.imgInfo.modal2"></div>
+
             </template>
           </open-modal>
         </div>

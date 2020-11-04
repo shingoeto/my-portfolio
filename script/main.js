@@ -242,13 +242,38 @@ new Vue({
     };
   },
   methods: {
-    openModal: function (e) {
+    openModal1: function (e) {
       this.showModal = {
-        modal: this.$refs.expl.innerHTML,
+        modal: this.$refs.work1.innerHTML
+      };
+    },
+    openModal2: function (e) {
+      this.showModal = {
+        modal: this.$refs.work2.innerHTML
+      };
+    },
+    openModal3: function (e) {
+      this.showModal = {
+        modal: this.$refs.work3.innerHTML
+      };
+    },
+    openModal4: function (e) {
+      this.showModal = {
+        modal: this.$refs.work4.innerHTML
+      };
+    },
+    openModal5: function (e) {
+      this.showModal = {
+        modal: this.$refs.work5.innerHTML
+      };
+    },
+    openModal6: function (e) {
+      this.showModal = {
+        modal: this.$refs.work6.innerHTML
       };
     },
     closeModal: function () {
-      this.showModal = false
+      this.showModal = null;
     }
   }
 })
