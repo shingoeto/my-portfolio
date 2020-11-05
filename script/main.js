@@ -207,19 +207,18 @@ $(function () {
 var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
 });
-
 // Modal Window
 Vue.component('open-modal', {
   template: `
-    <div class="overlay" @click="exitModal">
-      <div class="works-content" @click="stopModal" @click="keepModal">
-        <slot name="img" :img-info="imgInfo"></slot>
-        <button type="button" @click="exitModal">CLOSE</button>
-      </div>
+  <div class="overlay" @click="exitModal">
+    <div class="works-content" @click="stopModal" @click="keepModal">
+      <slot name="img" :img-info="imgInfo"></slot>
+      <button type="button" @click="exitModal">CLOSE</button>
     </div>
+  </div>
   `,
   props: {
-    imgInfo: Object
+    imgInfo: Object,
   },
   methods: {
     exitModal: function () {
@@ -228,51 +227,58 @@ Vue.component('open-modal', {
     keepModal: function () {
       event.stopPropagation();
     },
-    stopModal: function () {
-      // do something.
-    }
   },
 });
-
+// v-scroll-lock
+import VScrollLock from 'v-scroll-lock';
+Vue.use(VScrollLock);
 new Vue({
   el: '#app',
   data: function () {
     return {
       showModal: null,
+      open: false,
     };
   },
   methods: {
     openModal1: function (e) {
+      this.open = true;
       this.showModal = {
         modal: this.$refs.work1.innerHTML
       };
     },
     openModal2: function (e) {
+      this.open = true;
       this.showModal = {
         modal: this.$refs.work2.innerHTML
       };
     },
     openModal3: function (e) {
+      this.open = true;
       this.showModal = {
         modal: this.$refs.work3.innerHTML
       };
     },
     openModal4: function (e) {
+      this.open = true;
       this.showModal = {
         modal: this.$refs.work4.innerHTML
       };
     },
     openModal5: function (e) {
+      this.open = true;
       this.showModal = {
         modal: this.$refs.work5.innerHTML
       };
     },
     openModal6: function (e) {
+      this.open = true;
       this.showModal = {
         modal: this.$refs.work6.innerHTML
       };
     },
     closeModal: function () {
+      this.open = false;
       this.showModal = null;
     }
   }
