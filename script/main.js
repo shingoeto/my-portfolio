@@ -208,15 +208,7 @@ var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
 });
 // Modal Window
-Vue.component('open-modal', {
-  template: `
-  <div class="overlay" @click="exitModal">
-    <div class="works-content" @click="stopModal" @click="keepModal">
-      <slot name="img" :img-info="imgInfo"></slot>
-      <button type="button" @click="exitModal">CLOSE</button>
-    </div>
-  </div>
-  `,
+Vue.component('OpenModal', {
   props: {
     imgInfo: Object,
   },
@@ -228,6 +220,14 @@ Vue.component('open-modal', {
       event.stopPropagation();
     },
   },
+  template: `
+  <div class="overlay" @click="exitModal">
+    <div class="works-content" @click="stopModal" @click="keepModal">
+      <slot name="img" :img-info="imgInfo"></slot>
+      <button type="button" @click="exitModal">CLOSE</button>
+    </div>
+  </div>
+  `,
 });
 // v-scroll-lock
 import VScrollLock from 'v-scroll-lock';
