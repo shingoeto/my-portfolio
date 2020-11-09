@@ -232,6 +232,7 @@ Vue.component('OpenModal', {
 // v-scroll-lock
 import VScrollLock from 'v-scroll-lock';
 Vue.use(VScrollLock);
+// VUe Instance
 new Vue({
   el: '#app',
   data: function () {

@@ -335,11 +335,13 @@ a {
     padding: 75px 0;
   }
   // Works
-  .overlay {
-    padding: 10% 0;
-  }
-  .works-content {
-    width: 90%;
+  #works {
+    .overlay {
+      padding: 10% 0;
+    }
+    .works-content {
+      width: 90%;
+    }
   }
   // About
   #about {
