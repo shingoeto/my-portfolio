@@ -36,7 +36,7 @@ h2 {
   margin-bottom: 100px;
 }
 h3 {
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 50px;
 }
 h4 {
@@ -218,15 +218,12 @@ a {
   &-right {
     width: 48%;
     p {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
     a {
       text-decoration: none;
       color: $textBlack;
     }
-  }
-  &-title {
-    margin-top: 50px;
   }
   &-others {
     display: flex;
@@ -271,19 +268,25 @@ a {
     justify-content: space-between;
   }
   &-left, &-right {
-    width: 45%;
     img {
       width: 100%;
     }
     h3, .about-text {
       margin-bottom: 30px;
     }
+    h3 {
+      font-size: 30px;
+    }
     a {
       color: $textWhite;
     }
   }
+  &-left {
+    width: 30%;
+  }
   &-right {
-    padding: 2.5% 5%;
+    width: 70%;
+    padding: 2% 5%;
   }
   &-text {
     font-size: 16px;
