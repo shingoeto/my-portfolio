@@ -27,25 +27,25 @@ body, button {
   margin: 0 auto;
   height: 100%;
 }
+// a
+a {
+  text-decoration: none;
+  color: $textBlack;
+}
 // h1, h2, h3
 h1, h2 {
-  font-size: 70px;
+  font-size: 40px;
   text-align: center;
 }
 h2 {
   margin-bottom: 100px;
 }
 h3 {
-  font-size: 40px;
+  font-size:26px;
   margin-bottom: 50px;
 }
 h4 {
   font-size: 20px;
-
-}
-a {
-  text-decoration: none;
-  color: $textBlack;
 }
 // Header
 #header {
@@ -57,7 +57,8 @@ a {
       display: inline;
       padding: 20px;
       a {
-        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+        color: $textWhite;
+        text-shadow: black 0 0 2px;
         font-weight: bold;
       }
     }
@@ -66,7 +67,12 @@ a {
 // Main Visual
 #mv {
   background-image: url(/image/hero-bg.jpg);
+  background-size: cover;
   height: 100vh;
+}
+h1 a {
+  color: $textWhite;
+  text-shadow: black 0 0 8px;
 }
 .mv-container {
   height: 100vh;
@@ -76,14 +82,14 @@ a {
   justify-content: center;
   align-items: center;
   span {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 // Works
 #works {
   background-image: url(/image/works-bg.jpg);
   h2 {
-    color: #fff;
+    color: $textWhite;
   }
   .work {
     &-tmb-wrap {
@@ -92,18 +98,18 @@ a {
       justify-content: space-between;
     }
     &-tmb {
-      height: 33.3333%;
+      height: 25%;
       margin: 0 10% 13% 0;
-      width: calc(33.3333% - 10%);
+      width: calc(25% - 10%);
       cursor: pointer;
       transition: 1s;
       &:hover {
         box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
       }
-      &:nth-child(3n) {
+      &:nth-child(4n) {
         margin-right: 0;
       }
-      &:nth-child(n+4) {
+      &:nth-child(n+5) {
         margin-bottom: 0;
       }
     }
@@ -244,12 +250,6 @@ a {
   &-title {
     margin-bottom: 5px;
   }
-  &-bar-container {
-    height: 5px;
-    background: $textWhite;
-    width: 100%;
-    margin-bottom: 10px;
-  }
   &-type {
     margin-bottom: 2%;
     img {
@@ -261,6 +261,7 @@ a {
 // About
 #about {
   background-image: url(/image/about-bg.jpg);
+  background-size: cover;
   color: $textWhite;
 }
 .about {
@@ -277,7 +278,7 @@ a {
       margin-bottom: 30px;
     }
     h3 {
-      font-size: 30px;
+      font-size: 20px;
     }
     a {
       color: $textWhite;

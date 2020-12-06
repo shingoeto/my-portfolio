@@ -74,6 +74,18 @@ new Vue({
         modal: this.$refs.work6.innerHTML
       };
     },
+    openModal7: function (e) {
+      this.open = true;
+      this.showModal = {
+        modal: this.$refs.work7.innerHTML
+      };
+    },
+    openModal8: function (e) {
+      this.open = true;
+      this.showModal = {
+        modal: this.$refs.work8.innerHTML
+      };
+    },
     closeModal: function () {
       this.open = false;
       this.showModal = null;
