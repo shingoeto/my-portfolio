@@ -1,13 +1,22 @@
 // 変数
-$textBlack: #222;
+$textBlack: #111;
 $textWhite: #fff;
 // html
 html {
   height: 100%;
 }
-// body
+// Fonts
 body, button {
-  font-family: "Cormorant Garamond", YuGothic, "Yu Gothic Medium", "Yu Gothic", serif;
+  font-family: 'Cormorant Garamond', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+.text-ja {
+  font-style: normal;
+}
+.text-en {
+  font-style: italic;
+}
+h1, h2, h3, h4 {
+  font-style: italic;
 }
 // *
 * {
@@ -27,26 +36,44 @@ body, button {
   margin: 0 auto;
   height: 100%;
 }
-// h1, h2, h3
-h1, h2 {
-  font-size: 70px;
-  text-align: center;
-}
-h2 {
-  margin-bottom: 100px;
-}
-h3 {
-  font-size: 40px;
-  margin-bottom: 50px;
-}
-h4 {
-  font-size: 20px;
-
-}
+// a
 a {
   text-decoration: none;
   color: $textBlack;
 }
+// h1, h2, h3
+h1, h2 {
+  font-size: 40px;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 100px;
+  text-shadow: black 0 0 50px;
+}
+h3 {
+  font-size:26px;
+  margin-bottom: 50px;
+}
+h4 {
+  font-size: 20px;
+}
+p {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+// 白黒
+// .grayscale {
+//   -webkit-filter: grayscale(100%);
+//   -moz-filter: grayscale(100%);
+//   -ms-filter: grayscale(100%);
+//   transition: 1s;
+//   &:hover {
+//     -webkit-filter: grayscale(0);
+//     -moz-filter: grayscale(0);
+//     -ms-filter: grayscale(0);
+//     filter: grayscale(0);
+//   }
+// }
 // Header
 #header {
   margin: 30px;
@@ -57,7 +84,8 @@ a {
       display: inline;
       padding: 20px;
       a {
-        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+        color: $textWhite;
+        text-shadow: black 0 0 2px;
         font-weight: bold;
       }
     }
@@ -66,7 +94,13 @@ a {
 // Main Visual
 #mv {
   background-image: url(/image/hero-bg.jpg);
+  background-size: cover;
   height: 100vh;
+  transition: 1.5s;
+}
+h1 a {
+  color: $textWhite;
+  text-shadow: black 0 0 8px;
 }
 .mv-container {
   height: 100vh;
@@ -76,14 +110,15 @@ a {
   justify-content: center;
   align-items: center;
   span {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 // Works
 #works {
   background-image: url(/image/works-bg.jpg);
+  // background-color: #111;
   h2 {
-    color: #fff;
+    color: $textWhite;
   }
   .work {
     &-tmb-wrap {
@@ -92,18 +127,18 @@ a {
       justify-content: space-between;
     }
     &-tmb {
-      height: 33.3333%;
+      height: 25%;
       margin: 0 10% 13% 0;
-      width: calc(33.3333% - 10%);
+      width: calc(25% - 10%);
       cursor: pointer;
       transition: 1s;
       &:hover {
         box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
       }
-      &:nth-child(3n) {
+      &:nth-child(4n) {
         margin-right: 0;
       }
-      &:nth-child(n+4) {
+      &:nth-child(n+5) {
         margin-bottom: 0;
       }
     }
@@ -159,10 +194,10 @@ a {
       margin-bottom: 6%;
     }
     .work {
-      &-title-ja {
-        font-size: 24px;
+      &-title-1 {
+        font-size: 20px;
       }
-      &-title-en {
+      &-title-2 {
         font-size: 16px;
       }
       &-scope {
@@ -207,6 +242,7 @@ a {
 // Skills
 #skills {
   background-image: url(../image/skills-bg.jpg);
+  // background-color: #F2EAD7;
   background-size: cover;
   padding-bottom: 100px;
 }
@@ -244,12 +280,6 @@ a {
   &-title {
     margin-bottom: 5px;
   }
-  &-bar-container {
-    height: 5px;
-    background: $textWhite;
-    width: 100%;
-    margin-bottom: 10px;
-  }
   &-type {
     margin-bottom: 2%;
     img {
@@ -261,12 +291,14 @@ a {
 // About
 #about {
   background-image: url(/image/about-bg.jpg);
+  background-size: cover;
   color: $textWhite;
 }
 .about {
   &-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   &-left, &-right {
     img {
@@ -276,7 +308,7 @@ a {
       margin-bottom: 30px;
     }
     h3 {
-      font-size: 30px;
+      font-size: 20px;
     }
     a {
       color: $textWhite;
@@ -286,12 +318,7 @@ a {
     width: 30%;
   }
   &-right {
-    width: 70%;
-    padding: 2% 5%;
-  }
-  &-text {
-    font-size: 16px;
-  }
+    width: 60%;  }
 }
 // Footer
 #footer {
@@ -364,6 +391,7 @@ a {
   h2 {
     font-size: 40px;
   }
+  // Header
   // Works
   #works {
     .work {
@@ -382,7 +410,7 @@ a {
         &:nth-child(n+4) {
           margin-bottom: 10%;
         }
-        &:nth-child(n+5) {
+        &:nth-child(n+7) {
           margin-bottom: 0;
         }
         .overlay {

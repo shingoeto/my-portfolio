@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
   <meta property="og:site_name" content="エトーシンゴの作品集" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="SHINGO ETO's PORTFOLIO" />
@@ -20,7 +20,7 @@
   <!-- Header -->
   <header id="header">
     <nav>
-      <ul>
+      <ul class="text-en">
         <li><a href="#works">WORKS</a></li>
         <li><a href="#skills">SKILLS</a></li>
         <li><a href="#about">ABOUT</a></li>
@@ -28,44 +28,72 @@
     </nav>
   </header>
   <!-- Main Visual -->
-  <section id="mv">
+  <section id="mv" class="grayscale">
     <div class="inner">
       <div class="mv-container">
-        <h1><a href="#">shingo eto.<br><span>PORTFOLIO</span></a></h1>
+        <h1><a href="#">Shingo Eto.<br><span>PORTFOLIO</span></a></h1>
       </div>
     </div>
   </section>
   <!-- Works -->
   <section id="works">
     <div class="inner">
-      <h2>works.</h2>
+      <h2>Works.</h2>
       <div id="app">
         <div class="work-tmb-wrap">
           <!-- Work 1 -->
-          <img class="work-tmb" src="image/expl.jpg" alt="地球探検隊 webサイト" @click="openModal1">
+          <img class="work-tmb grayscale" src="image/my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
           <!-- Work 2 -->
-          <img class="work-tmb" src="image/miratabi.jpg" alt="ミラタビ webサイト" @click="openModal2">
+          <img class="work-tmb grayscale" src="image/expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
           <!-- Work 3 -->
-          <img class="work-tmb" src="image/thai.jpg" alt="Thailand Vlog" @click="openModal3">
+          <img class="work-tmb grayscale" src="image/scooby.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
           <!-- Work 4 -->
-          <img class="work-tmb" src="image/aw.jpg" alt="Hazuki Kondo - AW Collection" @click="openModal4">
+          <img class="work-tmb grayscale" src="image/thailand-vlog.jpg" alt="Thailand Vlog" @click="openModal4">
           <!-- Work 5 -->
-          <img class="work-tmb" src="image/usa.jpg" alt="USA - Short Video" @click="openModal5">
+          <img class="work-tmb grayscale" src="image/miratabi.jpg" alt="ミラタビ webサイト" @click="openModal5">
           <!-- Work 6 -->
-          <img class="work-tmb" src="image/trek.jpg" alt="Trek America's Vlog" @click="openModal6">
+          <img class="work-tmb grayscale" src="image/aw.jpg" alt="Hazuki Kondo - AW Collection" @click="openModal6">
+          <!-- Work 7 -->
+          <img class="work-tmb grayscale" src="image/usa.jpg" alt="USA - Short Video" @click="openModal7">
+          <!-- Work 8 -->
+          <img class="work-tmb grayscale" src="image/trek.jpg" alt="Trek America's Vlog" @click="openModal8">
         </div>
         <!--  Work 1 Contents -->
         <div class="work-wrap">
           <div ref="work1" class="work-contents" v-scroll-lock="open">
             <h3>
-              <span class="work-title-ja">地球探検隊</span><br>
-              <span class="work-title-en"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
+              <span class="work-title-1 text-en">My Portfolio</span><br>
+              <span class="work-title-2"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
+            </h3>
+            <a href="https://shingoeto.com/" rel="noopenner" target="_blank">
+              <img src="image/my-portfolio-pc.jpg" alt="My Portfolio (PC表示)">
+            </a>
+            <div class="work-scope">Design: Shingo Eto
+              <br>Coding: Shingo Eto
+            </div>
+            <p class="work-about">転職用のポートフォリオサイトを作成しました。デザイン面では余白を意識し、シンプルで見やすいポートフォリオサイトをイメージしました。配色はモノトーンベースにしましたが、メインヴィジュアルは印象をつけるためインパクトのある画像をチョイスしました。works.セクションは、作品ごとにページを設けるか考えましたが、Vue.jsを用いてモーダルウィンドウを採用しました。</p>
+            <div class="work-captures">
+              <div class="work-capture-tab">
+                <img src="image/my-portfolio-tab.jpg" alt="My Portfolio (タブレット表示)">
+              </div>
+              <div class="work-capture-sp">
+                <img src="image/my-portfolio-sp.jpg" alt="My Portfolio (スマホ表示)">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  Work 2 Contents -->
+        <div class="work-wrap">
+          <div ref="work2" class="work-contents" v-scroll-lock="open">
+            <h3>
+              <span class="work-title-1 text-ja">地球探検隊</span><br>
+              <span class="work-title-2"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
             </h3>
             <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
               <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト (PC表示)">
             </a>
             <div class="work-scope">Client: 地球探検隊様
-              <br>Design: Shingo Eto<br>Coding (HTML & CSS): Shingo Eto
+              <br>Design: Shingo Eto<br>Coding (HTML &amp; CSS): Shingo Eto
             </div>
             <p class="work-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなwebサイトをイメージしました。どこか柔らかさを感じる配色をイメージし、行間も少し開けることでどこかやさしさも伝わるように意識しました。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。</p>
             <div class="work-captures">
@@ -78,12 +106,47 @@
             </div>
           </div>
         </div>
-        <!--  Work 2 Contents -->
+        <!--  Work 3 Contents -->
         <div class="work-wrap">
-          <div ref="work2" class="work-contents" v-scroll-lock="open">
+          <div ref="work3" class="work-contents" v-scroll-lock="open">
             <h3>
-              <span class="work-title-ja">未来を創る旅社 ミラタビ</span><br>
-              <span class="work-title-en"><a href="https://miratabi.net/" rel="noopenner" target="_blank">miratabi.net</a></span>
+              <span class="work-title-1 text-en">SCOOBY</span><br>
+            </h3>
+            <img src="image/scooby-pc.jpg" alt="地球探検隊 webサイト (PC表示)">
+            <div class="work-scope">Client: SCOOBY
+              <br>Design: Shingo Eto
+            </div>
+            <p class="work-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなwebサイトをイメージしました。どこか柔らかさを感じる配色をイメージし、行間も少し開けることでどこかやさしさも伝わるように意識しました。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。</p>
+            <div class="work-captures">
+              <div class="work-capture-tab">
+                <img src="image/expl-tab.jpg" alt="地球探検隊 webサイト (タブレット表示)">
+              </div>
+              <div class="work-capture-sp">
+                <img src="image/expl-sp.jpg" alt="地球探検隊 webサイト (スマホ表示)">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  Work 4 Contents -->
+        <div class="work-wrap">
+          <div ref="work4" class="work-contents" v-scroll-lock="open">
+            <h3>
+              <span class="work-title-1 text-en">Thailand - Wonderful Land</span>
+            </h3>
+            <div class="work-video">
+              <iframe title="Thailand - Wonderful Land" src="https://www.youtube.com/embed/hURqN2SRsYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="work-scope">Producer: Shingo Eto<br>Editor: Shingo Eto
+            </div>
+            <p class="work-about">2020年2月、タイに旅を時のVlogです。疾走感のあるVlogをイメージしましたが、次々と来るクリップ一つ一つの存在感が薄れないように意識し作成しました。東南アジア特有の、ムシっとした暑さをイメージしたカラーグレーティングにしました。</p>
+          </div>
+        </div>
+        <!--  Work 5 Contents -->
+        <div class="work-wrap">
+          <div ref="work5" class="work-contents" v-scroll-lock="open">
+            <h3>
+              <span class="work-title-1 text-ja">未来を創る旅社 ミラタビ</span><br>
+              <span class="work-title-2"><a href="https://miratabi.net/" rel="noopenner" target="_blank">miratabi.net</a></span>
             </h3>
             <a href="https://miratabi.net/" rel="noopenner" target="_blank">
               <img src="image/miratabi-pc.jpg" alt="未来を創る旅社 ミラタビ webサイト (PC表示)">
@@ -104,81 +167,68 @@
             </div>
           </div>
         </div>
-        <!--  Work 3 Contents -->
-          <div class="work-wrap">
-            <div ref="work3" class="work-contents" v-scroll-lock="open">
-              <h3>
-                <span class="work-title-ja">Thailand Vlog</span>
-              </h3>
-              <div class="work-video">
-              </div>
-              <div class="work-scope">Producer: Shingo Eto<br>Editor: Shingo Eto
-              </div>
-              <p class="work-about">2020年2月、タイに旅をしに行った時のVlogです。疾走感のあるVlogをイメージしましたが、次々と来るクリップ一つ一つの存在感が薄れないように意識し作成しました。東南アジア特有の、ムシっとした暑さをイメージしたカラーグレーティングにしました。</p>
-            </div>
-          </div>
-        <!--  Work 4 Contents -->
-        <div class="work-wrap">
-          <div ref="work4" class="work-contents" v-scroll-lock="open">
-            <h3>
-              <span class="work-title-ja">AW Collection</span><br>
-            </h3>
-            <div class="work-video">
-              <iframe src="https://www.youtube.com/embed/ZYADtvekNFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="work-scope">Producer: Shingo Eto<br>Editor: Shingo Eto<br>Hair: Hazuki Kondo
-            </div>
-            <p class="work-about">美容師時代、定期的に行う撮影会で、個人的に動画の撮影をさせていただき、編集まで行いました。撮影音をそのまま使用したりし、雰囲気などをより感じ取れるよう、ラフに仕上げました。秋冬ということもあり、乾き始めた空気に少し冷たい風が吹いているようなカラーグレーティングにしました。</p>
-          </div>
-        </div>
-        <!--  Work 5 Contents -->
-        <div class="work-wrap">
-          <div ref="work5" class="work-contents" v-scroll-lock="open">
-            <h3>
-              <span class="work-title-ja">USA - Short Vlog</span><br>
-            </h3>
-            <div class="work-video">
-              <iframe src="https://www.youtube.com/embed/9Wv-a-m0G7U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="work-scope">Producer: Shingo Eto<br>Editor: Shingo Eto
-            </div>
-            <p class="work-about">撮影と編集をしました。2017年の夏にアメリカ西海岸へ一人旅に行きました。初めての海外でした。いい動画たくさん撮ってやる！と意気込んだものの、撮影する間も忘れるような素晴らしい旅となりました。Trek Americaという多国籍ツアー（13人で1週間かけてバンでロードトリップするツアー）にも参加し、日本人、アジア人も僕一人で、唯一のノンイングリッシュスピーカーでした。残念すぎるカメラワークに、無理やり編集でそれっぽく仕上げましたが、アメリカ西海岸の広大な景色や街は、それをもカバーしてくれる素晴らしいものでした。そして、素晴らしい経験となりました。</p>
-          </div>
-        </div>
         <!--  Work 6 Contents -->
         <div class="work-wrap">
-          <div ref="work6" class="work-contents" v-scroll-lock="open">
-            <h3>
-              <span class="work-title-ja">USA - Trek America</span><br>
-            </h3>
-            <div class="work-video">
-              <iframe src="https://www.youtube.com/embed/YCgTpZswS9o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="work-scope">Producer: Shingo Eto<br>Editor: Shingo Eto
-            </div>
-            <p class="work-about">撮影と編集をしました。2017年の夏、初海外としてアメリカ一人旅に行くと決意し、2週間をアメリカ西海岸で過ごしました。Trek Americaという多国籍ツアー（13人で1週間かけてバンでロードトリップするツアー）に参加し、仲間と共に素敵な時間を過ごしました。肌で感じるカルチャー、壮大な自然、東京では見れない星空、ド派手な街、デカすぎるハンバーガー、日本から出たことのない僕には全てが新鮮でした。そして何よりもアジア人の僕に親切にしてくれたメンバー。とても大切な思い出です。</p>
+        <div ref="work6" class="work-contents" v-scroll-lock="open">
+          <h3>
+            <span class="work-title-1 text-en">Hazuki Kondo - AW Collection 2018</span><br>
+          </h3>
+          <div class="work-video">
+            <iframe title="AW Collection" src="https://www.youtube.com/embed/ZYADtvekNFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
+          <div class="work-scope">Producer: Shingo Eto<br>Editor: Shingo Eto<br>Hair: Hazuki Kondo
+          </div>
+          <p class="work-about">美容師時代、定期的に行う撮影会で、個人的に動画の撮影をさせていただき、編集まで行いました。撮影音をそのまま使用したりし、雰囲気などをより感じ取れるよう、ラフに仕上げました。秋冬ということもあり、乾き始めた空気に少し冷たい風が吹いているようなカラーグレーティングにしました。</p>
         </div>
-          <!-- Modal Window -->
-          <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
-            <template v-slot:img="slotProps">
-              <div v-html="slotProps.imgInfo.modal"></div>
-            </template>
-          </open-modal>
+      </div>
+      <!--  Work 7 Contents -->
+      <div class="work-wrap">
+        <div ref="work7" class="work-contents" v-scroll-lock="open">
+          <h3>
+            <span class="work-title-1 text-en">USA - Short Vlog</span><br>
+          </h3>
+          <div class="work-video">
+            <iframe title="USA - Short Vlog" src="https://www.youtube.com/embed/9Wv-a-m0G7U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="work-scope">Producer: Shingo Eto<br>Editor: Shingo Eto
+          </div>
+          <p class="work-about">撮影と編集をしました。2017年の夏にアメリカ西海岸へ一人旅に行きました。初めての海外でした。いい動画たくさん撮ってやる！と意気込んだものの、撮影する間も忘れるような素晴らしい旅となりました。Trek Americaという多国籍ツアー（13人で1週間かけてバンでロードトリップするツアー）にも参加し、日本人、アジア人も僕一人で、唯一のノンイングリッシュスピーカーでした。残念すぎるカメラワークに、無理やり編集でそれっぽく仕上げましたが、アメリカ西海岸の広大な景色や街は、それをもカバーしてくれる素晴らしいものでした。そして、素晴らしい経験となりました。</p>
         </div>
+      </div>
+      <!--  Work 8 Contents -->
+      <div class="work-wrap">
+        <div ref="work8" class="work-contents" v-scroll-lock="open">
+          <h3>
+            <span class="work-title-1 text-en">USA - Trek America</span><br>
+          </h3>
+          <div class="work-video">
+            <iframe title="USA - Trek America" src="https://www.youtube.com/embed/YCgTpZswS9o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="work-scope">Producer: Shingo Eto<br>Editor: Shingo Eto
+          </div>
+          <p class="work-about">撮影と編集をしました。2017年の夏、初海外としてアメリカ一人旅に行くと決意し、2週間をアメリカ西海岸で過ごしました。Trek Americaという多国籍ツアー（13人で1週間かけてバンでロードトリップするツアー）に参加し、仲間と共に素敵な時間を過ごしました。肌で感じるカルチャー、壮大な自然、東京では見れない星空、ド派手な街、デカすぎるハンバーガー、日本から出たことのない僕には全てが新鮮でした。そして何よりもアジア人の僕に親切にしてくれたメンバー。とても大切な思い出です。</p>
+        </div>
+      </div>
+      <!-- Modal Window -->
+        <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
+          <template v-slot:img="slotProps">
+            <div v-html="slotProps.imgInfo.modal"></div>
+          </template>
+        </open-modal>
+      </div>
     </div>
   </section>
   <!-- Skills -->
   <section id="skills">
     <div class="inner">
-      <h2>skills and carrer.</h2>
-      <div class="skills">
+      <h2>Skills &amp; Carrer.</h2>
+      <div class="skills grayscale">
         <div class="skills-left">
-          <h3>skills.</h3>
+          <h3>Skills.</h3>
           <!-- Markup -->
           <div class="skill-container">
             <div class="skill-type">
-              <img src="/image/markup.png" alt="HTML5 & CSS3">
+              <img src="/image/markup.png" alt="HTML5 &amp; CSS3">
             </div>
             <p>基本的なマークアップ、
               レスポンシブデザインや、SCSS、
@@ -205,6 +255,14 @@
             <p>オーバーレイを多用した複雑なグラフィックデザインは難しいですが、基本的な画像編集が可能です。
             </p>
           </div>
+          <!-- Adobe Illustrator -->
+          <div class="skill-container">
+            <div class="skill-type">
+              <img src="/image/ai.png" alt="Adobe Illustrator">
+            </div>
+            <p>シンプルなロゴの作成が可能です。
+            </p>
+          </div>
           <!-- Adobe XD -->
           <div class="skill-container">
             <div class="skill-type">
@@ -213,12 +271,12 @@
             <p>web制作時のカンプ作成で使用しています。UI/UXを意識した設計を触りながら学習しています。
             </p>
           </div>
-          <!-- Adobe Illustrator -->
+          <!-- Adobe Premier Pro -->
           <div class="skill-container">
             <div class="skill-type">
-              <img src="/image/ai.png" alt="Adobe Illustrator">
+              <img src="/image/pr.png" alt="Adobe After Effects">
             </div>
-            <p>シンプルなロゴの作成が可能です。
+            <p>カッティングやテロップ挿入、トランジションを入れた基本的な編集が可能です。
             </p>
           </div>
           <!-- Adobe After Effects -->
@@ -234,7 +292,7 @@
         <div class="skills-right">
           <!-- others. -->
           <div id="others">
-            <h3 class="skills-title">others.</h3>
+            <h3 class="skills-title">Others.</h3>
             <!-- Module Bundler -->
             <div class="skill-container">
               <div class="skill-type">
@@ -259,7 +317,7 @@
             </div>
             <!-- carrer. -->
             <div id="career">
-              <h3>carrer.</h3>
+              <h3>Carrer.</h3>
               <h4>2016</h4>
               <p> - 高校卒業後、美容専門学校入学</p>
               <h4>2018</h4>
@@ -279,40 +337,42 @@
                 <br> - 案件獲得 (<a href="https://miratabi.net/" rel="noopenner" target="_blank">未来を創る旅社 ミラタビ webサイト</a>)
                 <br> - 案件獲得 (<a href="https://honeyspot.co.jp/" rel="noopenner" target="_blank">HONEYSPOT ハニスポ webサイト</a>)
                 <br> - 案件獲得 (株式会社フォーツリーズ webサイト ※現在制作中)
+                <br> - 案件獲得 (Cafe IBIS webサイト ※現在製作中)
                 <br> - 就職活動開始
               </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- About -->
-    <section id="about">
-      <div class="inner">
-        <h2>about</h2>
-        <div class="about-container">
-          <div class="about-left"><img src="image/shingoeto.jpg" alt="エトーシンゴ"></div>
-          <div class="about-right">
-            <h3>エトーシンゴ</h3>
-            <p class="about-text">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。
-              まだまだ駆け出しですが、いつかはディレクションもできるようになりたいと思っています。
-              高校生の頃、バイト代を貯めて買ったPCで動画編集やCMSでwebサイトを制作した事をきっかけに、デザインに興味を持ち始めました。
-              趣味は、野球観戦、海外旅、動画撮影や編集など多趣味です。音楽は70s~90sのロックや古いサウンドが好きで、
-              DJもまだまだですが小規模イベントなどでやっています。
-              少しずつですがデザインからコーディング、撮影に動画編集など、
-              様々な領域でマルチに活躍できる人材を目指しています。
-            </p>
-            <div class="contact">Contact: <a href="mailto:shingoetohh@gmail.com">shingoetohh@gmail.com</a></div>
-          </div>
+    </div>
+  </section>
+  <!-- About -->
+  <section id="about">
+    <div class="inner">
+      <h2>About</h2>
+      <div class="about-container  grayscale">
+        <div class="about-left"><img src="image/me.jpg" alt="エトーシンゴ"></div>
+        <div class="about-right">
+          <h3 class="text-ja">エトーシンゴ</h3>
+          <p class="about-text">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。
+            まだまだ駆け出しですが、いつかはディレクションもできるようになりたいと思っています。
+            高校生の頃、バイト代を貯めて買ったPCで動画編集やCMSでwebサイトを制作した事をきっかけに、デザインに興味を持ち始めました。
+            趣味は、野球観戦、海外旅、動画撮影や編集など多趣味です。音楽は70s~90sのロックや古いサウンドが好きで、
+            DJもまだまだですが小規模イベントなどでやっています。
+            少しずつですがデザインからコーディング、撮影に動画編集など、
+            様々な領域でマルチに活躍できる人材を目指しています。
+          </p>
+          <div class="contact">Contact: <a href="mailto:shingoetohh@gmail.com">shingoetohh@gmail.com</a></div>
         </div>
       </div>
-    </section>
-    <!-- Footer -->
-    <footer id="footer">
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer id="footer">
     <div class="inner">
       <div class="footer">
-        <p class="footer-copyright">© 2020 Shingo Eto.</p>
-        <ul class="footer-menu">
+        <p class="footer-copyright text-en">© 2020 Shingo Eto.</p>
+        <ul class="footer-menu text-en">
           <li><a href="#works">WORKS</a></li>
           <li><a href="#skills">SKILLS</a></li>
           <li><a href="#about">ABOUT</a></li>
