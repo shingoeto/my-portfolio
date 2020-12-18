@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
   <meta property="og:site_name" content="エトーシンゴの作品集" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="SHINGO ETO's PORTFOLIO" />
@@ -19,7 +20,7 @@
   <!-- Header -->
   <header id="header">
     <nav>
-      <ul>
+      <ul class="text-en">
         <li><a href="#works">WORKS</a></li>
         <li><a href="#skills">SKILLS</a></li>
         <li><a href="#about">ABOUT</a></li>
@@ -27,7 +28,7 @@
     </nav>
   </header>
   <!-- Main Visual -->
-  <section id="mv">
+  <section id="mv" class="grayscale">
     <div class="inner">
       <div class="mv-container">
         <h1><a href="#">Shingo Eto.<br><span>PORTFOLIO</span></a></h1>
@@ -41,28 +42,28 @@
       <div id="app">
         <div class="work-tmb-wrap">
           <!-- Work 1 -->
-          <img class="work-tmb" src="image/my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
+          <img class="work-tmb grayscale" src="image/my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
           <!-- Work 2 -->
-          <img class="work-tmb" src="image/expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
+          <img class="work-tmb grayscale" src="image/expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
           <!-- Work 3 -->
-          <img class="work-tmb" src="image/scooby.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
+          <img class="work-tmb grayscale" src="image/scooby.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
           <!-- Work 4 -->
-          <img class="work-tmb" src="image/thailand-vlog.jpg" alt="Thailand Vlog" @click="openModal4">
+          <img class="work-tmb grayscale" src="image/thailand-vlog.jpg" alt="Thailand Vlog" @click="openModal4">
           <!-- Work 5 -->
-          <img class="work-tmb" src="image/miratabi.jpg" alt="ミラタビ webサイト" @click="openModal5">
+          <img class="work-tmb grayscale" src="image/miratabi.jpg" alt="ミラタビ webサイト" @click="openModal5">
           <!-- Work 6 -->
-          <img class="work-tmb" src="image/aw.jpg" alt="Hazuki Kondo - AW Collection" @click="openModal6">
+          <img class="work-tmb grayscale" src="image/aw.jpg" alt="Hazuki Kondo - AW Collection" @click="openModal6">
           <!-- Work 7 -->
-          <img class="work-tmb" src="image/usa.jpg" alt="USA - Short Video" @click="openModal7">
+          <img class="work-tmb grayscale" src="image/usa.jpg" alt="USA - Short Video" @click="openModal7">
           <!-- Work 8 -->
-          <img class="work-tmb" src="image/trek.jpg" alt="Trek America's Vlog" @click="openModal8">
+          <img class="work-tmb grayscale" src="image/trek.jpg" alt="Trek America's Vlog" @click="openModal8">
         </div>
         <!--  Work 1 Contents -->
         <div class="work-wrap">
           <div ref="work1" class="work-contents" v-scroll-lock="open">
             <h3>
-              <span class="work-title-ja">My Portfolio</span><br>
-              <span class="work-title-en"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
+              <span class="work-title-1 text-en">My Portfolio</span><br>
+              <span class="work-title-2"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
             </h3>
             <a href="https://shingoeto.com/" rel="noopenner" target="_blank">
               <img src="image/my-portfolio-pc.jpg" alt="My Portfolio (PC表示)">
@@ -85,8 +86,8 @@
         <div class="work-wrap">
           <div ref="work2" class="work-contents" v-scroll-lock="open">
             <h3>
-              <span class="work-title-ja">地球探検隊</span><br>
-              <span class="work-title-en"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
+              <span class="work-title-1 text-ja">地球探検隊</span><br>
+              <span class="work-title-2"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
             </h3>
             <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
               <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト (PC表示)">
@@ -109,7 +110,7 @@
         <div class="work-wrap">
           <div ref="work3" class="work-contents" v-scroll-lock="open">
             <h3>
-              <span class="work-title-ja">SCOOBY</span><br>
+              <span class="work-title-1 text-en">SCOOBY</span><br>
             </h3>
             <img src="image/scooby-pc.jpg" alt="地球探検隊 webサイト (PC表示)">
             <div class="work-scope">Client: SCOOBY
@@ -130,7 +131,7 @@
         <div class="work-wrap">
           <div ref="work4" class="work-contents" v-scroll-lock="open">
             <h3>
-              <span class="work-title-ja">Thailand - Wonderful Land</span>
+              <span class="work-title-1 text-en">Thailand - Wonderful Land</span>
             </h3>
             <div class="work-video">
               <iframe title="Thailand - Wonderful Land" src="https://www.youtube.com/embed/hURqN2SRsYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -144,8 +145,8 @@
         <div class="work-wrap">
           <div ref="work5" class="work-contents" v-scroll-lock="open">
             <h3>
-              <span class="work-title-ja">未来を創る旅社 ミラタビ</span><br>
-              <span class="work-title-en"><a href="https://miratabi.net/" rel="noopenner" target="_blank">miratabi.net</a></span>
+              <span class="work-title-1 text-ja">未来を創る旅社 ミラタビ</span><br>
+              <span class="work-title-2"><a href="https://miratabi.net/" rel="noopenner" target="_blank">miratabi.net</a></span>
             </h3>
             <a href="https://miratabi.net/" rel="noopenner" target="_blank">
               <img src="image/miratabi-pc.jpg" alt="未来を創る旅社 ミラタビ webサイト (PC表示)">
@@ -170,7 +171,7 @@
         <div class="work-wrap">
         <div ref="work6" class="work-contents" v-scroll-lock="open">
           <h3>
-            <span class="work-title-ja">AW Collection</span><br>
+            <span class="work-title-1 text-en">Hazuki Kondo - AW Collection 2018</span><br>
           </h3>
           <div class="work-video">
             <iframe title="AW Collection" src="https://www.youtube.com/embed/ZYADtvekNFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -184,7 +185,7 @@
       <div class="work-wrap">
         <div ref="work7" class="work-contents" v-scroll-lock="open">
           <h3>
-            <span class="work-title-ja">USA - Short Vlog</span><br>
+            <span class="work-title-1 text-en">USA - Short Vlog</span><br>
           </h3>
           <div class="work-video">
             <iframe title="USA - Short Vlog" src="https://www.youtube.com/embed/9Wv-a-m0G7U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -198,7 +199,7 @@
       <div class="work-wrap">
         <div ref="work8" class="work-contents" v-scroll-lock="open">
           <h3>
-            <span class="work-title-ja">USA - Trek America</span><br>
+            <span class="work-title-1 text-en">USA - Trek America</span><br>
           </h3>
           <div class="work-video">
             <iframe title="USA - Trek America" src="https://www.youtube.com/embed/YCgTpZswS9o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -221,7 +222,7 @@
   <section id="skills">
     <div class="inner">
       <h2>Skills &amp; Carrer.</h2>
-      <div class="skills">
+      <div class="skills grayscale">
         <div class="skills-left">
           <h3>Skills.</h3>
           <!-- Markup -->
@@ -254,6 +255,14 @@
             <p>オーバーレイを多用した複雑なグラフィックデザインは難しいですが、基本的な画像編集が可能です。
             </p>
           </div>
+          <!-- Adobe Illustrator -->
+          <div class="skill-container">
+            <div class="skill-type">
+              <img src="/image/ai.png" alt="Adobe Illustrator">
+            </div>
+            <p>シンプルなロゴの作成が可能です。
+            </p>
+          </div>
           <!-- Adobe XD -->
           <div class="skill-container">
             <div class="skill-type">
@@ -262,12 +271,12 @@
             <p>web制作時のカンプ作成で使用しています。UI/UXを意識した設計を触りながら学習しています。
             </p>
           </div>
-          <!-- Adobe Illustrator -->
+          <!-- Adobe Premier Pro -->
           <div class="skill-container">
             <div class="skill-type">
-              <img src="/image/ai.png" alt="Adobe Illustrator">
+              <img src="/image/pr.png" alt="Adobe After Effects">
             </div>
-            <p>シンプルなロゴの作成が可能です。
+            <p>カッティングやテロップ挿入、トランジションを入れた基本的な編集が可能です。
             </p>
           </div>
           <!-- Adobe After Effects -->
@@ -328,6 +337,7 @@
                 <br> - 案件獲得 (<a href="https://miratabi.net/" rel="noopenner" target="_blank">未来を創る旅社 ミラタビ webサイト</a>)
                 <br> - 案件獲得 (<a href="https://honeyspot.co.jp/" rel="noopenner" target="_blank">HONEYSPOT ハニスポ webサイト</a>)
                 <br> - 案件獲得 (株式会社フォーツリーズ webサイト ※現在制作中)
+                <br> - 案件獲得 (Cafe IBIS webサイト ※現在製作中)
                 <br> - 就職活動開始
               </p>
             </div>
@@ -340,10 +350,10 @@
   <section id="about">
     <div class="inner">
       <h2>About</h2>
-      <div class="about-container">
+      <div class="about-container  grayscale">
         <div class="about-left"><img src="image/me.jpg" alt="エトーシンゴ"></div>
         <div class="about-right">
-          <h3>エトーシンゴ</h3>
+          <h3 class="text-ja">エトーシンゴ</h3>
           <p class="about-text">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。
             まだまだ駆け出しですが、いつかはディレクションもできるようになりたいと思っています。
             高校生の頃、バイト代を貯めて買ったPCで動画編集やCMSでwebサイトを制作した事をきっかけに、デザインに興味を持ち始めました。
@@ -361,8 +371,8 @@
   <footer id="footer">
     <div class="inner">
       <div class="footer">
-        <p class="footer-copyright">© 2020 Shingo Eto.</p>
-        <ul class="footer-menu">
+        <p class="footer-copyright text-en">© 2020 Shingo Eto.</p>
+        <ul class="footer-menu text-en">
           <li><a href="#works">WORKS</a></li>
           <li><a href="#skills">SKILLS</a></li>
           <li><a href="#about">ABOUT</a></li>

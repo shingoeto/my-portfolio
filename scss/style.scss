@@ -5,9 +5,18 @@ $textWhite: #fff;
 html {
   height: 100%;
 }
-// body
+// Fonts
 body, button {
   font-family: 'Cormorant Garamond', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+.text-ja {
+  font-style: normal;
+}
+.text-en {
+  font-style: italic;
+}
+h1, h2, h3, h4 {
+  font-style: italic;
 }
 // *
 * {
@@ -49,9 +58,22 @@ h4 {
   font-size: 20px;
 }
 p {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
 }
+// 白黒
+// .grayscale {
+//   -webkit-filter: grayscale(100%);
+//   -moz-filter: grayscale(100%);
+//   -ms-filter: grayscale(100%);
+//   transition: 1s;
+//   &:hover {
+//     -webkit-filter: grayscale(0);
+//     -moz-filter: grayscale(0);
+//     -ms-filter: grayscale(0);
+//     filter: grayscale(0);
+//   }
+// }
 // Header
 #header {
   margin: 30px;
@@ -74,6 +96,7 @@ p {
   background-image: url(/image/hero-bg.jpg);
   background-size: cover;
   height: 100vh;
+  transition: 1.5s;
 }
 h1 a {
   color: $textWhite;
@@ -93,6 +116,7 @@ h1 a {
 // Works
 #works {
   background-image: url(/image/works-bg.jpg);
+  // background-color: #111;
   h2 {
     color: $textWhite;
   }
@@ -170,10 +194,10 @@ h1 a {
       margin-bottom: 6%;
     }
     .work {
-      &-title-ja {
+      &-title-1 {
         font-size: 20px;
       }
-      &-title-en {
+      &-title-2 {
         font-size: 16px;
       }
       &-scope {
@@ -218,6 +242,7 @@ h1 a {
 // Skills
 #skills {
   background-image: url(../image/skills-bg.jpg);
+  // background-color: #F2EAD7;
   background-size: cover;
   padding-bottom: 100px;
 }
