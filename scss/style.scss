@@ -15,8 +15,16 @@ body, button {
 .text-en {
   font-style: italic;
 }
-h1, h2, h3, h4 {
+h1, h2, {
   font-style: italic;
+}
+button {
+  padding: 20px 80px;
+  margin: 100px 0;
+  font-size: 20px;
+  border: none;
+  background-color: #111111;
+  color: $textWhite;
 }
 // *
 * {
@@ -26,12 +34,12 @@ h1, h2, h3, h4 {
   padding: 0;
 }
 //
-#works, #about, #skills {
+#works, #about, #skills, #carrer {
   padding: 100px 0;
 }
 // inner
 .inner {
-  width: 1096px;
+  width: 80%;
   max-width: 100%;
   margin: 0 auto;
   height: 100%;
@@ -42,13 +50,16 @@ a {
   color: $textBlack;
 }
 // h1, h2, h3
-h1, h2 {
+h1 {
   font-size: 40px;
+}
+h2 {
+  font-size: 80px;
   text-align: center;
 }
 h2 {
-  margin-bottom: 100px;
-  text-shadow: black 0 0 50px;
+  margin-bottom: 10px;
+  text-align: left;
 }
 h3 {
   font-size:26px;
@@ -59,7 +70,12 @@ h4 {
 }
 p {
   font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  line-height: 30px;
+}
+// Section Title
+.section-title {
+  margin-bottom: 100px;
 }
 // 白黒
 // .grayscale {
@@ -76,27 +92,40 @@ p {
 // }
 // Header
 #header {
-  margin: 30px;
   position: fixed;
   height: 100px;
+  width: 100%;
+  background-color: #fff;
+  nav {
+    line-height: 100px;
+  }
   ul {
     li {
       display: inline;
-      padding: 20px;
+      padding: 0 20px;
       a {
-        color: $textWhite;
-        text-shadow: black 0 0 2px;
+        color: $textBlack;
+        text-shadow: white 0 0 2px;
         font-weight: bold;
+      }
+      &:first-child {
+        padding-left: 0;
       }
     }
   }
 }
 // Main Visual
 #mv {
-  background-image: url(/image/hero-bg.jpg);
   background-size: cover;
   height: 100vh;
   transition: 1.5s;
+}
+#hero-img {
+  background: 50%;
+  width: 100%;
+  background-image: url(/image/hero-bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 h1 a {
   color: $textWhite;
@@ -115,10 +144,11 @@ h1 a {
 }
 // Works
 #works {
-  background-image: url(/image/works-bg.jpg);
-  // background-color: #111;
+  // background-image: url(/image/works-bg.jpg);
+  background-color: #f6f6f6;
   h2 {
-    color: $textWhite;
+    color: $textBlack;
+    text-align: left;
   }
   .work {
     &-tmb-wrap {
@@ -128,18 +158,14 @@ h1 a {
     }
     &-tmb {
       height: 25%;
-      margin: 0 10% 13% 0;
-      width: calc(25% - 10%);
+      width: calc(25% - 2%);
       cursor: pointer;
       transition: 1s;
       &:hover {
-        box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 50px rgba(0,0, 0, 0.3);
       }
       &:nth-child(4n) {
         margin-right: 0;
-      }
-      &:nth-child(n+5) {
-        margin-bottom: 0;
       }
     }
   }
@@ -241,19 +267,23 @@ h1 a {
 
 // Skills
 #skills {
-  background-image: url(../image/skills-bg.jpg);
-  // background-color: #F2EAD7;
+  background-color: #ffffff;
   background-size: cover;
   padding-bottom: 100px;
 }
 .skills {
-  display: flex;
   justify-content: space-between;
   &-left {
-    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
   }
   &-right {
-    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
     p {
       margin-bottom: 40px;
     }
@@ -275,6 +305,7 @@ h1 a {
 }
 .skill {
   &-container {
+    width: 30%;
     margin-bottom: 8%;
   }
   &-title {
@@ -288,11 +319,18 @@ h1 a {
     }
   }
 }
+// Carrer
+#carrer {
+  background-color: #f6f6f6;
+}
+.carrer-container {
+  margin-bottom: 50px;
+}
 // About
 #about {
-  background-image: url(/image/about-bg.jpg);
+  background-color: #ffffff;
   background-size: cover;
-  color: $textWhite;
+  color: $textBlack;
 }
 .about {
   &-container {
@@ -315,10 +353,10 @@ h1 a {
     }
   }
   &-left {
-    width: 30%;
+    width: 50%;
   }
   &-right {
-    width: 60%;  }
+    width: 40%;  }
 }
 // Footer
 #footer {
@@ -355,6 +393,15 @@ h1 a {
   .inner {
     width: 80%;
   }
+  // MV
+  #mv {
+    padding: 10% 0;
+  }
+  #hero-img {
+    background-size: cover;
+    background-position: left;
+    height: 100%;
+  }
   h2 {
     font-size: 50px;
     margin-bottom: 75px;
@@ -373,14 +420,13 @@ h1 a {
   }
   // About
   #about {
-    background-image: url(/image/about-bg-2.jpg);
     background-size: cover;
   }
   .about {
-    &-left {
+    &-right {
       display: none;
     }
-    &-right {
+    &-left {
       padding: 0;
       width: 100%;
     }
@@ -389,29 +435,20 @@ h1 a {
 // Smart Phone
 @media screen and (max-width: 767px) {
   h2 {
-    font-size: 40px;
+    font-size: 60px;
   }
   // Header
   // Works
   #works {
     .work {
       &-tmb-wrap {
-        justify-content: center;
+        justify-content: space-between;
       }
       &-tmb {
-        width: calc(40% - 10% / 2);
+        width: calc(50% - 10% / 2);
         margin-bottom: 10%;
-        &:nth-child(3n) {
-          margin-right: 10%;
-        }
         &:nth-child(2n) {
           margin-right: 0;
-        }
-        &:nth-child(n+4) {
-          margin-bottom: 10%;
-        }
-        &:nth-child(n+7) {
-          margin-bottom: 0;
         }
         .overlay {
           padding: 20% 0;
@@ -444,6 +481,3 @@ h1 a {
     }
   }
 }
-
-
-
