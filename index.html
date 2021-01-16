@@ -20,14 +20,17 @@
   <!-- Header -->
   <header id="header">
     <div class="inner">
-      <nav>
-        <ul class="text-en">
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#works">WORKS</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#carrer">CARRER</a></li>
-        </ul>
-      </nav>
+      <div class="header-container">
+        <h1 class="logo"><a href="#">Shingo Eto.</a></h1>
+        <nav>
+          <ul class="text-en">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#carrer">CARRER</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <!-- Main Visual -->
@@ -42,39 +45,13 @@
       </div>
     </div>
   </section>
-  <!-- About -->
-  <section id="about">
-    <div class="inner">
-      <div class="section-title">
-        <h2>About</h2>
-        <p>私について</p>
-      </div>
-      <div class="about-container  grayscale">
-        <div class="about-left">
-          <h3 class="text-ja">エトーシンゴ</h3>
-          <p class="about-text">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。
-            まだまだ駆け出しですが、いつかはディレクションもできるようになりたいと思っています。
-            高校生の頃、アルバイトをし初給料で買ったPCで動画編集やCMSでwebサイトを制作した事をきっかけに、デザインに興味を持ち始めました。
-            趣味は、野球観戦、海外旅、動画撮影や編集など多趣味です。音楽は70s~90sのロックや古いサウンドが好きで、
-            DJもまだまだですが小規模イベントなどでやっています。
-            少しずつですがデザインからコーディング、撮影に動画編集など、
-            様々な領域でマルチに活躍できる人材を目指しています。
-          </p>
-          <div class="contact">Contact: <a href="mailto:shingoetohh@gmail.com">shingoetohh@gmail.com</a></div>
-        </div>
-        <div class="about-right">
-          <img src="image/me.jpg" alt="エトーシンゴ">
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- Works -->
   <section id="works">
     <div class="inner">
       <div class="section-title">
         <h2>Works.</h2>
         <p>This is my anthology. mainly, web design and video creating.</p>
-        <p>私の作品集です。主にウェブデザイン、動画編集の作品になります。</p>
+        <p>私の作品集。主にウェブデザイン、動画編集の作品など。</p>
       </div>
       <div id="app">
         <div class="work-tmb-wrap">
@@ -198,7 +175,7 @@
         </div> -->
         <!--  Work 6 Contents -->
         <!-- <div class="work-wrap">
-        <div ref="work6" class="work-contents" v-scroll-lock="open">
+          <div ref="work6" class="work-contents" v-scroll-lock="open">
           <h3>
             <span class="work-title-1 text-en">Hazuki Kondo - AW Collection 2018</span><br>
           </h3>
@@ -239,8 +216,8 @@
         </div>
       </div> -->
       <!-- Modal Window -->
-        <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
-          <template v-slot:img="slotProps">
+      <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
+        <template v-slot:img="slotProps">
             <div v-html="slotProps.imgInfo.modal"></div>
           </template>
         </open-modal>
@@ -254,7 +231,7 @@
       <div class="section-title">
         <h2>Skills</h2>
         <p>My Self-judgement skills & my environments.</p>
-        <p>私の自己判断によるスキルとその他環境について。</p>
+        <p>私の自己判断によるスキルと、その他環境について。</p>
       </div>
       <div class="skills grayscale">
         <div class="skills-left">
@@ -296,14 +273,6 @@
             <p>web制作時のカンプ作成で使用しています。UI/UXを意識した設計を触りながら学習しています。
             </p>
           </div>
-          <!-- Adobe Premier Pro -->
-          <div class="skill-container">
-            <div class="skill-type">
-              <img src="/image/pr.png" alt="Adobe After Effects">
-            </div>
-            <p>カッティングやテロップ挿入、トランジションを入れた基本的な編集が可能です。
-            </p>
-          </div>
           <!-- Adobe After Effects -->
           <div class="skill-container">
             <div class="skill-type">
@@ -311,6 +280,14 @@
             </div>
             <p>基本的な編集が可能です。複雑なアニメーションでなければ、イージイーズや波形を意識したトランジションを使った編集、
               自然な3Dカメラトラッキングなどの編集が可能です。
+            </p>
+          </div>
+          <!-- Adobe Premier Pro -->
+          <div class="skill-container">
+            <div class="skill-type">
+              <img src="/image/pr.png" alt="Adobe After Effects">
+            </div>
+            <p>カッティングやテロップ挿入、トランジションを入れた基本的な編集が可能です。
             </p>
           </div>
           <!-- Adobe Illustrator -->
@@ -340,19 +317,44 @@
               <img src="image/git.png" alt="Git">
               <img src="image/todoist.png" alt="Todoist">
             </div>
-            <p>MacBook Proを使用し、VSCodeでコーディングをしています。GitとGitHubを使用し、バージョン管理をしています。タスク管理はTodoistでGTD (<a href="https://gtd-japan.jp/about" rel="noopenner" target="_blank" style="text-decoration: underline">Getting Things Done</a>) を用いています。
+            <p>MacBook Proを使用し、VSCodeでマークアップやコーディングをしています。GitとGitHubを使用し、バージョン管理をしています。タスク管理はTodoistでGTD (<a href="https://gtd-japan.jp/about" rel="noopenner" target="_blank" style="text-decoration: underline">Getting Things Done</a>) を用いています。
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- Carrer -->
+  <!-- About -->
+  <section id="about">
+    <div class="inner">
+      <div class="section-title">
+        <h2>About</h2>
+        <p>私について。</p>
+      </div>
+      <div class="about-container  grayscale">
+        <div class="about-left">
+          <h3 class="text-ja">エトーシンゴ</h3>
+          <p class="about-text">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。
+            まだまだ駆け出しですが、いつかはディレクションもできるようになりたいと思っています。
+            高校生の頃、アルバイトをし初給料で買ったPCで動画編集やCMSでwebサイトを制作した事をきっかけに、デザインに興味を持ち始めました。
+            趣味は、野球観戦、海外旅、動画撮影や編集など多趣味です。音楽は70s~90sのロックや古いサウンドが好きで、
+            DJもまだまだですが小規模イベントなどでやっています。
+            少しずつですがデザインからコーディング、撮影に動画編集など、
+            様々な領域でマルチに活躍できる人材を目指しています。
+          </p>
+          <div class="contact">Contact: <a href="mailto:shingoetohh@gmail.com">shingoetohh@gmail.com</a></div>
+        </div>
+        <div class="about-right">
+          <img src="image/me.jpg" alt="エトーシンゴ">
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="carrer">
     <div class="inner">
       <div class="section-title">
         <h2>Carrer.</h2>
-        <p>私の過去のキャリアです。</p>
+        <p>私の経歴について</p>
       </div>
       <div class="carrer-container">
         <h3>2016</h3>
@@ -361,13 +363,13 @@
       <div class="carrer-container">
         <h3>2018</h3>
         <p> - 美容専門学校卒業
-          <br> - 東京青山の美容室に入社
+          <br> - 株式会社assortへ入社（美容室）
         </p>
       </div>
       <div class="carrer-container">
         <h3>2019</h3>
         <p> - Esportsチーム運営 (アマチュア)
-          <br> - 香港支店へ2ヶ月美容師アシスタントとして勤務
+          <br> - 香港支店（ASSORT Hong Kong）へ2ヶ月間美容師アシスタントとして勤務
           <br> - 10月末美容室退社
         </p>
       </div>
