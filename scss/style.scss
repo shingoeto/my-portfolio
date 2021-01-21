@@ -9,14 +9,13 @@ html {
 body, button {
   font-family: 'Cormorant Garamond', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
-.text-ja {
-  font-style: normal;
-}
-.text-en {
-  font-style: italic;
-}
-h1, h2, {
-  font-style: italic;
+.text {
+  &-ja {
+    font-style: normal;
+  }
+  &-en {
+    font-style: italic;
+  }
 }
 button {
   padding: 20px 80px;
@@ -50,14 +49,15 @@ a {
   color: $textBlack;
 }
 // h1, h2, h3
+h1, h2, {
+  font-style: italic;
+}
 h1 {
   font-size: 40px;
 }
 h2 {
   font-size: 80px;
   text-align: center;
-}
-h2 {
   margin-bottom: 10px;
   text-align: left;
 }
@@ -77,35 +77,15 @@ p {
 .section-title {
   margin-bottom: 100px;
 }
-// 白黒
-// .grayscale {
-//   -webkit-filter: grayscale(100%);
-//   -moz-filter: grayscale(100%);
-//   -ms-filter: grayscale(100%);
-//   transition: 1s;
-//   &:hover {
-//     -webkit-filter: grayscale(0);
-//     -moz-filter: grayscale(0);
-//     -ms-filter: grayscale(0);
-//     filter: grayscale(0);
-//   }
-// }
 // Header
 #header {
   position: fixed;
   height: 100px;
   width: 100%;
   background-color: #fff;
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .logo {
-    text-shadow: none;
-    font-size: 30px;
-  }
-  nav, .logo {
+  nav {
     line-height: 100px;
+    text-align: right;
   }
   ul {
     li {
@@ -116,8 +96,8 @@ p {
         text-shadow: white 0 0 2px;
         font-weight: bold;
       }
-      &:first-child {
-        padding-left: 0;
+      &:nth-child(4) {
+        padding-right: 0;
       }
     }
   }
@@ -126,7 +106,6 @@ p {
 #mv {
   background-size: cover;
   height: 100vh;
-  transition: 1.5s;
 }
 #hero-img {
   background: 50%;
@@ -152,7 +131,6 @@ h1 a {
 }
 // Works
 #works {
-  // background-image: url(/image/works-bg.jpg);
   background-color: #f6f6f6;
   h2 {
     color: $textBlack;
@@ -331,8 +309,26 @@ h1 a {
 #carrer {
   background-color: #f6f6f6;
 }
-.carrer-container {
-  margin-bottom: 10px;
+.carrer {
+  &-content {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-box {
+    margin-bottom: 5%;
+  }
+  &-left {
+    width: 45%;
+    img {
+      margin-top: 100px;
+      width: 150%;
+    }
+  }
+  &-right {
+    margin-left: auto;
+    width: 45%;
+  }
 }
 // About
 #about {
@@ -355,6 +351,9 @@ h1 a {
     }
     h3 {
       font-size: 20px;
+      span {
+        font-style: italic;
+      }
     }
     a {
       color: $textBlack;
@@ -491,7 +490,6 @@ h1 a {
   // Footer
   .footer {
     &-copyright {
-      margin: 0 auto;
     }
     &-menu {
       display: none;

@@ -14,15 +14,17 @@
   <meta property="og:email" content="shingoetohh@gmail.com" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@et_sng" />
-  <title>エトーシンゴ</title>
+  <title>Works | エトーシンゴ</title>
 </head>
-<body>
+<body id="page-works">
   <!-- Header -->
   <header id="header">
     <div class="inner">
-      <div class="header-nav">
+      <div class="header-container">
+        <h1 class="logo"><a href="#">Shingo Eto.</a></h1>
         <nav>
           <ul class="text-en">
+            <li><a href="https://shingoeto.com/">TOP</a></li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#works">WORKS</a></li>
             <li><a href="#skills">SKILLS</a></li>
@@ -32,18 +34,6 @@
       </div>
     </div>
   </header>
-  <!-- Main Visual -->
-  <section id="mv" class="grayscale">
-    <div class="inner">
-      <div id="hero-img">
-        <div class="inner">
-          <div class="mv-container">
-            <h1><a href="#">Shingo Eto.</a></h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- Works -->
   <section id="works">
     <div class="inner">
@@ -62,6 +52,14 @@
           <img class="work-tmb grayscale" src="image/scooby.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
           <!-- Work 4 -->
           <img class="work-tmb grayscale" src="image/thailand-vlog.jpg" alt="Thailand Vlog" @click="openModal4">
+          <!-- Work 6 -->
+          <img class="work-tmb grayscale" src="image/miratabi.jpg" alt="Thailand Vlog" @click="openModal5">
+          <!-- Work 7 -->
+          <img class="work-tmb grayscale" src="image/aw.jpg" alt="Thailand Vlog" @click="openModal6">
+          <!-- Work 8 -->
+          <img class="work-tmb grayscale" src="image/usa.jpg" alt="Thailand Vlog" @click="openModal7">
+          <!-- Work 9 -->
+          <img class="work-tmb grayscale" src="image/trek.jpg" alt="Thailand Vlog" @click="openModal8">
         </div>
         <!--  Work 1 Contents -->
         <div class="work-wrap">
@@ -147,7 +145,7 @@
           </div>
         </div>
         <!--  Work 5 Contents -->
-        <!-- <div class="work-wrap">
+        <div class="work-wrap">
           <div ref="work5" class="work-contents" v-scroll-lock="open">
             <h3>
               <span class="work-title-1 text-ja">未来を創る旅社 ミラタビ</span><br>
@@ -171,9 +169,9 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
         <!--  Work 6 Contents -->
-        <!-- <div class="work-wrap">
+        <div class="work-wrap">
           <div ref="work6" class="work-contents" v-scroll-lock="open">
           <h3>
             <span class="work-title-1 text-en">Hazuki Kondo - AW Collection 2018</span><br>
@@ -185,9 +183,9 @@
           </div>
           <p class="work-about">美容師時代、定期的に行う撮影会で、個人的に動画の撮影をさせていただき、編集まで行いました。撮影音をそのまま使用したりし、雰囲気などをより感じ取れるよう、ラフに仕上げました。秋冬ということもあり、乾き始めた空気に少し冷たい風が吹いているようなカラーグレーティングにしました。</p>
         </div>
-      </div> -->
+      </div>
       <!--  Work 7 Contents -->
-      <!-- <div class="work-wrap">
+      <div class="work-wrap">
         <div ref="work7" class="work-contents" v-scroll-lock="open">
           <h3>
             <span class="work-title-1 text-en">USA - Short Vlog</span><br>
@@ -199,9 +197,9 @@
           </div>
           <p class="work-about">撮影と編集をしました。2017年の夏にアメリカ西海岸へ一人旅に行きました。初めての海外でした。いい動画たくさん撮ってやる！と意気込んだものの、撮影する間も忘れるような素晴らしい旅となりました。Trek Americaという多国籍ツアー（13人で1週間かけてバンでロードトリップするツアー）にも参加し、日本人、アジア人も僕一人で、唯一のノンイングリッシュスピーカーでした。残念すぎるカメラワークに、無理やり編集でそれっぽく仕上げましたが、アメリカ西海岸の広大な景色や街は、それをもカバーしてくれる素晴らしいものでした。そして、素晴らしい経験となりました。</p>
         </div>
-      </div> -->
+      </div>
       <!--  Work 8 Contents -->
-      <!-- <div class="work-wrap">
+      <div class="work-wrap">
         <div ref="work8" class="work-contents" v-scroll-lock="open">
           <h3>
             <span class="work-title-1 text-en">USA - Trek America</span><br>
@@ -213,188 +211,13 @@
           </div>
           <p class="work-about">撮影と編集をしました。2017年の夏、初海外としてアメリカ一人旅に行くと決意し、2週間をアメリカ西海岸で過ごしました。Trek Americaという多国籍ツアー（13人で1週間かけてバンでロードトリップするツアー）に参加し、仲間と共に素敵な時間を過ごしました。肌で感じるカルチャー、壮大な自然、東京では見れない星空、ド派手な街、デカすぎるハンバーガー、日本から出たことのない僕には全てが新鮮でした。そして何よりもアジア人の僕に親切にしてくれたメンバー。とても大切な思い出です。</p>
         </div>
-      </div> -->
+      </div>
       <!-- Modal Window -->
       <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
         <template v-slot:img="slotProps">
             <div v-html="slotProps.imgInfo.modal"></div>
           </template>
         </open-modal>
-        <button> and more</button>
-      </div>
-    </div>
-  </section>
-  <!-- Skills -->
-  <section id="skills">
-    <div class="inner">
-      <div class="section-title">
-        <h2>Skills.</h2>
-        <p>My Self-judgement skills & my environments.</p>
-        <p>私の自己判断によるスキルと、その他環境について。</p>
-      </div>
-      <div class="skills grayscale">
-        <div class="skills-left">
-          <!-- Markup -->
-          <div class="skill-container">
-            <div class="skill-type">
-              <img src="/image/markup.png" alt="HTML5 &amp; CSS3">
-            </div>
-            <p>基本的なマークアップ、
-              レスポンシブデザインや、SCSS、
-              Emmetを使用した、マークアップが可能です。
-              <a href="https://ja.wikipedia.org/wiki/Don%27t_repeat_yourself" el="noopenner" target="_blank" style="text-decoration: underline">DRYの法則</a>を意識してマークアップするよう心がけています。
-            </p>
-          </div>
-          <!-- JavaScript -->
-          <div class="skill-container">
-            <div class="skill-type">
-              <img src="/image/js.png" alt="JavaScript">
-            </div>
-            <p>複雑なコードをスクラッチから書くことは難しいです。
-              JavaScript、jQueryやVue.jsなどのフレームワークを使用したコーディングは調べながらの実装が可能です。
-              webエンジニアリングの所感は、
-              <a href="https://arutega.jp/skills/" rel="noopenner" target="_blank" style="text-decoration: underline">こちらの記事</a>のチェックシートですと、B〜Cランクです。
-            </p>
-          </div>
-          <!-- Adobe Photoshop -->
-          <div class="skill-container">
-            <div class="skill-type">
-              <img src="/image/ps.png" alt="Adobe Photoshop">
-            </div>
-            <p>オーバーレイを多用した複雑なグラフィックデザインは難しいですが、基本的な画像編集が可能です。
-            </p>
-          </div>
-          <!-- Adobe XD -->
-          <div class="skill-container">
-            <div class="skill-type">
-              <img src="/image/xd.png" alt="Adobe XD">
-            </div>
-            <p>web制作時のカンプ作成で使用しています。UI/UXを意識した設計を触りながら学習しています。
-            </p>
-          </div>
-          <!-- Adobe After Effects -->
-          <div class="skill-container">
-            <div class="skill-type">
-              <img src="/image/ae.png" alt="Adobe After Effects">
-            </div>
-            <p>基本的な編集が可能です。複雑なアニメーションでなければ、イージイーズや波形を意識したトランジションを使った編集、
-              自然な3Dカメラトラッキングなどの編集が可能です。
-            </p>
-          </div>
-          <!-- Adobe Premier Pro -->
-          <div class="skill-container">
-            <div class="skill-type">
-              <img src="/image/pr.png" alt="Adobe After Effects">
-            </div>
-            <p>カッティングやテロップ挿入、トランジションを入れた基本的な編集が可能です。
-            </p>
-          </div>
-          <!-- Adobe Illustrator -->
-          <div class="skill-container">
-            <div class="skill-type">
-              <img src="/image/ai.png" alt="Adobe Illustrator">
-            </div>
-            <p>シンプルなロゴの作成が可能です。
-            </p>
-          </div>
-          <!-- Module Bundler -->
-          <div class="skill-container">
-            <div class="skill-type">
-              <img src="/image/parcel.png" alt="Adobe After Effects">
-              <img src="/image/prettier.png" alt="Adobe After Effects">
-              <img src="/image/editorconfig.png" alt="Adobe After Effects">
-              <img src="/image/eslint.png" alt="Adobe After Effects">
-            </div>
-            <p>Parcelをはじめとしたモジュールバンドラを使用し、雑然としたアセットを整理しています。
-            </p>
-          </div>
-          <!-- Environment -->
-          <div class="skill-container">
-            <div class="skill-type">
-              <img src="image/vscode.png" alt="VSCode">
-              <img src="image/github.png" alt="GitHub">
-              <img src="image/git.png" alt="Git">
-              <img src="image/todoist.png" alt="Todoist">
-            </div>
-            <p>MacBook Proを使用し、VSCodeでマークアップやコーディングをしています。GitとGitHubを使用し、バージョン管理をしています。タスク管理はTodoistでGTD (<a href="https://gtd-japan.jp/about" rel="noopenner" target="_blank" style="text-decoration: underline">Getting Things Done</a>) を用いています。
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Carrer -->
-  <section id="carrer">
-    <div class="inner">
-      <div class="section-title">
-        <h2>Carrer.</h2>
-        <p>私の経歴について。</p>
-      </div>
-      <div class="carrer-content">
-        <div class="carrer-left">
-          <img src="image/sea.JPG" alt="">
-        </div>
-        <div class="carrer-right">
-          <div class="carrer-box">
-            <h3>2016</h3>
-            <p> - 高校卒業後、美容専門学校入学</p>
-          </div>
-          <div class="carrer-box">
-            <h3>2018</h3>
-            <p> - 美容専門学校卒業
-              <br> - 株式会社assortへ入社（美容室）
-            </p>
-          </div>
-          <div class="carrer-box">
-            <h3>2019</h3>
-            <p> - Esportsチーム運営 (アマチュア)
-              <br> - 香港支店（ASSORT Hong Kong）へ2ヶ月間美容師アシスタントとして勤務
-              <br> - 10月末美容室退社
-            </p>
-          </div>
-          <div class="carrer-box">
-            <h3>2020</h3>
-            <p> - Esportsチーム運営脱退
-              <br> - webデザイン独学開始
-              <br> - 3ヶ月間限定でスタートアップ企業でアルバイト(web系研修など)
-              <br> - 案件獲得 (<a href="https://expl.co.jp/" rel="noopenner" target="_blank">地球探検隊 webサイト</a>)
-              <br> - 案件獲得 (<a href="https://miratabi.net/" rel="noopenner" target="_blank">未来を創る旅社 ミラタビ webサイト</a>)
-              <br> - 案件獲得 (<a href="https://honeyspot.co.jp/" rel="noopenner" target="_blank">HONEYSPOT ハニスポ webサイト</a>)
-              <br> - 案件獲得 (株式会社フォーツリーズ webサイト ※現在制作中)
-              <br> - 案件獲得 (Cafe IBIS webサイト ※現在製作中)
-            </p>
-          </div>
-          <div class="carrer-box">
-            <h3>2021</h3>
-            <p>就職活動開始</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- About -->
-  <section id="about">
-    <div class="inner">
-      <div class="section-title">
-        <h2>About.</h2>
-        <p>私について。</p>
-      </div>
-      <div class="about-container  grayscale">
-        <div class="about-left">
-          <h3 class="text-ja">エトーシンゴ / <span>Sheen</span></h3>
-          <p class="about-text">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。
-            まだまだ駆け出しですが、いつかはディレクションもできるようになりたいと思っています。
-            高校生の頃、アルバイトをし初給料で買ったPCで動画編集やCMSでwebサイトを制作した事をきっかけに、デザインに興味を持ち始めました。
-            趣味は、野球観戦、海外旅、動画撮影や編集など多趣味です。音楽は70s~90sのロックや古いサウンドが好きで、
-            DJもまだまだですが小規模イベントなどでやっています。
-            少しずつですがデザインからコーディング、撮影に動画編集など、
-            様々な領域でマルチに活躍できる人材を目指しています。
-          </p>
-          <div class="contact">Contact: <a href="mailto:shingoetohh@gmail.com">shingoetohh@gmail.com</a></div>
-        </div>
-        <div class="about-right">
-          <img src="image/me.jpg" alt="エトーシンゴ">
-        </div>
       </div>
     </div>
   </section>
@@ -402,7 +225,7 @@
   <footer id="footer">
     <div class="inner">
       <div class="footer">
-        <p class="footer-copyright">© 2020 - 2021 Shingo Eto.</p>
+        <p class="footer-copyright text-en">© 2020 Shingo Eto.</p>
         <ul class="footer-menu text-en">
           <li><a href="#works">WORKS</a></li>
           <li><a href="#skills">SKILLS</a></li>
