@@ -250,7 +250,6 @@ h1 a {
     margin-bottom: 2%;
   }
 }
-
 // Skills
 #skills {
   background-color: #ffffff;
@@ -367,7 +366,7 @@ h1 a {
 }
 // Footer
 #footer {
-  background-color: $textBlack;
+  background-color: #f6f6f6;
   height: 100px;
 }
 .footer {
@@ -375,8 +374,8 @@ h1 a {
   justify-content: space-between;
   line-height: 100px;
   &-copyright {
-    color: $textWhite;
-    display: flex;
+    color: $textBlack;
+    line-height: 100px;
   }
   &-menu {
     display: flex;
@@ -385,7 +384,7 @@ h1 a {
       list-style: none;
       margin-right: 30px;
       a {
-        color: $textWhite;
+        color: $textBlack;
         text-decoration: none;
       }
       a:hover {
@@ -399,6 +398,13 @@ h1 a {
 @media screen and (max-width: 1095px) {
   .inner {
     width: 80%;
+  }
+  // Header
+  #header {
+    height: 70px;
+    nav {
+      line-height: 70px;
+    }
   }
   // MV
   #mv {
@@ -449,6 +455,14 @@ h1 a {
     font-size: 60px;
   }
   // Header
+  #header {
+    height: 40px;
+    nav {
+      line-height: 40px;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
   // Works
   #works {
     .work {
@@ -473,7 +487,6 @@ h1 a {
   // Skills
   #skills {
     .skills {
-      display: block;
       &-left, &-right {
         width: 100%;
       }
@@ -487,9 +500,17 @@ h1 a {
       }
     }
   }
+  // Carrer
+  .carrer-left {
+    display: none;
+  }
+  .carrer-right {
+    width: 100%;
+  }
   // Footer
   .footer {
     &-copyright {
+      margin: 0 auto;
     }
     &-menu {
       display: none;
