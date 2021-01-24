@@ -306,7 +306,7 @@ h1 a {
 }
 // Carrer
 #carrer {
-  background-color: #f6f6f6;
+  background-color: #ffffff;
 }
 .carrer {
   &-content {
@@ -331,7 +331,7 @@ h1 a {
 }
 // About
 #about {
-  background-color: #ffffff;
+  background-color: #f6f6f6;
   background-size: cover;
   color: $textBlack;
 }
@@ -409,6 +409,9 @@ h1 a {
   // MV
   #mv {
     padding: 10% 0;
+    .mv-container {
+      height: 100%;
+    }
   }
   #hero-img {
     background-size: cover;
@@ -438,24 +441,36 @@ h1 a {
     }
   }
   // About
-  #about {
-    background-size: cover;
-  }
   .about {
     &-right {
       width: 100%;
     }
     &-left {
-      padding: 0;
       width: 100%;
-      margin-bottom: 50px;
     }
     &-container {
       display: inline;
     }
   }
+  .contact {
+    margin-bottom: 75px;
+  }
+  // Carrer
+  #carrer {
+    background-image: url(/image/carrer.jpg);
+    background-position: left 100% bottom 25%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+  }
+  .carrer-left {
+    display: none;
+  }
+  .carrer-right {
+    width: 100%;
+    left: 100px;
+  }
 }
-// Smart Phone
+// Smartphone
 @media screen and (max-width: 767px) {
   h2 {
     font-size: 60px;
@@ -466,7 +481,17 @@ h1 a {
     nav {
       line-height: 40px;
       text-align: center;
-      font-size: 12px;
+      font-size: 14px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      li {
+        padding: 0 10px;
+        &:first-child {
+          padding-left: 0;
+        }
+      }
     }
   }
   // Works
@@ -505,10 +530,6 @@ h1 a {
         margin-bottom: 8%;
       }
     }
-  }
-  // Carrer
-  .carrer-right {
-    width: 100%;
   }
   // Footer
   .footer {
