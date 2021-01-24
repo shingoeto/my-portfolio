@@ -103,7 +103,7 @@ p {
   }
 }
 // Main Visual
-#mv {
+#hero {
   background-size: cover;
   height: 100vh;
 }
@@ -118,7 +118,7 @@ h1 a {
   color: $textWhite;
   text-shadow: black 0 0 8px;
 }
-.mv-container {
+.hero-container {
   height: 100vh;
   width: 100%;
   text-align: center;
@@ -406,10 +406,10 @@ h1 a {
       line-height: 70px;
     }
   }
-  // MV
-  #mv {
+  // Hero
+  #hero {
     padding: 10% 0;
-    .mv-container {
+    .hero-container {
       height: 100%;
     }
   }
