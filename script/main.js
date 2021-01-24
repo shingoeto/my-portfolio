@@ -93,3 +93,12 @@ new Vue({
   }
 })
 
+$('.hamburger').on('click', function(){
+  $('.line').toggleClass('active');
+  $('.nav').fadeToggle();
+});
+$('li').on('click', function(){
+  $('.line').removeClass('active');
+  $('.nav').fadeOut();
+});
+
