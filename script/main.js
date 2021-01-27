@@ -20,7 +20,7 @@ Vue.component('OpenModal', {
   <div class="overlay" @click="exitModal">
     <div class="works-content" @click="stopModal" @click="keepModal">
       <slot name="img" :img-info="imgInfo"></slot>
-      <button type="button" @click="exitModal">CLOSE</button>
+      <button type="button" class="modal-close" @click="exitModal">CLOSE</button>
     </div>
   </div>
   `,
@@ -92,7 +92,7 @@ new Vue({
     }
   }
 })
-
+// Navigation Menu
 $('.hamburger').on('click', function(){
   $('.line').toggleClass('active');
   $('.nav').fadeToggle();
@@ -101,4 +101,5 @@ $('li').on('click', function(){
   $('.line').removeClass('active');
   $('.nav').fadeOut();
 });
+// Hide Navigation Line on Show in Modal Window
 
