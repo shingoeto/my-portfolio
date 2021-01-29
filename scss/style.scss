@@ -11,7 +11,7 @@ body {
 }
 // Fonts
 body, button {
-  font-family: 'Cormorant Garamond', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-family: 'Cormorant Infant', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
 .text {
   &-ja {
@@ -22,11 +22,11 @@ body, button {
   }
 }
 button {
-  padding: 20px 80px;
+  padding: 50px 200px;
   margin: 100px 0;
-  font-size: 20px;
+  font-size: 30px;
   border: none;
-  background-color: #111111;
+  background-color: #333333;
   color: $textWhite;
 }
 // *
@@ -198,23 +198,38 @@ h1 a {
     color: $textBlack;
     text-align: left;
   }
+  .work-no {
+    font-size: 100px;
+    font-weight: lighter;
+  }
   .work {
     &-tmb-wrap {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      margin-bottom: 10%;
+    }
+    &-text {
+      width: 30%;
     }
     &-tmb {
       height: 25%;
-      width: calc(25% - 2%);
+      width: 60%;
       cursor: pointer;
       transition: 1s;
       &:hover {
         box-shadow: 0 0 50px rgba(0,0, 0, 0.3);
+        filter: brightness(50%);
       }
       &:nth-child(4n) {
         margin-right: 0;
       }
+    }
+    &-role, &-used {
+      letter-spacing: normal;
+    }
+    &-role {
+      margin-bottom: 5%;
     }
   }
   // Modal Window
@@ -303,8 +318,45 @@ h1 a {
       font-size: 16px;
     }
   }
+  .fade-enter-active,
+  .fade-leave-active {
+      transition: opacity .8s ease;
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
   h4 {
     margin-bottom: 2%;
+  }
+}
+// works.html
+#page-works {
+  #works {
+    background-color: #ffffff;
+    h2 {
+      color: $textBlack;
+      text-align: left;
+    }
+    .work {
+      &-tmb-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      &-tmb {
+        height: 25%;
+        width: calc(25% - 2%);
+        cursor: pointer;
+        transition: 1s;
+        &:hover {
+          box-shadow: 0 0 50px rgba(0,0, 0, 0.3);
+        }
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
 // Skills

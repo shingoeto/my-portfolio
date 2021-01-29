@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@0;1&display=swap" rel="stylesheet">
   <meta property="og:site_name" content="エトーシンゴの作品集" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="SHINGO ETO's PORTFOLIO" />
@@ -14,7 +14,7 @@
   <meta property="og:email" content="shingoetohh@gmail.com" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@et_sng" />
-  <title>エトーシンゴ</title>
+  <title>SHINGO ETO's PORTFOLIO</title>
 </head>
 <body>
   <!-- Drawer -->
@@ -36,7 +36,7 @@
     </nav>
   </div>
   <!-- Hero -->
-  <section id="hero" class="grayscale">
+  <section id="hero" class="">
     <div class="inner">
       <div id="hero-img">
         <div class="inner">
@@ -57,14 +57,52 @@
       </div>
       <div id="app">
         <div class="work-tmb-wrap">
-          <!-- Work 1 -->
-          <img class="work-tmb grayscale" src="image/my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
-          <!-- Work 2 -->
-          <img class="work-tmb grayscale" src="image/expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
-          <!-- Work 3 -->
-          <img class="work-tmb grayscale" src="image/ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
-          <!-- Work 4 -->
-          <img class="work-tmb grayscale" src="image/thailand-vlog.jpg" alt="Thailand Vlog" @click="openModal4">
+          <div class="work-text">
+            <h3 class="work-no">01.</h3>
+            <h3>CHIKYU TANKENTAI</h3>
+            <br>my role: web design / markup / direction.
+            <br>used: vscode / adobe photoshop
+            <br>date: jul 2020.
+            <br>html / scss / parcel / prettier
+            <br> eslint / htmllint / stylelint / editor config
+          </div>
+          <img class="work-tmb" src="image/top-works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
+        </div>
+        <div class="work-tmb-wrap">
+          <img class="work-tmb" src="image/top-works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
+          <div class="work-text">
+            <h3 class="work-no">02.</h3>
+            <h3 class="work-name">MY PORTFOLIO</h3>
+            <p class="work-role">
+              MY ROLE: web Design / Direction
+              <br>USE: VSCode / Adobe Photoshop / Adobe XD
+              <br>DATE: Jan 2021
+            </p>
+            <p class="work-used">
+              html / scss / javascript / jquery / vue.js / parcel
+            </p>
+          </div>
+        </div>
+        <div class="work-tmb-wrap">
+          <div class="work-text">
+            <h3 class="work-no">03.</h3>
+            <h3 class="work-name">CAFE IBIS</h3>
+            <br>my role: web design (layout) / direction
+            <br>used: adobe photoshop
+            <br>date: jul 2020
+            <br>wordpress / cocoon / scss
+          </div>
+          <img class="work-tmb" src="image/top-works-ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
+        </div>
+        <div class="work-tmb-wrap">
+          <img class="work-tmb" src="image/top-works-thai.jpg" alt="Thailand Vlog" @click="openModal4">
+          <div class="work-text">
+            <h3 class="work-no">04.</h3>
+            <h3 class="work-name">WONDERFUL LAND "THAILAND"</h3>
+            <br>MY ROLE: shoot / edit
+            <br>DATE: dec 2020
+            <br>adobe after effects / iphone x
+          </div>
         </div>
         <!--  Work 1 Contents -->
         <div class="work-wrap">
@@ -345,7 +383,7 @@
         <h2>About.</h2>
         <p>私について。</p>
       </div>
-      <div class="about-container  grayscale">
+      <div class="about-container  ">
         <div class="about-left">
           <h3 class="text-ja">エトーシンゴ / <span>Sheen</span></h3>
           <p class="about-text">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。

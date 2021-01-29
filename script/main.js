@@ -12,17 +12,16 @@ Vue.component('OpenModal', {
     exitModal: function () {
       this.$emit('from-child');
     },
-    keepModal: function () {
-      event.stopPropagation();
-    },
   },
   template: `
-  <div class="overlay" @click="exitModal">
-    <div class="works-content" @click="stopModal" @click="keepModal">
-      <slot name="img" :img-info="imgInfo"></slot>
-      <button type="button" class="modal-close" @click="exitModal">close</button>
+  <transition name="fade">
+    <div class="overlay" @click="exitModal">
+      <div class="works-content" @click="stopModal">
+        <slot name="img" :img-info="imgInfo"></slot>
+        <button type="button" class="modal-close" @click="exitModal">close</button>
+      </div>
     </div>
-  </div>
+  </transition>
   `,
 });
 // v-scroll-lock
