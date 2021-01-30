@@ -22,9 +22,9 @@ body, button {
   }
 }
 button {
-  padding: 50px 200px;
+  padding: 30px 100px;
   margin: 100px 0;
-  font-size: 30px;
+  font-size: 20px;
   border: none;
   background-color: #333333;
   color: $textWhite;
@@ -199,7 +199,7 @@ h1 a {
     text-align: left;
   }
   .work-no {
-    font-size: 100px;
+    font-size: 60px;
     font-weight: lighter;
   }
   .work {
@@ -213,16 +213,18 @@ h1 a {
       width: 30%;
     }
     &-tmb {
-      height: 25%;
       width: 60%;
       cursor: pointer;
       transition: 1s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       &:hover {
         box-shadow: 0 0 50px rgba(0,0, 0, 0.3);
         filter: brightness(50%);
       }
-      &:nth-child(4n) {
-        margin-right: 0;
+      img {
+        width: 100%;
       }
     }
     &-role, &-used {
@@ -524,6 +526,7 @@ h1 a {
   // Skills
   .skill {
     &-container {
+      height: 300px;
       width: 45%;
     }
   }
@@ -534,6 +537,9 @@ h1 a {
     }
     .works-content {
       width: 90%;
+    }
+    .work-more {
+      margin: 0;
     }
   }
   // About
@@ -602,15 +608,30 @@ h1 a {
   // Works
   #works {
     .work {
+      &-no {
+        font-size: 50px;
+      }
+      &-name {
+        font-size: 24px;
+      }
       &-tmb-wrap {
-        justify-content: space-between;
+        flex-direction: column;
+      }
+      &-text {
+        width: 100%;
+        order: 1;
+        margin-bottom: 10%;
       }
       &-tmb {
-        width: calc(50% - 10% / 2);
+        width: 100%;
         margin-bottom: 10%;
+        order: 2;
         &:nth-child(2n) {
           margin-right: 0;
         }
+      }
+      &-more {
+        width: 100%;
       }
       .overlay {
         padding: 20% 0;
@@ -632,6 +653,7 @@ h1 a {
       }
       .skill-container {
         width: 100%;
+        height: auto;
         margin-bottom: 8%;
       }
     }

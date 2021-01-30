@@ -60,26 +60,35 @@
           <div class="work-text">
             <h3 class="work-no">01.</h3>
             <h3>CHIKYU TANKENTAI</h3>
-            <br>my role: web design / markup / direction.
-            <br>used: vscode / adobe photoshop
-            <br>date: jul 2020.
-            <br>html / scss / parcel / prettier
-            <br> eslint / htmllint / stylelint / editor config
+            <p class="work-role">
+              my role: web design / markup / direction.
+              <br>used: vscode / adobe photoshop
+              <br>date: jul 2020.
+            </p>
+            <p class="work-used">
+              html / scss / parcel / prettier
+              <br> eslint / htmllint / stylelint / editor config
+            </p>
           </div>
-          <img class="work-tmb" src="image/top-works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
+          <div class="work-tmb">
+            <img src="image/top-works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
+          </div>
         </div>
         <div class="work-tmb-wrap">
-          <img class="work-tmb" src="image/top-works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
+          <div class="work-tmb">
+            <img src="image/top-works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
+          </div>
           <div class="work-text">
             <h3 class="work-no">02.</h3>
             <h3 class="work-name">MY PORTFOLIO</h3>
             <p class="work-role">
-              MY ROLE: web Design / Direction
-              <br>USE: VSCode / Adobe Photoshop / Adobe XD
-              <br>DATE: Jan 2021
+              my role: web design / direction
+              <br>use: vscode / adobe photoshop / adobe xd
+              <br>date: jan 2021
             </p>
             <p class="work-used">
               html / scss / javascript / jquery / vue.js / parcel
+              <br>prettier / eslint / htmllint / stylelint / editor config
             </p>
           </div>
         </div>
@@ -87,21 +96,33 @@
           <div class="work-text">
             <h3 class="work-no">03.</h3>
             <h3 class="work-name">CAFE IBIS</h3>
-            <br>my role: web design (layout) / direction
-            <br>used: adobe photoshop
-            <br>date: jul 2020
-            <br>wordpress / cocoon / scss
+            <p class="work-role">
+              my role: web design (layout) / direction
+              <br>used: adobe photoshop
+              <br>date: jul 2020
+            </p>
+            <p class="work-used">
+              <br>wordpress / cocoon / scss
+            </p>
           </div>
-          <img class="work-tmb" src="image/top-works-ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
+          <div class="work-tmb">
+            <img src="image/top-works-ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
+          </div>
         </div>
         <div class="work-tmb-wrap">
-          <img class="work-tmb" src="image/top-works-thai.jpg" alt="Thailand Vlog" @click="openModal4">
+          <div class="work-tmb">
+            <img src="image/top-works-thai.jpg" alt="Thailand Vlog" @click="openModal4">
+          </div>
           <div class="work-text">
             <h3 class="work-no">04.</h3>
             <h3 class="work-name">WONDERFUL LAND "THAILAND"</h3>
-            <br>MY ROLE: shoot / edit
-            <br>DATE: dec 2020
-            <br>adobe after effects / iphone x
+            <p class="work-role">
+              my role: shoot / edit
+              <br>date: dec 2020
+            </p>
+            <p class="work-used">
+              adobe after effects / iphone x / osmo mobile 2
+            </p>
           </div>
         </div>
         <!--  Work 1 Contents -->
@@ -218,15 +239,15 @@
             </p>
           </div>
         </div>
-      <!-- Modal Window -->
-      <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
-        <template v-slot:img="slotProps">
-          <div v-html="slotProps.imgInfo.modal"></div>
-        </template>
-      </open-modal>
-      <button class="modal-close">and more</button>
+        <!-- Modal Window -->
+        <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
+          <template v-slot:img="slotProps">
+            <div v-html="slotProps.imgInfo.modal"></div>
+          </template>
+        </open-modal>
+        <button class="work-more">and more</button>
+      </div>
     </div>
-  </div>
   </section>
   <!-- Skills -->
   <section id="skills">
@@ -361,11 +382,6 @@
             <p> - Esportsチーム運営脱退
               <br> - webデザイン独学開始
               <br> - 3ヶ月間限定でスタートアップ企業でアルバイト(web系研修など)
-              <br> - 案件獲得 (<a href="https://expl.co.jp/" rel="noopenner" target="_blank">地球探検隊 webサイト</a>)
-              <br> - 案件獲得 (<a href="https://miratabi.net/" rel="noopenner" target="_blank">未来を創る旅社 ミラタビ webサイト</a>)
-              <br> - 案件獲得 (<a href="https://honeyspot.co.jp/" rel="noopenner" target="_blank">HONEYSPOT ハニスポ webサイト</a>)
-              <br> - 案件獲得 (株式会社フォーツリーズ webサイト ※現在制作中)
-              <br> - 案件獲得 (Cafe IBIS webサイト ※現在製作中)
             </p>
           </div>
           <div class="carrer-box">
