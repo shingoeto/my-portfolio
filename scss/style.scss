@@ -23,7 +23,6 @@ body, button {
 }
 button {
   padding: 30px 100px;
-  margin: 100px 0;
   font-size: 20px;
   border: none;
   background-color: #333333;
@@ -60,10 +59,11 @@ h1 {
   font-size: 40px;
 }
 h2 {
-  font-size: 80px;
+  font-size: 100px;
   text-align: center;
   margin-bottom: 10px;
   text-align: left;
+  font-weight: normal;
 }
 h3 {
   font-size:26px;
@@ -198,19 +198,25 @@ h1 a {
     color: $textBlack;
     text-align: left;
   }
-  .work-no {
-    font-size: 60px;
-    font-weight: lighter;
-  }
   .work {
-    &-tmb-wrap {
+    &-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-bottom: 10%;
+      margin-bottom: 20%;
     }
     &-text {
       width: 30%;
+    }
+    &-no {
+      font-size: 60px;
+      font-weight: lighter;
+    }
+    &-role, &-used {
+      letter-spacing: normal;
+    }
+    &-role {
+      margin-bottom: 5%;
     }
     &-tmb {
       width: 60%;
@@ -226,12 +232,6 @@ h1 a {
       img {
         width: 100%;
       }
-    }
-    &-role, &-used {
-      letter-spacing: normal;
-    }
-    &-role {
-      margin-bottom: 5%;
     }
   }
   // Modal Window
@@ -580,6 +580,7 @@ h1 a {
   }
   h2 {
     font-size: 60px;
+    margin-bottom: 5%;
   }
   p {
     letter-spacing: normal;
