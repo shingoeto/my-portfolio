@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@0;1&display=swap" rel="stylesheet">
   <meta property="og:site_name" content="エトーシンゴの作品集" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="SHINGO ETO's PORTFOLIO" />
@@ -14,7 +14,7 @@
   <meta property="og:email" content="shingoetohh@gmail.com" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@et_sng" />
-  <title>エトーシンゴ</title>
+  <title>SHINGO ETO's PORTFOLIO</title>
 </head>
 <body>
   <!-- Drawer -->
@@ -36,7 +36,7 @@
     </nav>
   </div>
   <!-- Hero -->
-  <section id="hero" class="grayscale">
+  <section id="hero" class="">
     <div class="inner">
       <div id="hero-img">
         <div class="inner">
@@ -56,28 +56,91 @@
         <p>私の作品集。主にウェブデザイン、動画編集の作品など。</p>
       </div>
       <div id="app">
-        <div class="work-tmb-wrap">
-          <!-- Work 1 -->
-          <img class="work-tmb grayscale" src="image/my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
-          <!-- Work 2 -->
-          <img class="work-tmb grayscale" src="image/expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
-          <!-- Work 3 -->
-          <img class="work-tmb grayscale" src="image/ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
-          <!-- Work 4 -->
-          <img class="work-tmb grayscale" src="image/thailand-vlog.jpg" alt="Thailand Vlog" @click="openModal4">
+        <div class="work-container">
+          <div class="work-text">
+            <h3 class="work-no">01.</h3>
+            <h3>CHIKYU TANKENTAI</h3>
+            <p class="work-role">
+              my role: web design / markup / direction.
+              <br>used: vscode / adobe photoshop
+              <br>date: jul 2020.
+            </p>
+            <p class="work-used">
+              html / scss / parcel / prettier
+              <br> eslint / htmllint / stylelint / editor config
+            </p>
+          </div>
+          <div class="work-tmb">
+            <img src="image/top-works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
+          </div>
+        </div>
+        <div class="work-container">
+          <div class="work-tmb">
+            <img src="image/top-works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
+          </div>
+          <div class="work-text">
+            <h3 class="work-no">02.</h3>
+            <h3 class="work-name">MY PORTFOLIO</h3>
+            <p class="work-role">
+              my role: web design / direction
+              <br>use: vscode / adobe photoshop / adobe xd
+              <br>date: jan 2021
+            </p>
+            <p class="work-used">
+              html / scss / javascript / jquery / vue.js / parcel
+              <br>prettier / eslint / htmllint / stylelint / editor config
+            </p>
+          </div>
+        </div>
+        <div class="work-container">
+          <div class="work-text">
+            <h3 class="work-no">03.</h3>
+            <h3 class="work-name">CAFE IBIS</h3>
+            <p class="work-role">
+              my role: web design (layout) / direction
+              <br>used: adobe photoshop
+              <br>date: jul 2020
+            </p>
+            <p class="work-used">
+              <br>wordpress / cocoon / scss
+            </p>
+          </div>
+          <div class="work-tmb">
+            <img src="image/top-works-ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
+          </div>
+        </div>
+        <div class="work-container">
+          <div class="work-tmb">
+            <img src="image/top-works-thai.jpg" alt="Thailand Vlog" @click="openModal4">
+          </div>
+          <div class="work-text">
+            <h3 class="work-no">04.</h3>
+            <h3 class="work-name">WONDERFUL LAND "THAILAND"</h3>
+            <p class="work-role">
+              my role: shoot / edit
+              <br>date: dec 2020
+            </p>
+            <p class="work-used">
+              adobe after effects / iphone x / osmo mobile 2
+            </p>
+          </div>
         </div>
         <!--  Work 1 Contents -->
-        <div class="work-wrap">
+        <div class="modal-container">
           <div ref="work1" class="work-contents" v-scroll-lock="open">
-            <h3>
-              <span class="work-title-1 text-en">My Portfolio</span><br>
-              <span class="work-title-2"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
+            <h3 class="work-title-wrap">
+              <span class="work-modal-title text-en">My Portfolio</span><br>
+              <span class="work-modal-link"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
             </h3>
-            <a href="https://shingoeto.com/" rel="noopenner" target="_blank">
-              <img src="image/my-portfolio-pc.jpg" alt="My Portfolio (PC表示)" class="work-image">
-            </a>
-            <div class="work-scope">design & coding: shingo eto
+            <div class="work-modal-image">
+              <a href="https://shingoeto.com/" rel="noopenner" target="_blank">
+                <img src="image/my-portfolio-pc.jpg" alt="My Portfolio (PC表示)" class="work-image">
+              </a>
             </div>
+            <p class="work-scope">
+              web design / direction: shingo eto
+              <br>photos: sherry / shingo eto
+            </p>
             <p class="work-about">
               転職用のポートフォリオサイトを作成しました。
               デザイン面では余白を意識し、
@@ -99,18 +162,23 @@
           </div>
         </div>
         <!--  Work 2 Contents -->
-        <div class="work-wrap">
+        <div class="modal-container">
           <div ref="work2" class="work-contents" v-scroll-lock="open">
-            <h3>
-              <span class="work-title-1 text-ja">地球探検隊</span><br>
-              <span class="work-title-2"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
+            <h3 class="work-title-wrap">
+              <span class="work-modal-title text-en">Chikyu Tankentai</span><br>
+              <span class="work-modal-link"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
             </h3>
-            <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
-              <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="work-image">
-            </a>
-            <div class="work-scope">client: chikyu tankentai
-              <br>design & coding: shingo eto
+            <div class="work-modal-image">
+              <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
+                <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="work-image">
+              </a>
             </div>
+            <p class="work-scope">
+              web design / direction: shingo eto
+              <br>photos: manabu
+              <br>html / scss / parcel / prettier
+              <br> eslint / htmllint / stylelint / editor config
+            </p>
             <p class="work-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなwebサイトをイメージしました。どこか柔らかさを感じる配色をイメージし、行間も少し開けることでどこかやさしさも伝わるように意識しました。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。</p>
             <div class="work-captures">
               <div class="work-capture-tab">
@@ -123,21 +191,21 @@
           </div>
         </div>
         <!--  Work 3 Contents -->
-        <div class="work-wrap">
+        <div class="modal-container">
           <div ref="work3" class="work-contents" v-scroll-lock="open">
-            <h3>
-              <span class="work-title-1 text-en">Cafe IBIS</span><br>
-              <span class="work-title-2"><a href="https://ibiscafe.com/" rel="noopenner" target="_blank">ibiscafe.com</a></span>
+            <h3 class="work-title-wrap">
+              <span class="work-modal-title text-en">Cafe IBIS</span><br>
+              <span class="work-modal-link"><a href="https://ibiscafe.com/" rel="noopenner" target="_blank">ibiscafe.com</a></span>
             </h3>
             <a href="https://ibiscafe.com/" rel="noopenner" target="_blank">
               <img src="image/ibis-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="work-image">
             </a>
-            <div class="work-scope">client: cafe ibis
-              <br>design: shingo eto
-              <br>Template: Cocoon
-            </div>
+            <p class="work-scope">
+              web design: shingo eto
+              <br>wordpress / cocoon / scss
+            </p>
             <p class="work-about">
-              スタッフとしてもお客としてもお世話になっているカフェのwebサイトを
+              スタッフとしてもゲストとしてもお世話になっているカフェのwebサイトを
               WordPressテーマ「Cocoon」を使用し、レイアウト・デザインをしました。
               全体のイメージは「シンプルさ」「洗練さ」。
               写真素材が洗練されているイメージのものが多く、
@@ -159,17 +227,17 @@
           </div>
         </div>
         <!--  Work 4 Contents -->
-        <div class="work-wrap">
+        <div class="modal-container">
           <div ref="work4" class="work-contents" v-scroll-lock="open">
-            <h3>
-              <span class="work-title-1 text-en">Thailand - Wonderful Land</span>
+            <h3 class="work-title-wrap">
+              <span class="work-modal-title text-en">Thailand - Wonderful Land</span>
             </h3>
             <div class="work-video">
               <iframe title="Thailand - Wonderful Land" src="https://www.youtube.com/embed/hURqN2SRsYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="work-scope">
-              clips & editing: shingo eto
-            </div>
+            <p class="work-scope">
+              clips / edit: shingo eto
+            </p>
             <p class="work-about">
               2020年2月、タイに旅をした時のVlogです。
               疾走感のあるVlogをイメージしましたが、
@@ -180,15 +248,15 @@
             </p>
           </div>
         </div>
-      <!-- Modal Window -->
-      <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
-        <template v-slot:img="slotProps">
-          <div v-html="slotProps.imgInfo.modal"></div>
-        </template>
-      </open-modal>
-      <button class="modal-close">and more</button>
+        <!-- Modal Window -->
+        <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
+          <template v-slot:img="slotProps">
+            <div v-html="slotProps.imgInfo.modal"></div>
+          </template>
+        </open-modal>
+        <button class="work-more">and more</button>
+      </div>
     </div>
-  </div>
   </section>
   <!-- Skills -->
   <section id="skills">
@@ -207,7 +275,7 @@
             </div>
             <p>基本的なマークアップ、
               レスポンシブデザインや、SCSS、
-              Emmetを使用した、マークアップが可能です。
+              Emmetを使用したマークアップが可能です。
               <a href="https://ja.wikipedia.org/wiki/Don%27t_repeat_yourself" el="noopenner" target="_blank" style="text-decoration: underline">DRYの法則</a>を意識してマークアップするよう心がけています。
             </p>
           </div>
@@ -323,11 +391,6 @@
             <p> - Esportsチーム運営脱退
               <br> - webデザイン独学開始
               <br> - 3ヶ月間限定でスタートアップ企業でアルバイト(web系研修など)
-              <br> - 案件獲得 (<a href="https://expl.co.jp/" rel="noopenner" target="_blank">地球探検隊 webサイト</a>)
-              <br> - 案件獲得 (<a href="https://miratabi.net/" rel="noopenner" target="_blank">未来を創る旅社 ミラタビ webサイト</a>)
-              <br> - 案件獲得 (<a href="https://honeyspot.co.jp/" rel="noopenner" target="_blank">HONEYSPOT ハニスポ webサイト</a>)
-              <br> - 案件獲得 (株式会社フォーツリーズ webサイト ※現在制作中)
-              <br> - 案件獲得 (Cafe IBIS webサイト ※現在製作中)
             </p>
           </div>
           <div class="carrer-box">
@@ -345,14 +408,14 @@
         <h2>About.</h2>
         <p>私について。</p>
       </div>
-      <div class="about-container  grayscale">
+      <div class="about-container  ">
         <div class="about-left">
           <h3 class="text-ja">エトーシンゴ / <span>Sheen</span></h3>
           <p class="about-text">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。
             まだまだ駆け出しですが、いつかはディレクションもできるようになりたいと思っています。
-            高校生の頃、アルバイトをし初給料で買ったPCで動画編集やCMSでwebサイトを制作した事をきっかけに、デザインに興味を持ち始めました。
-            趣味は、野球観戦、海外旅、動画撮影や編集など多趣味です。音楽は70s~90sのロックや古いサウンドが好きで、
-            DJもまだまだですが小規模イベントなどでやっています。
+            高校生の頃、アルバイトをし初給料で買ったPCで動画編集をしたりCMSでwebサイトを制作した事をきっかけに、デザインに興味を持ち始めました。
+            趣味は、野球観戦、海外旅、動画撮影や編集など多趣味です。古臭いものが好きです。
+            たまに超小規模イベントなどでDJもやっています。
             少しずつですがデザインからコーディング、撮影に動画編集など、
             様々な領域でマルチに活躍できる人材を目指しています。
           </p>
@@ -368,7 +431,7 @@
   <footer id="footer">
     <div class="inner">
       <div class="footer">
-        <p class="footer-copyright">© 2020 - 2021 Shingo Eto.</p>
+        <p class="footer-copyright">&copy; 2020 - 2021 Shingo Eto.</p>
         <ul class="footer-menu text-en">
           <li><a href="#works">WORKS</a></li>
           <li><a href="#skills">SKILLS</a></li>
