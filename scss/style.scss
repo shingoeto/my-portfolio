@@ -22,11 +22,12 @@ body, button {
   }
 }
 button {
-  padding: 30px 100px;
+  padding: 20px 100px;
   font-size: 20px;
   border: none;
-  background-color: #333333;
+  background-color: #222222;
   color: $textWhite;
+  margin-top: 150px;
 }
 // *
 * {
@@ -37,7 +38,7 @@ button {
 }
 //
 #works, #about, #skills, #carrer {
-  padding: 100px 0;
+  padding: 150px 0;
 }
 // inner
 .inner {
@@ -59,14 +60,14 @@ h1 {
   font-size: 40px;
 }
 h2 {
-  font-size: 100px;
+  font-size: 120px;
   text-align: center;
   margin-bottom: 10px;
   text-align: left;
   font-weight: normal;
 }
 h3 {
-  font-size:26px;
+  font-size: 26px;
   margin-bottom: 10px;
 }
 h4 {
@@ -204,6 +205,9 @@ h1 a {
       flex-wrap: wrap;
       justify-content: space-between;
       margin-bottom: 20%;
+      &:nth-child(4n) {
+        margin-bottom: 0;
+      }
     }
     &-text {
       width: 30%;
@@ -234,8 +238,8 @@ h1 a {
       }
     }
   }
-  // Modal Window
-  .overlay {
+  // Modal Window Template
+  .modal-overlay {
     z-index: 1;
     top: 0;
     left: 0;
@@ -249,77 +253,77 @@ h1 a {
     align-items: center;
     height: 100vh;
   }
+  .works {
+    &-modal-content {
+      z-index: 100;
+      background-color: #fff;
+      padding: 0 8%;
+      max-height: 100%;
+      margin: 0 10%;
+      width: 60%;
+      position: relative;
+      box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      overflow-y: auto;
+      touch-action: pan-x;
+      text-align: center;
+    }
+  }
   .work-contents {
     display: none;
   }
-  .works-content {
-    z-index: 100;
-    background-color: #fff;
-    padding: 0 8%;
-    max-height: 100%;
-    margin: 0 10%;
-    width: 60%;
-    position: relative;
-    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    overflow-y: auto;
-    touch-action: pan-x;
-    text-align: center;
-    .work-image, .work-video {
+  // Modal Window Content
+  .work {
+    &-title-wrap, &-modal-img {
+      margin: 10% 0;
+    }
+    &-modal-title {
+      font-size: 20px;
+    }
+    &-modal-link {
+      font-size: 16px;
+    }
+    &-modal-image, &-video, &-about, &-scope {
+      margin-bottom: 10%;
+    }
+    &-image, &-video {
       width: 100%;
     }
-    .work-video {
+    &-video {
       height: 0;
       position: relative;
       padding-top: 56.25%;
       overflow: hidden;
-    }
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .works-about, h3 {
-      margin: 10% 0;
-    }
-    .work {
-      &-title-1 {
-        font-size: 20px;
-      }
-      &-title-2 {
-        font-size: 16px;
-      }
-      &-scope {
-        margin: 10% 0;
-      }
-      &-about {
-        margin-bottom: 6%;
-      }
-      &-captures {
-        display: flex;
-        justify-content: space-between;
-      }
-      &-capture-tab, &-capture-sp {
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
-      &-capture-tab {
-        width: 60%;
-        height: 10%;
-      }
-      &-capture-sp {
-        width: 30%;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
-    button {
-      margin: 10% 0;
-      font-size: 16px;
+    &-scope {
+      letter-spacing: normal;
+    }
+    &-captures {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-capture-tab, &-capture-sp {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-capture-tab {
+      width: 60%;
+      height: 10%;
+    }
+    &-capture-sp {
+      width: 30%;
     }
   }
+  // Modal Fade
   .fade-enter-active,
   .fade-leave-active {
       transition: opacity .8s ease;
@@ -327,9 +331,6 @@ h1 a {
   .fade-enter,
   .fade-leave-to {
     opacity: 0;
-  }
-  h4 {
-    margin-bottom: 2%;
   }
 }
 // works.html
@@ -497,6 +498,9 @@ h1 a {
   .inner {
     width: 80%;
   }
+  button {
+    margin-top: 100px;
+  }
   // Header
   #header {
     height: 70px;
@@ -521,7 +525,7 @@ h1 a {
     margin-bottom: 75px;
   }
   #works, #about, #skills {
-    padding: 75px 0;
+    padding: 100px 0;
   }
   // Skills
   .skill {
@@ -537,9 +541,6 @@ h1 a {
     }
     .works-content {
       width: 90%;
-    }
-    .work-more {
-      margin: 0;
     }
   }
   // About
@@ -625,7 +626,6 @@ h1 a {
       }
       &-tmb {
         width: 100%;
-        margin-bottom: 10%;
         order: 2;
         &:nth-child(2n) {
           margin-right: 0;
