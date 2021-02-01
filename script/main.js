@@ -101,4 +101,15 @@ $('li').on('click', function(){
   $('.nav').fadeOut();
 });
 // Hide Navigation Line on Show in Modal Window
+$(function() {
+  $(window).scroll(function () {
+    $('.fadein').each(function () {
+      var scroll = $(window).scrollTop();
+      var position = $(this).offset().top;
+      var windowHeight = $(window).height();
+      if (scroll > position - windowHeight - 300)
+        $(this).addClass("on");
+    })
+  })
+})
 

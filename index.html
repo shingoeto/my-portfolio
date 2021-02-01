@@ -36,7 +36,7 @@
     </nav>
   </div>
   <!-- Hero -->
-  <section id="hero" class="">
+  <section id="hero">
     <div class="inner">
       <div id="hero-img">
         <div class="inner">
@@ -51,42 +51,42 @@
   <section id="works">
     <div class="inner">
       <div class="section-title">
-        <h2>Works.</h2>
-        <p>This is my anthology. mainly, web design and video creating.</p>
-        <p>私の作品集。主にウェブデザイン、動画編集の作品など。</p>
+        <h2 class="fadein">Works.</h2>
+        <p class="fadein">This is my anthology. mainly, web design and video creating.</p>
+        <p class="fadein">私の作品集。主にウェブデザイン、動画編集の作品など。</p>
       </div>
       <div id="app">
         <div class="work-container">
           <div class="work-text">
-            <h3 class="work-no">01.</h3>
-            <h3>CHIKYU TANKENTAI</h3>
-            <p class="work-role">
+            <h3 class="work-no fadein">01.</h3>
+            <h3 class="work-name fadein">CHIKYU TANKENTAI</h3>
+            <p class="work-role fadein">
               my role: web design / markup / direction.
               <br>used: vscode / adobe photoshop
               <br>date: jul 2020.
             </p>
-            <p class="work-used">
+            <p class="work-used fadein">
               html / scss / parcel / prettier
               <br> eslint / htmllint / stylelint / editor config
             </p>
           </div>
-          <div class="work-tmb">
+          <div class="work-tmb fadein">
             <img src="image/top-works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
           </div>
         </div>
         <div class="work-container">
-          <div class="work-tmb">
+          <div class="work-tmb fadein">
             <img src="image/top-works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
           </div>
           <div class="work-text">
-            <h3 class="work-no">02.</h3>
-            <h3 class="work-name">MY PORTFOLIO</h3>
-            <p class="work-role">
+            <h3 class="work-no fadein">02.</h3>
+            <h3 class="work-name fadein">MY PORTFOLIO</h3>
+            <p class="work-role fadein">
               my role: web design / direction
               <br>use: vscode / adobe photoshop / adobe xd
               <br>date: jan 2021
             </p>
-            <p class="work-used">
+            <p class="work-used fadein">
               html / scss / javascript / jquery / vue.js / parcel
               <br>prettier / eslint / htmllint / stylelint / editor config
             </p>
@@ -94,33 +94,33 @@
         </div>
         <div class="work-container">
           <div class="work-text">
-            <h3 class="work-no">03.</h3>
-            <h3 class="work-name">CAFE IBIS</h3>
-            <p class="work-role">
+            <h3 class="work-no fadein">03.</h3>
+            <h3 class="work-name fadein">CAFE IBIS</h3>
+            <p class="work-role fadein">
               my role: web design (layout) / direction
               <br>used: adobe photoshop
               <br>date: jul 2020
             </p>
-            <p class="work-used">
+            <p class="work-used fadein">
               <br>wordpress / cocoon / scss
             </p>
           </div>
-          <div class="work-tmb">
+          <div class="work-tmb fadein">
             <img src="image/top-works-ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
           </div>
         </div>
         <div class="work-container">
-          <div class="work-tmb">
+          <div class="work-tmb fadein">
             <img src="image/top-works-thai.jpg" alt="Thailand Vlog" @click="openModal4">
           </div>
-          <div class="work-text">
-            <h3 class="work-no">04.</h3>
-            <h3 class="work-name">WONDERFUL LAND "THAILAND"</h3>
-            <p class="work-role">
+          <div class="work-text fadein">
+            <h3 class="work-no fadein">04.</h3>
+            <h3 class="work-name fadein">WONDERFUL LAND "THAILAND"</h3>
+            <p class="work-role fadein">
               my role: shoot / edit
               <br>date: dec 2020
             </p>
-            <p class="work-used">
+            <p class="work-used fadein">
               adobe after effects / iphone x / osmo mobile 2
             </p>
           </div>
@@ -128,10 +128,10 @@
         <!--  Work 1 Contents -->
         <div class="modal-container">
           <div ref="work1" class="work-contents" v-scroll-lock="open">
-            <h3 class="work-title-wrap">
+            <h4 class="work-title-wrap">
               <span class="work-modal-title text-en">My Portfolio</span><br>
               <span class="work-modal-link"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
-            </h3>
+            </h4>
             <div class="work-modal-image">
               <a href="https://shingoeto.com/" rel="noopenner" target="_blank">
                 <img src="image/my-portfolio-pc.jpg" alt="My Portfolio (PC表示)" class="work-image">
@@ -164,10 +164,10 @@
         <!--  Work 2 Contents -->
         <div class="modal-container">
           <div ref="work2" class="work-contents" v-scroll-lock="open">
-            <h3 class="work-title-wrap">
+            <h4 class="work-title-wrap">
               <span class="work-modal-title text-en">Chikyu Tankentai</span><br>
               <span class="work-modal-link"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
-            </h3>
+            </h4>
             <div class="work-modal-image">
               <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
                 <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="work-image">
@@ -193,10 +193,10 @@
         <!--  Work 3 Contents -->
         <div class="modal-container">
           <div ref="work3" class="work-contents" v-scroll-lock="open">
-            <h3 class="work-title-wrap">
+            <h4 class="work-title-wrap">
               <span class="work-modal-title text-en">Cafe IBIS</span><br>
               <span class="work-modal-link"><a href="https://ibiscafe.com/" rel="noopenner" target="_blank">ibiscafe.com</a></span>
-            </h3>
+            </h4>
             <a href="https://ibiscafe.com/" rel="noopenner" target="_blank">
               <img src="image/ibis-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="work-image">
             </a>
@@ -229,9 +229,9 @@
         <!--  Work 4 Contents -->
         <div class="modal-container">
           <div ref="work4" class="work-contents" v-scroll-lock="open">
-            <h3 class="work-title-wrap">
+            <h4 class="work-title-wrap">
               <span class="work-modal-title text-en">Thailand - Wonderful Land</span>
-            </h3>
+            </h4>
             <div class="work-video">
               <iframe title="Thailand - Wonderful Land" src="https://www.youtube.com/embed/hURqN2SRsYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -262,14 +262,14 @@
   <section id="skills">
     <div class="inner">
       <div class="section-title">
-        <h2>Skills.</h2>
-        <p>My Self-judgement skills & my environments.</p>
-        <p>私の自己判断によるスキルと、その他環境について。</p>
+        <h2 class="fadein">Skills.</h2>
+        <p class="fadein">My Self-judgement skills & my environments.</p>
+        <p class="fadein">私の自己判断によるスキルと、その他環境について。</p>
       </div>
       <div class="skills">
         <div class="skills-left">
           <!-- Markup -->
-          <div class="skill-container">
+          <div class="skill-container fadein">
             <div class="skill-type">
               <img src="/image/markup.png" alt="HTML5 &amp; CSS3">
             </div>
@@ -280,7 +280,7 @@
             </p>
           </div>
           <!-- JavaScript -->
-          <div class="skill-container">
+          <div class="skill-container fadein">
             <div class="skill-type">
               <img src="/image/js.png" alt="JavaScript">
             </div>
@@ -291,7 +291,7 @@
             </p>
           </div>
           <!-- Adobe Photoshop -->
-          <div class="skill-container">
+          <div class="skill-container fadein">
             <div class="skill-type">
               <img src="/image/ps.png" alt="Adobe Photoshop">
             </div>
@@ -299,7 +299,7 @@
             </p>
           </div>
           <!-- Adobe XD -->
-          <div class="skill-container">
+          <div class="skill-container fadein">
             <div class="skill-type">
               <img src="/image/xd.png" alt="Adobe XD">
             </div>
@@ -307,7 +307,7 @@
             </p>
           </div>
           <!-- Adobe After Effects -->
-          <div class="skill-container">
+          <div class="skill-container fadein">
             <div class="skill-type">
               <img src="/image/ae.png" alt="Adobe After Effects">
             </div>
@@ -316,7 +316,7 @@
             </p>
           </div>
           <!-- Adobe Premier Pro -->
-          <div class="skill-container">
+          <div class="skill-container fadein">
             <div class="skill-type">
               <img src="/image/pr.png" alt="Adobe After Effects">
             </div>
@@ -324,7 +324,7 @@
             </p>
           </div>
           <!-- Adobe Illustrator -->
-          <div class="skill-container">
+          <div class="skill-container fadein">
             <div class="skill-type">
               <img src="/image/ai.png" alt="Adobe Illustrator">
             </div>
@@ -332,7 +332,7 @@
             </p>
           </div>
           <!-- Module Bundler -->
-          <div class="skill-container">
+          <div class="skill-container fadein">
             <div class="skill-type">
               <img src="/image/parcel.png" alt="Adobe After Effects">
               <img src="/image/prettier.png" alt="Adobe After Effects">
@@ -343,7 +343,7 @@
             </p>
           </div>
           <!-- Environment -->
-          <div class="skill-container">
+          <div class="skill-container fadein">
             <div class="skill-type">
               <img src="image/vscode.png" alt="VSCode">
               <img src="image/github.png" alt="GitHub">
@@ -361,39 +361,36 @@
   <section id="carrer">
     <div class="inner">
       <div class="section-title">
-        <h2>Carrer.</h2>
-        <p>私の経歴について。</p>
+        <h2 class="fadein">Carrer.</h2>
+        <p class="fadein">私の経歴について。</p>
       </div>
       <div class="carrer-content">
-        <div class="carrer-left">
-          <img src="image/carrer.jpg" alt="">
-        </div>
         <div class="carrer-right">
-          <div class="carrer-box">
+          <div class="carrer-box fadein">
             <h3>2016</h3>
             <p> - 高校卒業後、美容専門学校入学</p>
           </div>
-          <div class="carrer-box">
+          <div class="carrer-box fadein">
             <h3>2018</h3>
             <p> - 美容専門学校卒業
               <br> - 株式会社assortへ入社（美容室）
             </p>
           </div>
-          <div class="carrer-box">
+          <div class="carrer-box fadein">
             <h3>2019</h3>
             <p> - Esportsチーム運営 (アマチュア)
               <br> - 香港支店（ASSORT Hong Kong）へ2ヶ月間美容師アシスタントとして勤務
               <br> - 10月末美容室退社
             </p>
           </div>
-          <div class="carrer-box">
+          <div class="carrer-box fadein">
             <h3>2020</h3>
             <p> - Esportsチーム運営脱退
               <br> - webデザイン独学開始
               <br> - 3ヶ月間限定でスタートアップ企業でアルバイト(web系研修など)
             </p>
           </div>
-          <div class="carrer-box">
+          <div class="carrer-box fadein">
             <h3>2021</h3>
             <p>就職活動開始</p>
           </div>
@@ -405,13 +402,13 @@
   <section id="about">
     <div class="inner">
       <div class="section-title">
-        <h2>About.</h2>
-        <p>私について。</p>
+        <h2 class="fadein">About.</h2>
+        <p class="fadein">私について。</p>
       </div>
-      <div class="about-container  ">
+      <div class="about-container">
         <div class="about-left">
-          <h3 class="text-ja">エトーシンゴ / <span>Sheen</span></h3>
-          <p class="about-text">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。
+          <h3 class="text-ja fadein">エトーシンゴ / <span>Shingo Eto</span></h3>
+          <p class="about-text fadein">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。
             まだまだ駆け出しですが、いつかはディレクションもできるようになりたいと思っています。
             高校生の頃、アルバイトをし初給料で買ったPCで動画編集をしたりCMSでwebサイトを制作した事をきっかけに、デザインに興味を持ち始めました。
             趣味は、野球観戦、海外旅、動画撮影や編集など多趣味です。古臭いものが好きです。
@@ -419,9 +416,9 @@
             少しずつですがデザインからコーディング、撮影に動画編集など、
             様々な領域でマルチに活躍できる人材を目指しています。
           </p>
-          <div class="contact">Contact: <a href="mailto:shingoetohh@gmail.com">shingoetohh@gmail.com</a></div>
+          <div class="contact fadein">Contact: <a href="mailto:shingoetohh@gmail.com">shingoetohh@gmail.com</a></div>
         </div>
-        <div class="about-right">
+        <div class="about-right fadein">
           <img src="image/me.jpg" alt="エトーシンゴ">
         </div>
       </div>
