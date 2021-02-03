@@ -31,7 +31,7 @@ body, button {
   }
 }
 button {
-  padding: 20px 100px;
+  padding: 30px 110px;
   font-size: 20px;
   border: none;
   background-color: #222222;
@@ -172,7 +172,6 @@ p {
     }
   }
 }
-
 // Main Visual
 #hero {
   background-size: cover;
@@ -245,8 +244,8 @@ h1 a {
         width: 100%;
       }
     }
-    &-modal-close {
-      margin: 10% 0;
+    &-more a {
+      color: $textWhite;
     }
   }
   // Modal Window Template
@@ -332,6 +331,9 @@ h1 a {
     }
     &-capture-sp {
       width: 30%;
+    }
+    &-modal-close {
+      margin: 10% 0;
     }
   }
   // Modal Fade
