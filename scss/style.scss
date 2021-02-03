@@ -142,6 +142,7 @@ p {
     background-image: url(/image/nav-bg.gif);
     background-size: cover;
     background-position: center;
+    z-index: 1000000;
   }
   .item {
     margin: 40px 0;
