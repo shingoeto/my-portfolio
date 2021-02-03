@@ -15,10 +15,10 @@ Vue.component('OpenModal', {
   },
   template: `
   <transition name="fade">
-    <div class="modal-overlay" @click="exitModal">
+    <div class="work-modal-overlay" @click="exitModal">
       <div class="works-modal-content" @click="stopModal">
         <slot name="img" :img-info="imgInfo"></slot>
-        <button type="button" class="modal-close" @click="exitModal">close</button>
+        <button type="button" class="work-modal-close" @click="exitModal">close</button>
       </div>
     </div>
   </transition>

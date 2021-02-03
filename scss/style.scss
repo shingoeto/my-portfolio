@@ -245,9 +245,12 @@ h1 a {
         width: 100%;
       }
     }
+    &-modal-close {
+      margin: 10% 0;
+    }
   }
   // Modal Window Template
-  .modal-overlay {
+  .work-modal-overlay {
     z-index: 1;
     top: 0;
     left: 0;
