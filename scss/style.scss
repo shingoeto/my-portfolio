@@ -98,6 +98,13 @@ p {
   z-index: 100000;
   cursor: pointer;
 }
+.logo {
+  z-index: 99;
+  width: 60px;
+  position: fixed;
+  left: 40px;
+  top: 40px;
+}
 .line {
   background: #111111;
   display: block;
@@ -128,21 +135,20 @@ p {
 }
 // Navigation
 .nav {
+  background-image: url(/image/nav-bg.gif);
+  background-position: center;
   display: none;
   height: 100%;
   position: fixed;
   width: 100%;
+  z-index: 98;
   .wrap {
-    align-items: center;
+    align-items:center;
     display: flex;
     height: 100vh;
     justify-content: center;
     position: absolute;
     width: 100%;
-    background-image: url(/image/nav-bg.gif);
-    background-size: cover;
-    background-position: center;
-    z-index: 1000000;
   }
   .item {
     margin: 40px 0;
@@ -166,6 +172,7 @@ p {
     }
   }
 }
+
 // Main Visual
 #hero {
   background-size: cover;
