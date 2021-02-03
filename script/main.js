@@ -15,10 +15,10 @@ Vue.component('OpenModal', {
   },
   template: `
   <transition name="fade">
-    <div class="modal-overlay" @click="exitModal">
+    <div class="work-modal-overlay" @click="exitModal">
       <div class="works-modal-content" @click="stopModal">
         <slot name="img" :img-info="imgInfo"></slot>
-        <button type="button" class="modal-close" @click="exitModal">close</button>
+        <button type="button" class="work-modal-close" @click="exitModal">close</button>
       </div>
     </div>
   </transition>
@@ -101,4 +101,15 @@ $('li').on('click', function(){
   $('.nav').fadeOut();
 });
 // Hide Navigation Line on Show in Modal Window
+$(function() {
+  $(window).scroll(function () {
+    $('.fadein').each(function () {
+      var scroll = $(window).scrollTop();
+      var position = $(this).offset().top;
+      var windowHeight = $(window).height();
+      if (scroll > position - windowHeight - 300)
+        $(this).addClass("on");
+    })
+  })
+})
 

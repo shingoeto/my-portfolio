@@ -9,6 +9,15 @@ html {
 body {
   overflow: scroll;
 }
+.fadein {
+  opacity: 0;
+  transition: 1.5s;
+  transform: translate(0, 200px);
+}
+.fadein.on {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 // Fonts
 body, button {
   font-family: 'Cormorant Infant', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
@@ -22,7 +31,7 @@ body, button {
   }
 }
 button {
-  padding: 20px 100px;
+  padding: 30px 110px;
   font-size: 20px;
   border: none;
   background-color: #222222;
@@ -69,9 +78,6 @@ h2 {
 h3 {
   font-size: 26px;
   margin-bottom: 10px;
-}
-h4 {
-  font-size: 20px;
 }
 p {
   font-size: 16px;
@@ -129,7 +135,8 @@ p {
 }
 // Navigation
 .nav {
-  background: rgba(0,0,0,0.9);
+  background-image: url(/image/nav-bg.gif);
+  background-position: center;
   display: none;
   height: 100%;
   position: fixed;
@@ -237,9 +244,12 @@ h1 a {
         width: 100%;
       }
     }
+    &-more a {
+      color: $textWhite;
+    }
   }
   // Modal Window Template
-  .modal-overlay {
+  .work-modal-overlay {
     z-index: 1;
     top: 0;
     left: 0;
@@ -322,6 +332,9 @@ h1 a {
     &-capture-sp {
       width: 30%;
     }
+    &-modal-close {
+      margin: 10% 0;
+    }
   }
   // Modal Fade
   .fade-enter-active,
@@ -370,16 +383,6 @@ h1 a {
 }
 .skills {
   justify-content: space-between;
-  &-others {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    img {
-      width: 20%;
-      height: 20%;
-      padding: 0 8% 8% 0;
-    }
-  }
   &-left {
     display: flex;
     justify-content: space-between;
@@ -392,9 +395,6 @@ h1 a {
     height: 200px;
     margin-bottom: 3%;
   }
-  &-title {
-    margin-bottom: 5px;
-  }
   &-type {
     margin-bottom: 2%;
     img {
@@ -406,6 +406,11 @@ h1 a {
 // Carrer
 #carrer {
   background-color: #f6f6f6;
+  background-image: url(/image/carrer.jpg);
+  background-position: 25% 100%;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-origin: content-box;
 }
 .carrer {
   &-content {
@@ -416,16 +421,9 @@ h1 a {
   &-box {
     margin-bottom: 5%;
   }
-  &-left {
-    width: 45%;
-    img {
-      margin-top: 100px;
-      width: 150%;
-    }
-  }
   &-right {
     margin-left: auto;
-    width: 45%;
+    width: 50%;
   }
 }
 // About
@@ -461,7 +459,8 @@ h1 a {
     width: 50%;
   }
   &-right {
-    width: 40%;  }
+    width: 40%;
+  }
 }
 // Footer
 #footer {
@@ -498,15 +497,16 @@ h1 a {
   .inner {
     width: 80%;
   }
+  .hamburger {
+    top: 25px;
+    right: 25px;
+  }
+  #carrer {
+    background-position: left 100%  bottom 30%;
+    background-size: 70%;
+  }
   button {
     margin-top: 100px;
-  }
-  // Header
-  #header {
-    height: 70px;
-    nav {
-      line-height: 70px;
-    }
   }
   // Hero
   #hero {
@@ -536,11 +536,8 @@ h1 a {
   }
   // Works
   #works {
-    .overlay {
+    .modal-overlay {
       padding: 10% 0;
-    }
-    .works-content {
-      width: 90%;
     }
   }
   // About
@@ -557,13 +554,6 @@ h1 a {
   }
   .contact {
     margin-bottom: 75px;
-  }
-  // Carrer
-  #carrer {
-    background-image: url(/image/carrer.jpg);
-    background-position: left 100% bottom 25%;
-    background-size: 80%;
-    background-repeat: no-repeat;
   }
   .carrer-left {
     display: none;
@@ -588,25 +578,6 @@ h1 a {
     line-height: 25px;
     text-align: left;
   }
-  // Header
-  #header {
-    height: 40px;
-    nav {
-      line-height: 40px;
-      text-align: center;
-      font-size: 14px;
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      li {
-        padding: 0 10px;
-        &:first-child {
-          padding-left: 0;
-        }
-      }
-    }
-  }
   // Works
   #works {
     .work {
@@ -616,7 +587,7 @@ h1 a {
       &-name {
         font-size: 24px;
       }
-      &-tmb-wrap {
+      &-container {
         flex-direction: column;
       }
       &-text {
@@ -634,30 +605,26 @@ h1 a {
       &-more {
         width: 100%;
       }
-      .overlay {
-        padding: 20% 0;
-      }
-      .works-content {
-        padding: 5%;
-      }
     }
   }
   // Skills
-  #skills {
-    .skills {
-      &-left, &-right {
-        width: 100%;
-      }
-      &-left {
-        margin-bottom: 50px;
-        display: inline;
-      }
-      .skill-container {
-        width: 100%;
-        height: auto;
-        margin-bottom: 8%;
-      }
+  .skills {
+    &-left, &-right {
+      width: 100%;
     }
+    &-left {
+      margin-bottom: 50px;
+      display: inline;
+    }
+    .skill-container {
+      width: 100%;
+      height: auto;
+      margin-bottom: 8%;
+    }
+  }
+  #carrer {
+    background-position: left 100%  bottom 20%;
+    background-size: 80%;
   }
   // Footer
   .footer {
