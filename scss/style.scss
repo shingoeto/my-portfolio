@@ -333,7 +333,7 @@ h1 a {
       width: 30%;
     }
     &-modal-close {
-      margin: 10% 0;
+      margin: 10% auto;
     }
   }
   // Modal Fade
@@ -536,6 +536,10 @@ h1 a {
   }
   // Works
   #works {
+    .works-modal-content {
+      width: 90%;
+      height: 90%;
+    }
     .modal-overlay {
       padding: 10% 0;
     }
@@ -568,6 +572,10 @@ h1 a {
   body, p, button {
     font-size: 14px;
     letter-spacing: normal;
+  }
+  button {
+    padding: 20px 90px;
+    width: 100%;
   }
   h2 {
     font-size: 60px;
@@ -604,6 +612,9 @@ h1 a {
       }
       &-more {
         width: 100%;
+      }
+      &-scope {
+        text-align: center;
       }
     }
   }

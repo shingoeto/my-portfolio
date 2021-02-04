@@ -18,7 +18,7 @@ Vue.component('OpenModal', {
     <div class="work-modal-overlay" @click="exitModal">
       <div class="works-modal-content" @click="stopModal">
         <slot name="img" :img-info="imgInfo"></slot>
-        <button type="button" class="work-modal-close" @click="exitModal">close</button>
+        <button type="button" class="work-modal-close" @click="exitModal">CLOSE</button>
       </div>
     </div>
   </transition>
