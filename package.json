@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx parcel index.html",
     "build": "npx parcel build index.html",
-    "build-works": "npx parcel build works.html",
+    "build-works": "npx parcel works.html",
     "lint:html": "npx htmllint *.html",
     "lint:script": "npx eslint --fix script/**/*",
     "lint:scss": "npx stylelint --fix scss/**/*",

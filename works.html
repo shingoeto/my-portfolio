@@ -39,28 +39,28 @@
   <section id="works">
     <div class="inner">
       <div class="section-title">
-        <h2 class="fadein">Works.</h2>
-        <p class="fadein">This is my anthology. mainly, web design and video creating.</p>
-        <p class="fadein">私の作品集。主にウェブデザイン、動画編集の作品など。</p>
+        <h2 class="fadein-works">Works.</h2>
+        <p class="fadein-works">This is my anthology. mainly, web design and video creating.</p>
+        <p class="fadein-works">私の作品集。主にウェブデザイン、動画編集の作品など。</p>
       </div>
       <div id="app">
         <div class="work-tmb-wrap">
           <!-- Work 1 -->
-          <img class="work-tmb fadein" src="image/my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
+          <img class="work-tmb fadein-works" src="image/my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
           <!-- Work 2 -->
-          <img class="work-tmb fadein" src="image/expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
+          <img class="work-tmb fadein-works" src="image/expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
           <!-- Work 3 -->
-          <img class="work-tmb fadein" src="image/scooby.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
+          <img class="work-tmb fadein-works" src="image/scooby.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
           <!-- Work 4 -->
-          <img class="work-tmb fadein" src="image/thailand-vlog.jpg" alt="Thailand Vlog" @click="openModal4">
+          <img class="work-tmb fadein-works" src="image/thailand-vlog.jpg" alt="Thailand Vlog" @click="openModal4">
           <!-- Work 6 -->
-          <img class="work-tmb fadein" src="image/miratabi.jpg" alt="Thailand Vlog" @click="openModal5">
+          <img class="work-tmb fadein-works" src="image/miratabi.jpg" alt="Thailand Vlog" @click="openModal5">
           <!-- Work 7 -->
-          <img class="work-tmb fadein" src="image/aw.jpg" alt="Thailand Vlog" @click="openModal6">
+          <img class="work-tmb fadein-works" src="image/aw.jpg" alt="Thailand Vlog" @click="openModal6">
           <!-- Work 8 -->
-          <img class="work-tmb fadein" src="image/usa.jpg" alt="Thailand Vlog" @click="openModal7">
+          <img class="work-tmb fadein-works" src="image/usa.jpg" alt="Thailand Vlog" @click="openModal7">
           <!-- Work 9 -->
-          <img class="work-tmb fadein" src="image/trek.jpg" alt="Thailand Vlog" @click="openModal8">
+          <img class="work-tmb fadein-works" src="image/trek.jpg" alt="Thailand Vlog" @click="openModal8">
         </div>
         <!--  Work 1 Contents -->
         <div class="modal-container">
@@ -187,7 +187,6 @@
             </p>
           </div>
         </div>
-
         <!--  Work 5 Contents -->
         <div class="modal-container">
           <div ref="work5" class="work-contents" v-scroll-lock="open">
@@ -244,57 +243,56 @@
             </p>
           </div>
         </div>
-      </div>
-      <!--  Work 7 Contents -->
-      <div class="modal-container">
-        <div ref="work7" class="work-contents" v-scroll-lock="open">
-          <h4 class="work-title-wrap">
-            <span class="work-modal-title text-en">USA - Short Vlog</span>
-          </h4>
-          <div class="work-video">
-            <iframe title="USA - Short Vlog" src="https://www.youtube.com/embed/9Wv-a-m0G7U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!--  Work 7 Contents -->
+        <div class="modal-container">
+          <div ref="work7" class="work-contents" v-scroll-lock="open">
+            <h4 class="work-title-wrap">
+              <span class="work-modal-title text-en">USA - Short Vlog</span>
+            </h4>
+            <div class="work-video">
+              <iframe title="USA - Short Vlog" src="https://www.youtube.com/embed/9Wv-a-m0G7U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="work-scope">
+              clips / edit: shingo eto
+            </p>
+            <p class="work-about">
+              撮影と編集をしました。2017年の夏にアメリカ西海岸へ一人旅に行きました。
+              初めての海外でした。いい動画たくさん撮ってやる！と意気込んだものの、
+              撮影する間も忘れるような素晴らしい旅となりました。
+              Trek Americaという多国籍ツアー（13人で1週間かけてバンでロードトリップするツアー）にも参加し、
+              日本人、アジア人も僕一人で、唯一のノンイングリッシュスピーカーでした。
+              残念すぎるカメラワークに、無理やり編集でそれっぽく仕上げましたが、アメリカ西海岸の広大な景色や街は、
+              それをもカバーしてくれる素晴らしいものでした。そして、素晴らしい経験となりました。
+            </p>
           </div>
-          <p class="work-scope">
-            clips / edit: shingo eto
-          </p>
-          <p class="work-about">
-            撮影と編集をしました。2017年の夏にアメリカ西海岸へ一人旅に行きました。
-            初めての海外でした。いい動画たくさん撮ってやる！と意気込んだものの、
-            撮影する間も忘れるような素晴らしい旅となりました。
-            Trek Americaという多国籍ツアー（13人で1週間かけてバンでロードトリップするツアー）にも参加し、
-            日本人、アジア人も僕一人で、唯一のノンイングリッシュスピーカーでした。
-            残念すぎるカメラワークに、無理やり編集でそれっぽく仕上げましたが、アメリカ西海岸の広大な景色や街は、
-            それをもカバーしてくれる素晴らしいものでした。そして、素晴らしい経験となりました。
-          </p>
         </div>
-      </div>
-      <!--  Work 8 Contents -->
-      <div class="modal-container">
-        <div ref="work8" class="work-contents" v-scroll-lock="open">
-          <h4 class="work-title-wrap">
-            <span class="work-modal-title text-en">USA - Trek America</span>
-          </h4>
-          <div class="work-video">
-            <iframe title="USA - Trek America" src="https://www.youtube.com/embed/YCgTpZswS9o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!--  Work 8 Contents -->
+        <div class="modal-container">
+          <div ref="work8" class="work-contents" v-scroll-lock="open">
+            <h4 class="work-title-wrap">
+              <span class="work-modal-title text-en">USA - Trek America</span>
+            </h4>
+            <div class="work-video">
+              <iframe title="USA - Trek America" src="https://www.youtube.com/embed/YCgTpZswS9o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="work-scope">
+              clips / edit: shingo eto
+            </p>
+            <p class="work-about">
+              撮影と編集をしました。2017年の夏、初海外としてアメリカ一人旅に行くと決意し、
+              2週間をアメリカ西海岸で過ごしました。Trek Americaという多国籍ツアー
+              （13人で1週間かけてバンでロードトリップするツアー）に参加し、
+              仲間と共に素敵な時間を過ごしました。肌で感じるカルチャー、
+              壮大な自然、東京では見れない星空、ド派手な街、デカすぎるハンバーガー、
+              日本から出たことのない僕には全てが新鮮でした。
+              そして何よりもアジア人の僕に親切にしてくれたメンバー。とても大切な思い出です。
+            </p>
           </div>
-          <p class="work-scope">
-            clips / edit: shingo eto
-          </p>
-          <p class="work-about">
-            撮影と編集をしました。2017年の夏、初海外としてアメリカ一人旅に行くと決意し、
-            2週間をアメリカ西海岸で過ごしました。Trek Americaという多国籍ツアー
-            （13人で1週間かけてバンでロードトリップするツアー）に参加し、
-            仲間と共に素敵な時間を過ごしました。肌で感じるカルチャー、
-            壮大な自然、東京では見れない星空、ド派手な街、デカすぎるハンバーガー、
-            日本から出たことのない僕には全てが新鮮でした。
-            そして何よりもアジア人の僕に親切にしてくれたメンバー。とても大切な思い出です。
-          </p>
         </div>
-      </div>
-      <!-- Modal Window -->
-      <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
-        <template v-slot:img="slotProps">
-            <div v-html="slotProps.imgInfo.modal"></div>
+        <!-- Modal Window -->
+        <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
+          <template v-slot:img="slotProps">
+              <div v-html="slotProps.imgInfo.modal"></div>
           </template>
         </open-modal>
       </div>
