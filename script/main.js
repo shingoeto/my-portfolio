@@ -112,16 +112,3 @@ $(function() {
     })
   })
 })
-// Hide Navigation Line on Show in Modal Window (works.html)
-$(function() {
-  $(window).scroll(function () {
-    $('.fadein-works').each(function () {
-      var scroll = $(window).scrollTop();
-      var position = $(this).offset().top;
-      var windowHeight = $(window).height();
-      if (scroll > position - windowHeight - 100)
-        $(this).addClass("on");
-    })
-  })
-})
-
