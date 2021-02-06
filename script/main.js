@@ -22,7 +22,7 @@ Vue.component('OpenModal', {
       </div>
     </div>
   </transition>
-  `,
+  `
 });
 // v-scroll-lock
 import VScrollLock from 'v-scroll-lock';
@@ -107,7 +107,7 @@ $(function() {
       var scroll = $(window).scrollTop();
       var position = $(this).offset().top;
       var windowHeight = $(window).height();
-      if (scroll > position - windowHeight - 300)
+      if (scroll > position - windowHeight - 400)
         $(this).addClass("on");
     })
   })
