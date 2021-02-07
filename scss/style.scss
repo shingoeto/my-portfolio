@@ -46,6 +46,10 @@ button {
   margin: 0;
   padding: 0;
 }
+h1 img {
+  width: 20%;
+  filter: brightness(10000%);
+}
 // scetion
 #works, #about, #skills, #carrer {
   padding: 150px 0;
