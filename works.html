@@ -17,7 +17,7 @@
   <title>Works | SHINGO ETO's PORTFOLIO</title>
 </head>
 <body id="page-works">
-  <!-- Hero -->
+  <!-- hero -->
   <section id="hero">
     <div class="inner">
       <div id="hero-img">
@@ -32,29 +32,29 @@
       </div>
     </div>
   </section>
-  <!-- Works -->
+  <!-- works -->
   <section id="works">
     <div class="inner">
       <div id="app">
         <div class="work-tmb-wrap">
-          <!-- Work 1 -->
+          <!-- work 1 -->
           <img class="work-tmb fadein" src="image/works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
-          <!-- Work 2 -->
+          <!-- work 2 -->
           <img class="work-tmb fadein" src="image/works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
-          <!-- Work 3 -->
+          <!-- work 3 -->
           <img class="work-tmb fadein" src="image/works-ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
-          <!-- Work 4 -->
+          <!-- work 4 -->
           <img class="work-tmb fadein" src="image/works-thailand-vlog.jpg" alt="Thailand Vlog" @click="openModal4">
-          <!-- Work 6 -->
+          <!-- work 6 -->
           <img class="work-tmb fadein" src="image/works-miratabi.jpg" alt="Thailand Vlog" @click="openModal5">
-          <!-- Work 7 -->
+          <!-- work 7 -->
           <img class="work-tmb fadein" src="image/works-aw.jpg" alt="Thailand Vlog" @click="openModal6">
-          <!-- Work 8 -->
+          <!-- work 8 -->
           <img class="work-tmb fadein" src="image/works-usa.jpg" alt="Thailand Vlog" @click="openModal7">
-          <!-- Work 9 -->
+          <!-- work 9 -->
           <img class="work-tmb fadein" src="image/works-trek.jpg" alt="Thailand Vlog" @click="openModal8">
         </div>
-        <!--  Work 1 Contents -->
+        <!--  work 1 contents -->
         <div class="modal-container">
           <div ref="work1" class="work-contents" v-scroll-lock="open">
             <h4 class="work-title-wrap">
@@ -90,7 +90,7 @@
             </div>
           </div>
         </div>
-        <!--  Work 2 Contents -->
+        <!--  work 2 contents -->
         <div class="modal-container">
           <div ref="work2" class="work-contents" v-scroll-lock="open">
             <h4 class="work-title-wrap">
@@ -119,7 +119,7 @@
             </div>
           </div>
         </div>
-        <!--  Work 3 Contents -->
+        <!--  work 3 contents -->
         <div class="modal-container">
           <div ref="work3" class="work-contents" v-scroll-lock="open">
             <h4 class="work-title-wrap">
@@ -157,7 +157,7 @@
             </div>
           </div>
         </div>
-        <!--  Work 4 Contents -->
+        <!--  work 4 contents -->
         <div class="modal-container">
           <div ref="work4" class="work-contents" v-scroll-lock="open">
             <h4 class="work-title-wrap">
@@ -179,7 +179,7 @@
             </p>
           </div>
         </div>
-        <!--  Work 5 Contents -->
+        <!--  work 5 contents -->
         <div class="modal-container">
           <div ref="work5" class="work-contents" v-scroll-lock="open">
             <div class="work-title-wrap">
@@ -213,7 +213,7 @@
             </div>
           </div>
         </div>
-        <!--  Work 6 Contents -->
+        <!--  work 6 contents -->
         <div class="modal-container">
           <div ref="work6" class="work-contents" v-scroll-lock="open">
             <h4 class="work-title-wrap">
@@ -235,7 +235,7 @@
             </p>
           </div>
         </div>
-        <!--  Work 7 Contents -->
+        <!--  work 7 contents -->
         <div class="modal-container">
           <div ref="work7" class="work-contents" v-scroll-lock="open">
             <h4 class="work-title-wrap">
@@ -258,7 +258,7 @@
             </p>
           </div>
         </div>
-        <!--  Work 8 Contents -->
+        <!--  work 8 contents -->
         <div class="modal-container">
           <div ref="work8" class="work-contents" v-scroll-lock="open">
             <h4 class="work-title-wrap">
@@ -281,7 +281,7 @@
             </p>
           </div>
         </div>
-        <!-- Modal Window -->
+        <!-- modal window -->
         <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
           <template v-slot:img="slotProps">
               <div v-html="slotProps.imgInfo.modal"></div>
@@ -291,7 +291,7 @@
       <button class="work-back fadein"><a href="https://shingoeto.com/">BACK</a></button>
     </div>
   </section>
-  <!-- Footer -->
+  <!-- footer -->
   <footer id="footer">
     <div class="inner">
       <div class="footer">

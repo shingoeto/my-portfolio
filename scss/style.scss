@@ -1,4 +1,4 @@
-// 変数
+// variable
 $textBlack: #111;
 $textWhite: #fff;
 // html
@@ -9,6 +9,7 @@ html {
 body {
   overflow: scroll;
 }
+// fade in animation
 .fadein {
   opacity: 0;
   transition: 1.5s;
@@ -18,7 +19,7 @@ body {
   opacity: 1;
   transform: translate(0, 0);
 }
-// Fonts
+// fonts
 body, button {
   font-family: 'Cormorant Infant', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
@@ -45,7 +46,7 @@ button {
   margin: 0;
   padding: 0;
 }
-//
+// scetion
 #works, #about, #skills, #carrer {
   padding: 150px 0;
 }
@@ -84,11 +85,11 @@ p {
   letter-spacing: 2px;
   line-height: 30px;
 }
-// Section Title
+// section title
 .section-title {
   margin-bottom: 100px;
 }
-// Drawer
+// drawer
 .hamburger {
   height: 20px;
   position: fixed;
@@ -133,7 +134,7 @@ p {
   bottom: 10px;
   transform: rotate(135deg);
 }
-// Navigation
+// navigation
 .nav {
   background-image: url(/image/nav-bg.gif);
   background-position: center;
@@ -172,7 +173,7 @@ p {
     }
   }
 }
-// Main Visual
+// main visual
 #hero {
   background-size: cover;
   height: 100vh;
@@ -199,7 +200,7 @@ h1 a {
     font-size: 16px;
   }
 }
-// Works
+// works
 #works {
   background-color: #f6f6f6;
   h2 {
@@ -248,7 +249,7 @@ h1 a {
       color: $textWhite;
     }
   }
-  // Modal Window Template
+  // modal window template
   .work-modal-overlay {
     z-index: 1;
     top: 0;
@@ -283,7 +284,7 @@ h1 a {
     -webkit-overflow-scrolling:touch;
     height: 100%;
   }
-  // Modal Window Content
+  // modal window contents
   .work {
     &-title-wrap, &-modal-img {
       margin: 10% 0;
@@ -337,7 +338,7 @@ h1 a {
       margin: 10% auto;
     }
   }
-  // Modal Fade
+  // madal window's fade in
   .fade-enter-active,
   .fade-leave-active {
       transition: opacity .8s ease;
@@ -423,7 +424,7 @@ h1 a {
     }
   }
 }
-// Skills
+// skills
 #skills {
   background-color: #ffffff;
   background-size: cover;
@@ -451,7 +452,7 @@ h1 a {
     }
   }
 }
-// Carrer
+// carrer
 #carrer {
   background-color: #f6f6f6;
   background-image: url(/image/carrer.jpg);
@@ -474,7 +475,7 @@ h1 a {
     width: 50%;
   }
 }
-// About
+// about
 #about {
   background-color: #fff;
   background-size: cover;
@@ -511,7 +512,7 @@ h1 a {
     width: 40%;
   }
 }
-// Footer
+// footer
 #footer {
   background-color: #f6f6f6;
   height: 100px;
@@ -541,7 +542,7 @@ h1 a {
     }
   }
 }
-// Tablet
+// tablet
 @media screen and (max-width: 1095px) {
   .fadein {
     transform: translate(0, 200px);
@@ -560,7 +561,7 @@ h1 a {
   button {
     margin-top: 100px;
   }
-  // Hero
+  // hero (tablet)
   #hero {
     padding: 10% 0;
     .hero-container {
@@ -579,14 +580,14 @@ h1 a {
   #works, #about, #skills {
     padding: 100px 0;
   }
-  // Skills
+  // skills (tablet)
   .skill {
     &-container {
       height: 300px;
       width: 45%;
     }
   }
-  // Works
+  // works (tablet)
   #works {
     .works-modal-content {
       width: 90%;
@@ -596,7 +597,7 @@ h1 a {
       padding: 10% 0;
     }
   }
-  // About
+  // about (tablet)
   .about {
     &-right {
       width: 100%;
@@ -619,7 +620,7 @@ h1 a {
     left: 100px;
   }
 }
-// Smartphone
+// smart phone
 @media screen and (max-width: 767px) {
   body, p, button {
     font-size: 14px;
@@ -638,7 +639,7 @@ h1 a {
     line-height: 25px;
     text-align: left;
   }
-  // Works
+  // works (smart phone)
   #works {
     .work {
       &-no {
@@ -670,7 +671,7 @@ h1 a {
       }
     }
   }
-  // Skills
+  // skills (smart phone)
   .skills {
     &-left, &-right {
       width: 100%;
@@ -689,7 +690,7 @@ h1 a {
     background-position: left 100%  bottom 20%;
     background-size: 80%;
   }
-  // Footer
+  // footer (smart phone)
   .footer {
     &-copyright {
       margin: 0 auto;
