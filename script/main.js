@@ -2,11 +2,11 @@
 // jquery
 // navigation menu
 $('.hamburger').on('click', function(){
-  $('.line').toggleClass('active');
+  $('.hamburger-line').toggleClass('active');
   $('.nav').fadeToggle();
 });
 $('li').on('click', function(){
-  $('.line').removeClass('active');
+  $('.hamburger-line').removeClass('active');
   $('.nav').fadeOut();
 });
 // hide navigation line on show in modal window
@@ -34,10 +34,10 @@ Vue.component('OpenModal', {
   },
   template: `
   <transition name="fade">
-  <div class="work-modal-overlay" @click="exitModal">
+  <div class="works-modal-overlay" @click="exitModal">
   <div class="works-modal-content" @click="stopModal">
   <slot name="img" :img-info="imgInfo"></slot>
-  <button type="button" class="work-modal-close" @click="exitModal">CLOSE</button>
+  <button type="button" class="works-modal-close" @click="exitModal">CLOSE</button>
   </div>
   </div>
   </transition>

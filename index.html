@@ -20,26 +20,26 @@
   <!-- Drawer -->
   <div id="drawer">
     <a class="hamburger">
-      <span class="line top"></span>
-      <span class="line center"></span>
-      <span class="line bottom"></span>
+      <span class="hamburger-line hamburger-line-top"></span>
+      <span class="hamburger-line hamburger-line-center"></span>
+      <span class="hamburger-line hamburger-line-bottom"></span>
     </a>
     <nav class="nav">
-      <div class="wrap">
-        <ul class="menu">
-          <li class="item"><a href="#works">WORKS</a></li>
-          <li class="item"><a href="#skills">SKILLS</a></li>
-          <li class="item"><a href="#carrer">CARRER</a></li>
-          <li class="item"><a href="#about">ABOUT</a></li>
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#works" class="nav-item-link">WORKS</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-item-link">SKILLS</a></li>
+          <li class="nav-item"><a href="#carrer" class="nav-item-link">CARRER</a></li>
+          <li class="nav-item"><a href="#about" class="nav-item-link">ABOUT</a></li>
         </ul>
       </div>
     </nav>
   </div>
   <!-- Hero -->
   <section id="hero">
-    <div class="inner">
-      <div id="hero-img">
-        <div class="inner">
+    <div class="contents-inner">
+      <div class="hero-img">
+        <div class="contents-inner">
           <div class="hero-container">
             <h1><a href="#">Shingo Eto<br><span>portfolio</span></a></h1>
           </div>
@@ -48,100 +48,100 @@
     </div>
   </section>
   <!-- Works -->
-  <section id="works">
-    <div class="inner">
+  <section id="works" class="section-bg-gray">
+    <div class="contents-inner">
       <div class="section-title">
         <h2 class="fadein">Works.</h2>
         <p class="fadein">This is my anthology. mainly, web design and video creating.</p>
         <p class="fadein">私の作品集。主にウェブデザイン、動画編集の作品など。</p>
       </div>
       <div id="app">
-        <div class="work-container">
-          <div class="work-text">
-            <h3 class="work-no fadein">01.</h3>
-            <h3 class="work-name fadein">CHIKYU TANKENTAI</h3>
-            <p class="work-role fadein">
+        <div class="works-container">
+          <div class="works-about">
+            <h3 class="works-number fadein">01.</h3>
+            <h3 class="works-title fadein">CHIKYU TANKENTAI</h3>
+            <p class="works-role fadein">
               my role: web design / markup / direction.
               <br>used: vscode / adobe photoshop
               <br>date: jul 2020.
             </p>
-            <p class="work-used fadein">
+            <p class="works-used fadein">
               html / scss / parcel / prettier
               <br> eslint / htmllint / stylelint / editor config
             </p>
           </div>
-          <div class="work-tmb fadein">
-            <img src="image/top-works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
+          <div class="works-thumbnail fadein">
+            <img src="image/top-works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2" class="">
           </div>
         </div>
-        <div class="work-container">
-          <div class="work-tmb fadein">
+        <div class="works-container">
+          <div class="works-thumbnail fadein">
             <img src="image/top-works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
           </div>
-          <div class="work-text">
-            <h3 class="work-no fadein">02.</h3>
-            <h3 class="work-name fadein">MY PORTFOLIO</h3>
-            <p class="work-role fadein">
+          <div class="works-about">
+            <h3 class="works-number fadein">02.</h3>
+            <h3 class="works-title fadein">MY PORTFOLIO</h3>
+            <p class="works-role fadein">
               my role: web design / direction
               <br>use: vscode / adobe photoshop / adobe xd
               <br>date: jan 2021
             </p>
-            <p class="work-used fadein">
+            <p class="works-used fadein">
               html / scss / javascript / jquery / vue.js / parcel
               <br>prettier / eslint / htmllint / stylelint / editor config
             </p>
           </div>
         </div>
-        <div class="work-container">
-          <div class="work-text">
-            <h3 class="work-no fadein">03.</h3>
-            <h3 class="work-name fadein">CAFE IBIS</h3>
-            <p class="work-role fadein">
+        <div class="works-container">
+          <div class="works-about">
+            <h3 class="works-number fadein">03.</h3>
+            <h3 class="works-title fadein">CAFE IBIS</h3>
+            <p class="works-role fadein">
               my role: web design (layout) / direction
               <br>used: adobe photoshop
               <br>date: jul 2020
             </p>
-            <p class="work-used fadein">
+            <p class="works-used fadein">
               <br>wordpress / cocoon / scss
             </p>
           </div>
-          <div class="work-tmb fadein">
+          <div class="works-thumbnail fadein">
             <img src="image/top-works-ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
           </div>
         </div>
-        <div class="work-container">
-          <div class="work-tmb fadein">
+        <div class="works-container">
+          <div class="works-thumbnail fadein">
             <img src="image/top-works-thai.jpg" alt="Thailand Vlog" @click="openModal4">
           </div>
-          <div class="work-text fadein">
-            <h3 class="work-no fadein">04.</h3>
-            <h3 class="work-name fadein">WONDERFUL LAND "THAILAND"</h3>
-            <p class="work-role fadein">
+          <div class="works-about fadein">
+            <h3 class="works-number fadein">04.</h3>
+            <h3 class="works-title fadein">WONDERFUL LAND "THAILAND"</h3>
+            <p class="works-role fadein">
               my role: shoot / edit
               <br>date: dec 2020
             </p>
-            <p class="work-used fadein">
+            <p class="works-used fadein">
               adobe after effects / iphone x / osmo mobile 2
             </p>
           </div>
         </div>
         <!--  Work 1 Contents -->
-        <div class="modal-container">
-          <div ref="work1" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title">MY PORTFOLIO</span><br>
-              <span class="work-modal-link"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
+        <div class="works-modal-container">
+          <div ref="work1" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">MY PORTFOLIO</span><br>
+              <span class="works-modal-link"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
             </h4>
-            <div class="work-modal-image">
+            <div class="works-modal-image-container">
               <a href="https://shingoeto.com/" rel="noopenner" target="_blank">
-                <img src="image/my-portfolio-pc.jpg" alt="My Portfolio (PC表示)" class="work-image">
+                <img src="image/my-portfolio-pc.jpg" alt="My Portfolio (PC表示)" class="works-modal-image">
               </a>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               web design / direction: shingo eto
               <br>photos: sherry / shingo eto
             </p>
-            <p class="work-about">
+            <p class="works-modal-about">
               自身のポートフォリオサイトを作成しました。
               デザイン面では余白を意識し、
               シンプルで見やすい、ウェブ、動画、写真など、様々な作品で使えるようなポートフォリオサイトをイメージしました。
@@ -154,62 +154,62 @@
               また、jQueryを用いてフェードインアニメーションも実装しました。ゆっくりでも、
               高速でもスクロールをされた時のフワッと感を演出したく数値を設定。
             </p>
-            <div class="work-captures">
-              <div class="work-capture-tab">
+            <div class="works-modal-captures">
+              <div class="works-modal-capture-tab">
                 <img src="image/my-portfolio-tab.jpg" alt="My Portfolio (タブレット表示)">
               </div>
-              <div class="work-capture-sp">
+              <div class="works-modal-capture-sp">
                 <img src="image/my-portfolio-sp.jpg" alt="My Portfolio (スマホ表示)">
               </div>
             </div>
           </div>
         </div>
         <!--  Work 2 Contents -->
-        <div class="modal-container">
-          <div ref="work2" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title">CHIKYU TANKENTAI</span><br>
-              <span class="work-modal-link"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
+        <div class="works-modal-container">
+          <div ref="work2" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">CHIKYU TANKENTAI</span><br>
+              <span class="works-modal-link"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
             </h4>
-            <div class="work-modal-image">
+            <div class="works-modal-image-container">
               <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
-                <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="work-image">
+                <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="works-modal-image">
               </a>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               web design / direction: shingo eto
               <br>photos: manabu
               <br>html / scss / parcel / prettier
               <br> eslint / htmllint / stylelint / editor config
             </p>
-            <p class="work-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなwebサイトをイメージしました。どこか柔らかさを感じる配色をイメージし、行間も少し開けることでどこかやさしさも伝わるように意識しました。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。</p>
-            <div class="work-captures">
-              <div class="work-capture-tab">
+            <p class="works-modal-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなwebサイトをイメージしました。どこか柔らかさを感じる配色をイメージし、行間も少し開けることでどこかやさしさも伝わるように意識しました。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。</p>
+            <div class="works-modal-captures">
+              <div class="works-modal-capture-tab">
                 <img src="image/expl-tab.jpg" alt="地球探検隊 webサイト (タブレット表示)">
               </div>
-              <div class="work-capture-sp">
+              <div class="works-modal-capture-sp">
                 <img src="image/expl-sp.jpg" alt="地球探検隊 webサイト (スマホ表示)">
               </div>
             </div>
           </div>
         </div>
         <!--  Work 3 Contents -->
-        <div class="modal-container">
-          <div ref="work3" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title">CAFE IBIS</span><br>
-              <span class="work-modal-link"><a href="https://ibiscafe.com/" rel="noopenner" target="_blank">ibiscafe.com</a></span>
+        <div class="works-modal-container">
+          <div ref="work3" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">CAFE IBIS</span><br>
+              <span class="works-modal-link"><a href="https://ibiscafe.com/" rel="noopenner" target="_blank">ibiscafe.com</a></span>
             </h4>
-            <div class="work-modal-image">
+            <div class="works-modal-image-container">
               <a href="https://ibiscafe.com/" rel="noopenner" target="_blank">
-                <img src="image/ibis-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="work-image">
+                <img src="image/ibis-pc.jpg" alt="Cafe IBIS webサイト (PC表示)" class="works-modal-image">
               </a>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               web design: shingo eto
               <br>wordpress / cocoon / scss
             </p>
-            <p class="work-about">
+            <p class="works-modal-about">
               スタッフとしてもゲストとしても深く関わらさせていただいているカフェのwebサイトを
               WordPressテーマ「Cocoon」を使用し、レイアウト・デザインをしました。
               全体のイメージは「シンプルさ」「洗練さ」。
@@ -221,29 +221,29 @@
               外国人のお客様も多く、海外のサイトをイメージしつつ日本人のユーザーも
               見やすいようなイメージをしました。
             </p>
-            <div class="work-captures">
-              <div class="work-capture-tab">
+            <div class="works-modal-captures">
+              <div class="works-modal-capture-tab">
                 <img src="image/ibis-tab.jpg" alt="地球探検隊 webサイト (タブレット表示)">
               </div>
-              <div class="work-capture-sp">
+              <div class="works-modal-capture-sp">
                 <img src="image/ibis-sp.jpg" alt="地球探検隊 webサイト (スマホ表示)">
               </div>
             </div>
           </div>
         </div>
         <!--  Work 4 Contents -->
-        <div class="modal-container">
-          <div ref="work4" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title">WONDERFUL LAND "THAILAND"</span>
+        <div class="works-modal-container">
+          <div ref="work4" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">WONDERFUL LAND "THAILAND"</span>
             </h4>
-            <div class="work-video">
+            <div class="works-modal-video">
               <iframe title="Thailand - Wonderful Land" src="https://www.youtube.com/embed/hURqN2SRsYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               clips / edit: shingo eto
             </p>
-            <p class="work-about">
+            <p class="works-modal-about">
               2020年2月、タイに旅をした時のVlogです。
               疾走感のあるVlogをイメージしましたが、
               次々と来るクリップ一つ一つの存在感が薄れないように意識し作成しました。
@@ -259,19 +259,19 @@
             <div v-html="slotProps.imgInfo.modal"></div>
           </template>
         </open-modal>
-        <button class="work-more fadein"><a href="https://shingoeto.com/works.html">ALL WORKS</a></button>
+        <button class="works-more fadein"><a href="https://shingoeto.com/works.html">ALL WORKS</a></button>
       </div>
     </div>
   </section>
   <!-- Skills -->
-  <section id="skills">
-    <div class="inner">
+  <section id="skills" class="section-bg-white">
+    <div class="contents-inner">
       <div class="section-title">
         <h2 class="fadein">Skills.</h2>
         <p class="fadein">My Self-judgement skills & my environments.</p>
         <p class="fadein">私の自己判断によるスキルと、その他環境について。</p>
       </div>
-      <div class="skills">
+      <div class="skills-container">
         <div class="skills-left">
           <!-- Markup -->
           <div class="skill-container">
@@ -367,8 +367,8 @@
     </div>
   </section>
   <!-- Carrer -->
-  <section id="carrer">
-    <div class="inner">
+  <section id="carrer" class="section-bg-gray">
+    <div class="contents-inner">
       <div class="section-title">
         <h2 class="fadein">Carrer.</h2>
         <p class="fadein">私の経歴について。</p>
@@ -408,8 +408,8 @@
     </div>
   </section>
   <!-- About -->
-  <section id="about">
-    <div class="inner">
+  <section id="about" class="section-bg-white">
+    <div class="contents-inner">
       <div class="section-title">
         <h2 class="fadein">About.</h2>
         <p class="fadein">私について。</p>
@@ -435,7 +435,7 @@
   </section>
   <!-- Footer -->
   <footer id="footer">
-    <div class="inner">
+    <div class="contents-inner">
       <div class="footer">
         <p class="footer-copyright">&copy; 2020 - 2021 Shingo Eto.</p>
         <ul class="footer-menu text-en">
