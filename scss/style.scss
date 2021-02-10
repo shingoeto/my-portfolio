@@ -420,56 +420,49 @@ h1 a {
   }
 }
 // skills
-// 忘れんな
-#skills {
-  background-size: cover;
-  padding-bottom: 100px;
-}
-.skills-container {
-  justify-content: space-between;
-  &-left {
+.skills {
+  &-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-}
-.skill {
-  &-container {
+  &-type {
     width: 45%;
     height: 200px;
     margin-bottom: 3%;
   }
-  &-type {
+  &-type-images {
     margin-bottom: 2%;
-    img {
-      width: 40px;
-      margin-right: 20px;
-    }
+  }
+  &-type-image {
+    width: 40px;
+    margin-right: 20px;
   }
 }
+
 // carrer
-#carrer {
-  background-color: #f6f6f6;
-  background-image: url(/image/carrer.jpg);
-  background-position: 25% 100%;
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-}
 .carrer {
-  &-content {
+  &-background {
+    background-image: url(/image/carrer.jpg);
+    background-position: 25% 100%;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+  }
+  &-container { // contents
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
   }
-  &-box {
-    margin-bottom: 5%;
-  }
-  &-right {
+  &-group { // right
     margin-left: auto;
     width: 50%;
   }
+  &-year { // box
+    margin-bottom: 5%;
+  }
 }
+
 // about
 #about {
   background-color: #fff;
@@ -575,21 +568,20 @@ h1 a {
   #works, #about, #skills {
     padding: 100px 0;
   }
-  // skills (tablet)
-  .skill {
-    &-container {
-      height: 300px;
-      width: 45%;
-    }
-  }
   // works (tablet)
-  #works {
-    .works-modal-content {
+  .works {
+    &-modal-content {
       width: 90%;
       height: 90%;
     }
-    .works-modal-overlay {
+    &-modal-overlay {
       padding: 10% 0;
+    }
+  }
+  // skills (tablet)
+  .skills {
+    &-container {
+      width: 100%;
     }
   }
   // about (tablet)
@@ -607,12 +599,12 @@ h1 a {
   .contact {
     margin-bottom: 75px;
   }
-  .carrer-left {
-    display: none;
-  }
-  .carrer-right {
-    width: 100%;
-    left: 100px;
+  // Carrer
+  .carrer {
+    &-group {
+      width: 100%;
+      left: 100px;
+    }
   }
 }
 // smart phone
@@ -668,17 +660,18 @@ h1 a {
   }
   // skills (smart phone)
   .skills {
-    &-left, &-right {
+    &-container {
       width: 100%;
-    }
-    &-left {
       margin-bottom: 50px;
       display: inline;
     }
-    .skill-container {
+    &-type {
       width: 100%;
       height: auto;
       margin-bottom: 8%;
+    }
+    &-type-images {
+      width: 100%;
     }
   }
   #carrer {
