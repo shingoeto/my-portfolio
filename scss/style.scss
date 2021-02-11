@@ -424,9 +424,9 @@ body, button {
   &-name {
     font-weight: normal;
     font-size: 22px;
-    &-middle-name {
-      font-style: italic;
-    }
+  }
+  &-middle-name {
+    font-style: italic;
   }
   &-email {
     color: $Black;
