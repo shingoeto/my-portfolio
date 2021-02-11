@@ -1,0 +1,163 @@
+// Tablet
+@media screen and (max-width: 1095px) {
+  // Common
+  h2 {
+    font-size: 50px;
+    margin-bottom: 75px;
+  }
+  .inner {
+    width: 80%;
+  }
+  .fadein {
+    transform: translate(0, 200px);
+  }
+  button {
+    margin-top: 100px;
+  }
+  .section-padding {
+    padding: 100px 0;
+  }
+  // Drawer (Tablet)
+  .hamburger {
+    top: 25px;
+    right: 25px;
+  }
+  // Hero (Tablet)
+  #hero {
+    padding: 10% 0;
+  }
+  .hero {
+    &-container {
+      height: 100%;
+    }
+    &-image {
+      background-size: cover;
+      background-position: left;
+      height: 100%;
+    }
+  }
+  // Works (Tablet)
+  .works {
+    &-modal-content {
+      width: 90%;
+      height: 90%;
+    }
+    &-modal-overlay {
+      padding: 10% 0;
+    }
+  }
+  // Skills (Tablet)
+  .skills {
+    &-container {
+      width: 100%;
+    }
+  }
+  // Carrer (Tablet)
+  #carrer {
+    background-position: left 100%  bottom 30%;
+    background-size: 70%;
+  }
+  .carrer {
+    &-group {
+      width: 100%;
+      left: 100px;
+    }
+  }
+  // About (Tablet)
+  .about {
+    &-right {
+      width: 100%;
+    }
+    &-left {
+      width: 100%;
+    }
+    &-container {
+      display: inline;
+    }
+    &-contact {
+      margin-bottom: 100px;
+    }
+  }
+}
+// Smart Phone
+@media screen and (max-width: 767px) {
+  body, p, button {
+    font-size: 14px;
+    letter-spacing: normal;
+  }
+  button {
+    padding: 20px 90px;
+    width: 100%;
+  }
+  h2 {
+    font-size: 60px;
+    margin-bottom: 5%;
+  }
+  p {
+    letter-spacing: normal;
+    line-height: 25px;
+    text-align: left;
+  }
+  // Works (Smart Phone)
+  #works {
+    .works {
+      &-container {
+        flex-direction: column;
+      }
+      &-about {
+        width: 100%;
+        order: 1;
+        margin-bottom: 10%;
+      }
+      &-number {
+        font-size: 50px;
+      }
+      &-title {
+        font-size: 24px;
+      }
+      &-thumbnail {
+        width: 100%;
+        order: 2;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+      &-more {
+        width: 100%;
+      }
+      &-scope {
+        text-align: center;
+      }
+    }
+  }
+  // Skills (Smart Phone)
+  .skills {
+    &-container {
+      width: 100%;
+      margin-bottom: 50px;
+      display: inline;
+    }
+    &-type {
+      width: 100%;
+      height: auto;
+      margin-bottom: 8%;
+    }
+    &-type-images {
+      width: 100%;
+    }
+  }
+  // Carrer (Smart Phone)
+  #carrer {
+    background-position: left 100%  bottom 20%;
+    background-size: 80%;
+  }
+  // Footer (Smart Phone)
+  .footer {
+    &-copyright {
+      margin: 0 auto;
+    }
+    &-menu {
+      display: none;
+    }
+  }
+}

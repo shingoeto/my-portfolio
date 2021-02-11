@@ -17,13 +17,13 @@
   <title>Works | SHINGO ETO's PORTFOLIO</title>
 </head>
 <body id="page-works">
-  <!-- Hero -->
+  <!-- hero -->
   <section id="hero">
     <div class="inner">
-      <div id="hero-img">
-        <h2>Works.
-          <p>This is my anthology. mainly, web design and video creating.</p>
-          <p>私の作品集。主にウェブデザイン、動画編集の作品など。</p>
+      <div class="sub-page-hero-image">
+        <h2 class="sub-page-title">Works.
+          <p class="sub-page-about">This is my anthology. mainly, web design and video creating.</p>
+          <p class="sub-page-about">私の作品集。主にウェブデザイン、動画編集の作品など。</p>
         </h2>
         <div class="inner">
           <div class="hero-container">
@@ -32,45 +32,45 @@
       </div>
     </div>
   </section>
-  <!-- Works -->
-  <section id="works">
+  <!-- works -->
+  <section id="works" class="section-background-white section-padding">
     <div class="inner">
       <div id="app">
-        <div class="work-tmb-wrap">
-          <!-- Work 1 -->
-          <img class="work-tmb fadein" src="image/works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
-          <!-- Work 2 -->
-          <img class="work-tmb fadein" src="image/works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
-          <!-- Work 3 -->
-          <img class="work-tmb fadein" src="image/works-ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
-          <!-- Work 4 -->
-          <img class="work-tmb fadein" src="image/works-thailand-vlog.jpg" alt="Thailand Vlog" @click="openModal4">
-          <!-- Work 6 -->
-          <img class="work-tmb fadein" src="image/works-miratabi.jpg" alt="Thailand Vlog" @click="openModal5">
-          <!-- Work 7 -->
-          <img class="work-tmb fadein" src="image/works-aw.jpg" alt="Thailand Vlog" @click="openModal6">
-          <!-- Work 8 -->
-          <img class="work-tmb fadein" src="image/works-usa.jpg" alt="Thailand Vlog" @click="openModal7">
-          <!-- Work 9 -->
-          <img class="work-tmb fadein" src="image/works-trek.jpg" alt="Thailand Vlog" @click="openModal8">
+        <div class="page-works-container">
+          <!-- work 1 -->
+          <img class="page-works-thumbnail fadein" src="image/works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
+          <!-- work 2 -->
+          <img class="page-works-thumbnail fadein" src="image/works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
+          <!-- work 3 -->
+          <img class="page-works-thumbnail fadein" src="image/works-ibis.jpg" alt="IBIS webサイト" @click="openModal3">
+          <!-- work 4 -->
+          <img class="page-works-thumbnail fadein" src="image/works-thailand-vlog.jpg" alt="Wonderful Land - Thailand" @click="openModal4">
+          <!-- work 6 -->
+          <img class="page-works-thumbnail fadein" src="image/works-miratabi.jpg" alt="未来を創る旅社 ミラタビ webサイト" @click="openModal5">
+          <!-- work 7 -->
+          <img class="page-works-thumbnail fadein" src="image/works-aw.jpg" alt="Hazuki Kondo - AW Collection 2019" @click="openModal6">
+          <!-- work 8 -->
+          <img class="page-works-thumbnail fadein" src="image/works-usa.jpg" alt="USA - Short Vlog" @click="openModal7">
+          <!-- work 9 -->
+          <img class="page-works-thumbnail fadein" src="image/works-trek.jpg" alt="USA - Trek America" @click="openModal8">
         </div>
-        <!--  Work 1 Contents -->
-        <div class="modal-container">
-          <div ref="work1" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title text-en">My Portfolio</span><br>
-              <span class="work-modal-link"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
+        <!--  work 1 contents -->
+        <div class="works-modal-container">
+          <div ref="work1" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">MY PORTFOLIO</span><br>
+              <span class="works-modal-link"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
             </h4>
-            <div class="work-modal-image">
+            <div class="works-modal-image-container">
               <a href="https://shingoeto.com/" rel="noopenner" target="_blank">
-                <img src="image/my-portfolio-pc.jpg" alt="My Portfolio (PC表示)" class="work-image">
+                <img src="image/my-portfolio-pc.jpg" alt="My Portfolio (PC表示)" class="works-modal-image">
               </a>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               web design / direction: shingo eto
               <br>photos: sherry / shingo eto
             </p>
-            <p class="work-about">
+            <p class="works-modal-about">
               転職用のポートフォリオサイトを作成しました。
               デザイン面では余白を意識し、
               シンプルで見やすい、web、動画、写真など、様々な作品で使えるようなポートフォリオサイトをイメージしました。
@@ -80,62 +80,62 @@
               「游ゴシック」は文字感覚を空けたいと思った時に一番馴染みが良いと感じ設定しました。
               works. セクションはVue.jsを用いてモーダルウィンドウを採用しました。
             </p>
-            <div class="work-captures">
-              <div class="work-capture-tab">
+            <div class="works-modal-captures">
+              <div class="works-modal-capture-tab">
                 <img src="image/my-portfolio-tab.jpg" alt="My Portfolio (タブレット表示)">
               </div>
-              <div class="work-capture-sp">
+              <div class="works-modal-capture-sp">
                 <img src="image/my-portfolio-sp.jpg" alt="My Portfolio (スマホ表示)">
               </div>
             </div>
           </div>
         </div>
-        <!--  Work 2 Contents -->
-        <div class="modal-container">
-          <div ref="work2" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title text-en">Chikyu Tankentai</span><br>
-              <span class="work-modal-link"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
+        <!--  work 2 contents -->
+        <div class="works-modal-container">
+          <div ref="work2" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">CHIKYU TANKENTAI</span><br>
+              <span class="works-modal-link"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
             </h4>
-            <div class="work-modal-image">
+            <div class="works-modal-image-container">
               <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
-                <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="work-image">
+                <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="works-modal-image">
               </a>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               web design / direction: shingo eto
               <br>photos: manabu
               <br>html / scss / parcel / prettier
               <br> eslint / htmllint / stylelint / editor config
             </p>
-            <p class="work-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなwebサイトをイメージしました。どこか柔らかさを感じる配色をイメージし、行間も少し開けることでどこかやさしさも伝わるように意識しました。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。</p>
-            <div class="work-captures">
-              <div class="work-capture-tab">
+            <p class="works-modal-about">デザインからコーディングまで担当。ターゲットは10代〜50代と広め。中年の方にも見やすいシンプルなデザイン、そして若者が惹かれるキャッチーな文章も写真を使用し、「旅したいな」と思っていただき、幅広く愛着をもたれるようなwebサイトをイメージしました。どこか柔らかさを感じる配色をイメージし、行間も少し開けることでどこかやさしさも伝わるように意識しました。デザイン面では、メインヴィジュアルの星空でインパクト、「隊長って誰？」「ミラタビとは？」セクションの背景に写真を使用し、全体的に艶のある質感を意識しました。</p>
+            <div class="works-modal-captures">
+              <div class="works-modal-capture-tab">
                 <img src="image/expl-tab.jpg" alt="地球探検隊 webサイト (タブレット表示)">
               </div>
-              <div class="work-capture-sp">
+              <div class="works-modal-capture-sp">
                 <img src="image/expl-sp.jpg" alt="地球探検隊 webサイト (スマホ表示)">
               </div>
             </div>
           </div>
         </div>
-        <!--  Work 3 Contents -->
-        <div class="modal-container">
-          <div ref="work3" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title text-en">Cafe IBIS</span><br>
-              <span class="work-modal-link"><a href="https://ibiscafe.com/" rel="noopenner" target="_blank">ibiscafe.com</a></span>
+        <!--  work 3 contents -->
+        <div class="works-modal-container">
+          <div ref="work3" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">CAFE IBIS</span><br>
+              <span class="works-modal-link"><a href="https://ibiscafe.com/" rel="noopenner" target="_blank">ibiscafe.com</a></span>
             </h4>
-            <div class="work-modal-image">
+            <div class="works-modal-image-container">
               <a href="https://ibiscafe.com/" rel="noopenner" target="_blank">
-                <img src="image/ibis-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="work-image">
+                <img src="image/ibis-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="works-modal-image">
               </a>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               web design: shingo eto
               <br>wordpress / cocoon / scss
             </p>
-            <p class="work-about">
+            <p class="works-modal-about">
               スタッフとしてもゲストとしてもお世話になっているカフェのwebサイトを
               WordPressテーマ「Cocoon」を使用し、レイアウト・デザインをしました。
               全体のイメージは「シンプルさ」「洗練さ」。
@@ -147,29 +147,29 @@
               外国人のお客様も多く、海外のサイトをイメージしつつ日本人のユーザーも
               見やすいようなイメージをしました。
             </p>
-            <div class="work-captures">
-              <div class="work-capture-tab">
+            <div class="works-modal-captures">
+              <div class="works-modal-capture-tab">
                 <img src="image/ibis-tab.jpg" alt="地球探検隊 webサイト (タブレット表示)">
               </div>
-              <div class="work-capture-sp">
+              <div class="works-modal-capture-sp">
                 <img src="image/ibis-sp.jpg" alt="地球探検隊 webサイト (スマホ表示)">
               </div>
             </div>
           </div>
         </div>
-        <!--  Work 4 Contents -->
-        <div class="modal-container">
-          <div ref="work4" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title text-en">Thailand - Wonderful Land</span>
+        <!--  work 4 contents -->
+        <div class="works-modal-container">
+          <div ref="work4" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">WONDERFUL LAMD "THAILAMD"</span>
             </h4>
-            <div class="work-video">
+            <div class="works-modal-video">
               <iframe title="Thailand - Wonderful Land" src="https://www.youtube.com/embed/hURqN2SRsYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               clips / edit: shingo eto
             </p>
-            <p class="work-about">
+            <p class="works-modal-about">
               2020年2月、タイに旅をした時のVlogです。
               疾走感のあるVlogをイメージしましたが、
               次々と来るクリップ一つ一つの存在感が薄れないように意識し作成しました。
@@ -179,54 +179,54 @@
             </p>
           </div>
         </div>
-        <!--  Work 5 Contents -->
-        <div class="modal-container">
-          <div ref="work5" class="work-contents" v-scroll-lock="open">
-            <div class="work-title-wrap">
+        <!--  work 5 contents -->
+        <div class="works-modal-container">
+          <div ref="work5" class="works-modal-contents" v-scroll-lock="open">
+            <div class="works-modal-titles">
               <h4>
-                <span class="work-modal-title">Miratabi</span><br>
-                <span class="work-modal-link"><a href="https://miratabi.net/" rel="noopenner" target="_blank">miratabi.net</a></span>
+                <span class="works-modal-title">MIRATABI</span><br>
+                <span class="works-modal-link"><a href="https://miratabi.net/" rel="noopenner" target="_blank">miratabi.net</a></span>
               </h4>
             </div>
-            <div class="work-modal-image">
+            <div class="works-modal-image-container">
               <a href="https://miratabi.net/" rel="noopenner" target="_blank">
-                <img src="image/miratabi-pc.jpg" alt="未来を創る旅社 ミラタビ webサイト (PC表示)" class="work-image">
+                <img src="image/miratabi-pc.jpg" alt="未来を創る旅社 ミラタビ webサイト (PC表示)" class="works-modal-image">
               </a>
             </div>
-            <div class="work-scope">
+            <div class="works-modal-scope">
               client: miratabi
               <br>design: shingo eto
             </div>
-            <p class="work-about">
+            <p class="works-modal-about">
               WordPressテーマ「Snow Monkey」を使用し、テンプレートからデザイン、
               画像の編集等を担当しました。ターゲットの年齢層は30代〜60代と幅広め。
               シンプルさを意識し、クリアなイメージで作成しました。
               素材写真が、配色は、広大な青空と草原がイメージできるような配色にしました。
             </p>
-            <div class="work-captures">
-              <div class="work-capture-tab">
+            <div class="works-modal-captures">
+              <div class="works-modal-capture-tab">
                 <img src="image/miratabi-tab.jpg" alt="地球探検隊 webサイト (タブレット表示)">
               </div>
-              <div class="work-capture-sp">
+              <div class="works-modal-capture-sp">
                 <img src="image/miratabi-sp.jpg" alt="地球探検隊 webサイト (スマートフォン表示)">
               </div>
             </div>
           </div>
         </div>
-        <!--  Work 6 Contents -->
-        <div class="modal-container">
-          <div ref="work6" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title text-en">Hazuki Kondo - AW Collection 2018</span>
+        <!--  work 6 contents -->
+        <div class="works-modal-container">
+          <div ref="work6" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">HAZUKI KONDO - AW COLLECTION 2018</span>
             </h4>
-            <div class="work-video">
+            <div class="works-modal-video">
               <iframe title="Thailand - Wonderful Land" src="https://www.youtube.com/embed/ZYADtvekNFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               edit: shingo eto
               <br>hair & make: hazuki kondo
             </p>
-            <p class="work-about">
+            <p class="works-modal-about">
               美容師時代、定期的に行う撮影会で、個人的に動画の撮影をさせていただき、
               編集まで行いました。撮影音をそのまま使用したりし、
               雰囲気などをより感じ取れるよう、
@@ -235,19 +235,19 @@
             </p>
           </div>
         </div>
-        <!--  Work 7 Contents -->
-        <div class="modal-container">
-          <div ref="work7" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title text-en">USA - Short Vlog</span>
+        <!--  work 7 contents -->
+        <div class="works-modal-container">
+          <div ref="work7" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">USA - SHORT VLOG</span>
             </h4>
-            <div class="work-video">
+            <div class="works-modal-video">
               <iframe title="USA - Short Vlog" src="https://www.youtube.com/embed/9Wv-a-m0G7U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               clips / edit: shingo eto
             </p>
-            <p class="work-about">
+            <p class="works-modal-about">
               撮影と編集をしました。2017年の夏にアメリカ西海岸へ一人旅に行きました。
               初めての海外でした。いい動画たくさん撮ってやる！と意気込んだものの、
               撮影する間も忘れるような素晴らしい旅となりました。
@@ -258,19 +258,19 @@
             </p>
           </div>
         </div>
-        <!--  Work 8 Contents -->
-        <div class="modal-container">
-          <div ref="work8" class="work-contents" v-scroll-lock="open">
-            <h4 class="work-title-wrap">
-              <span class="work-modal-title text-en">USA - Trek America</span>
+        <!--  work 8 contents -->
+        <div class="works-modal-container">
+          <div ref="work8" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">USA - TREK AMERICA</span>
             </h4>
-            <div class="work-video">
+            <div class="works-modal-video">
               <iframe title="USA - Trek America" src="https://www.youtube.com/embed/YCgTpZswS9o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <p class="work-scope">
+            <p class="works-modal-scope">
               clips / edit: shingo eto
             </p>
-            <p class="work-about">
+            <p class="works-modal-about">
               撮影と編集をしました。2017年の夏、初海外としてアメリカ一人旅に行くと決意し、
               2週間をアメリカ西海岸で過ごしました。Trek Americaという多国籍ツアー
               （13人で1週間かけてバンでロードトリップするツアー）に参加し、
@@ -281,26 +281,26 @@
             </p>
           </div>
         </div>
-        <!-- Modal Window -->
+        <!-- modal window -->
         <open-modal v-if="showModal != null" :img-info="showModal" @from-child="closeModal">
           <template v-slot:img="slotProps">
               <div v-html="slotProps.imgInfo.modal"></div>
           </template>
         </open-modal>
       </div>
-      <button class="work-back fadein"><a href="https://shingoeto.com/">BACK</a></button>
+      <button class="page-works-back"><a href="https://shingoeto.com/">BACK</a></button>
     </div>
   </section>
   <!-- Footer -->
-  <footer id="footer">
+  <footer id="footer" class="section-background-gray">
     <div class="inner">
-      <div class="footer">
-        <p class="footer-copyright text-en">© 2020 Shingo Eto.</p>
+      <div class="footer-container">
+        <p class="footer-copyright">&copy; 2020 - 2021 Shingo Eto.</p>
         <ul class="footer-menu text-en">
-          <li><a href="#works">WORKS</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#carrer">CARRER</a></li>
-          <li><a href="#about">ABOUT</a></li>
+          <li class="footer-nav"><a href="#works" class="footer-link">WORKS</a></li>
+          <li class="footer-nav"><a href="#skills" class="footer-link">SKILLS</a></li>
+          <li class="footer-nav"><a href="#carrer" class="footer-link">CARRER</a></li>
+          <li class="footer-nav"><a href="#about" class="footer-link">ABOUT</a></li>
         </ul>
       </div>
     </div>

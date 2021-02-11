@@ -1,9 +1,28 @@
 'use strict';
-// smooth-scroll.js
-var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
+// jquery
+// navigation menu
+$('.hamburger').on('click', function(){
+  $('.hamburger-line').toggleClass('active');
+  $('.nav').fadeToggle();
 });
-// Modal Window
+$('li').on('click', function(){
+  $('.hamburger-line').removeClass('active');
+  $('.nav').fadeOut();
+});
+// hide navigation line on show in modal window
+$(function() {
+  $(window).scroll(function () {
+    $('.fadein').each(function () {
+      var scroll = $(window).scrollTop();
+      var position = $(this).offset().top;
+      var windowHeight = $(window).height();
+      if (scroll > position - windowHeight - 400)
+        $(this).addClass("up");
+    })
+  })
+})
+// vue.js
+// modal window
 Vue.component('OpenModal', {
   props: {
     imgInfo: Object,
@@ -14,20 +33,16 @@ Vue.component('OpenModal', {
     },
   },
   template: `
-  <transition name="fade">
-    <div class="work-modal-overlay" @click="exitModal">
+  <transition name="works-modal-fade">
+    <div class="works-modal-overlay" @click="exitModal">
       <div class="works-modal-content" @click="stopModal">
         <slot name="img" :img-info="imgInfo"></slot>
-        <button type="button" class="work-modal-close" @click="exitModal">CLOSE</button>
+        <button type="button" class="works-modal-close" @click="exitModal">CLOSE</button>
       </div>
     </div>
   </transition>
   `
 });
-// v-scroll-lock
-import VScrollLock from 'v-scroll-lock';
-Vue.use(VScrollLock);
-// Vue Instance
 new Vue({
   el: '#app',
   data: function () {
@@ -91,24 +106,11 @@ new Vue({
     }
   }
 })
-// Navigation Menu
-$('.hamburger').on('click', function(){
-  $('.line').toggleClass('active');
-  $('.nav').fadeToggle();
+// library
+// smooth-scroll.js
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 1000,
 });
-$('li').on('click', function(){
-  $('.line').removeClass('active');
-  $('.nav').fadeOut();
-});
-// Hide Navigation Line on Show in Modal Window
-$(function() {
-  $(window).scroll(function () {
-    $('.fadein').each(function () {
-      var scroll = $(window).scrollTop();
-      var position = $(this).offset().top;
-      var windowHeight = $(window).height();
-      if (scroll > position - windowHeight - 400)
-        $(this).addClass("on");
-    })
-  })
-})
+// v-scroll-lock
+import VScrollLock from 'v-scroll-lock';
+Vue.use(VScrollLock);
