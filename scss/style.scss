@@ -4,7 +4,6 @@ $White: #fff;
 $buttonBackground: #222;
 $sectionBackgroundWhite: #fff;
 $sectionBackgroundGray: #f6f6f6;
-
 // Common
 * {
   -webkit-box-sizing: border-box;
@@ -30,7 +29,7 @@ li {
   list-style: none;
 }
 .text-en {
-    font-style: italic;
+  font-style: italic;
 }
 button {
   padding: 0 110px;
@@ -54,6 +53,11 @@ h3 {
   font-size: 26px;
   margin-bottom: 10px;
 }
+p {
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 30px;
+}
 .section {
   &-title {
     margin-bottom: 100px;
@@ -73,6 +77,7 @@ h3 {
   max-width: 100%;
   margin: 0 auto;
   height: 100%;
+  height: 100%;
 }
 // Fonts
 body, button {
@@ -87,11 +92,6 @@ body, button {
 .fadein.up {
   opacity: 1;
   transform: translate(0, 0);
-}
-p {
-  font-size: 16px;
-  letter-spacing: 2px;
-  line-height: 30px;
 }
 // drawer
 .hamburger {
@@ -152,17 +152,17 @@ p {
   &-item {
     margin: 40px 0;
     list-style: none;
-    &-link {
-      font-style: italic;
+  }
+  &-item-link {
+    font-style: italic;
+    color: $White;
+    font-size: 30px;
+    padding: 40px;
+    text-decoration: none;
+    transition: .5s;
+    &:hover {
       color: $White;
-      font-size: 30px;
-      padding: 40px;
-      text-decoration: none;
-      transition: .5s;
-      &:hover {
-        color: $White;
-        text-shadow: 0 0 10px $White;
-      }
+      text-shadow: 0 0 10px $White;
     }
   }
 }
@@ -172,7 +172,7 @@ p {
   height: 100vh;
 }
 .hero {
-  &-img {
+  &-image {
     background: 50%;
     width: 100%;
     background-image: url(/image/hero-bg.jpg);
@@ -202,9 +202,9 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20%;
-    &:nth-child(4n) {
-      margin-bottom: 0;
-    }
+  }
+  &-container:nth-child(4n) {
+    margin-bottom: 0;
   }
   &-about {
     width: 30%;
@@ -331,26 +331,27 @@ p {
   }
   &-fade-enter-active,
   &-fade-leave-active {
-      transition: opacity .8s ease;
+    transition: opacity .8s ease;
   }
   &-fade-enter,
   &-fade-leave-to {
     opacity: 0;
   }
 }
-
-// works.html
-.page-works {
+// Common of Subpage
+.sub-page {
   &-hero-image {
-
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: right 0% top 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
-}
-#page-works {
-
-  .section-title {
-    margin: 0;
-  }
-  h2 {
+  &-title {
+    color: $Black;
+    text-align: left;
     margin-bottom: 0;
     text-align: left;
     width: 100%;
@@ -358,79 +359,10 @@ p {
       font-style: normal;
     }
   }
-  .hero-img {
-    background-image: url(/image/works-hero.jpg);
-    background-size: 90%;
-    background-position: right 0% top 50%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  }
-  #works {
-    .sub-page-title {
-      color: $Black;
-      text-align: left;
-    }
-    .page-works {
-      &-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      &-thumbnail {
-        height: 25%;
-        width: 18%;
-        margin: 0 9% 10% 0;
-        cursor: pointer;
-        transition: 1s;
-        &:hover {
-          box-shadow: 0 0 50px rgba(0,0, 0, 0.3);
-        }
-        &:nth-child(4n) {
-          margin-right: 0;
-        }
-        &:nth-child(n+5) {
-          margin-bottom: 0;
-        }
-      }
-      &-back {
-        padding-top: 30px;
-        padding-bottom: 30px;
-      }
-      &-back a {
-        color: $White;
-      }
-    }
-  }
-  @media screen and (max-width: 1095px) {
-    #hero {
-      height: 900px;
-    }
-    .hero-img {
-      height: 100%;
-    }
-    #works {
-      padding-top: 0;
-      .page-works-thumbnail {
-        width: 45%;
-        margin-right: 0;
-        margin-bottom: 10%;
-        &:nth-child(n+5) {
-          margin-bottom: 10%;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 767px) {
-    #hero {
-      height: 500px;
-    }
-    .hero-img {
-      height: 100%;
-    }
+  &-about {
+    font-style: normal;
   }
 }
-
 // Skills
 .skills {
   &-container {
@@ -451,7 +383,6 @@ p {
     margin-right: 20px;
   }
 }
-
 // Carrer
 .carrer {
   &-background {
@@ -474,7 +405,6 @@ p {
     margin-bottom: 5%;
   }
 }
-
 // About
 .about {
   &-container {
