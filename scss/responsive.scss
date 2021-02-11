@@ -1,42 +1,42 @@
-// tablet
+// Tablet
 @media screen and (max-width: 1095px) {
-  .fadein {
-    transform: translate(0, 200px);
-  }
-  .inner {
-    width: 80%;
-  }
-  .hamburger {
-    top: 25px;
-    right: 25px;
-  }
-  #carrer {
-    background-position: left 100%  bottom 30%;
-    background-size: 70%;
-  }
-  button {
-    margin-top: 100px;
-  }
-  // hero (tablet)
-  #hero {
-    padding: 10% 0;
-    .hero-container {
-      height: 100%;
-    }
-  }
-  .hero-image {
-    background-size: cover;
-    background-position: left;
-    height: 100%;
-  }
+  // Common
   h2 {
     font-size: 50px;
     margin-bottom: 75px;
   }
-  #works, #about, #skills {
+  .inner {
+    width: 80%;
+  }
+  .fadein {
+    transform: translate(0, 200px);
+  }
+  button {
+    margin-top: 100px;
+  }
+  .section-padding {
     padding: 100px 0;
   }
-  // works (tablet)
+  // Drawer (Tablet)
+  .hamburger {
+    top: 25px;
+    right: 25px;
+  }
+  // Hero (Tablet)
+  #hero {
+    padding: 10% 0;
+  }
+  .hero {
+    &-container {
+      height: 100%;
+    }
+    &-image {
+      background-size: cover;
+      background-position: left;
+      height: 100%;
+    }
+  }
+  // Works (Tablet)
   .works {
     &-modal-content {
       width: 90%;
@@ -46,13 +46,24 @@
       padding: 10% 0;
     }
   }
-  // skills (tablet)
+  // Skills (Tablet)
   .skills {
     &-container {
       width: 100%;
     }
   }
-  // about (tablet)
+  // Carrer (Tablet)
+  #carrer {
+    background-position: left 100%  bottom 30%;
+    background-size: 70%;
+  }
+  .carrer {
+    &-group {
+      width: 100%;
+      left: 100px;
+    }
+  }
+  // About (Tablet)
   .about {
     &-right {
       width: 100%;
@@ -63,19 +74,12 @@
     &-container {
       display: inline;
     }
-  }
-  .contact {
-    margin-bottom: 75px;
-  }
-  // Carrer
-  .carrer {
-    &-group {
-      width: 100%;
-      left: 100px;
+    &-contact {
+      margin-bottom: 100px;
     }
   }
 }
-// smart phone
+// Smart Phone
 @media screen and (max-width: 767px) {
   body, p, button {
     font-size: 14px;
@@ -94,7 +98,7 @@
     line-height: 25px;
     text-align: left;
   }
-  // works (smart phone)
+  // Works (Smart Phone)
   #works {
     .works {
       &-container {
@@ -126,7 +130,7 @@
       }
     }
   }
-  // skills (smart phone)
+  // Skills (Smart Phone)
   .skills {
     &-container {
       width: 100%;
@@ -142,11 +146,12 @@
       width: 100%;
     }
   }
+  // Carrer (Smart Phone)
   #carrer {
     background-position: left 100%  bottom 20%;
     background-size: 80%;
   }
-  // footer (smart phone)
+  // Footer (Smart Phone)
   .footer {
     &-copyright {
       margin: 0 auto;

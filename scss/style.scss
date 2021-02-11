@@ -37,7 +37,6 @@ button {
   border: none;
   background-color: $buttonBackground;
   color: $White;
-  margin-top: 150px;
 }
 h1, h2, {
   font-style: italic;
@@ -91,7 +90,7 @@ body, button {
   opacity: 1;
   transform: translate(0, 0);
 }
-// Common of Subpage
+// Common of Sub Page
 .sub-page {
   &-hero-image {
     background-repeat: no-repeat;
@@ -116,7 +115,7 @@ body, button {
     font-style: normal;
   }
 }
-// drawer
+// Drawer
 .hamburger {
   height: 20px;
   position: fixed;
@@ -154,7 +153,7 @@ body, button {
     }
   }
 }
-// navigation
+// Navigation
 .nav {
   background-image: url(/image/nav-bg.gif);
   background-position: center;
@@ -227,7 +226,7 @@ body, button {
     margin-bottom: 20%;
   }
   &-container:nth-child(4n) {
-    margin-bottom: 0;
+    margin-bottom: 150px;
   }
   &-about {
     width: 30%;
@@ -414,7 +413,6 @@ body, button {
   }
   &-left {
     width: 50%;
-    margin-bottom: 100px;
   }
   &-right {
     width: 40%;
