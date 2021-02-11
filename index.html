@@ -37,19 +37,19 @@
   </div>
   <!-- Hero -->
   <section id="hero">
-    <div class="contents-inner">
+    <div class="inner">
       <div class="hero-img">
-        <div class="contents-inner">
+        <div class="inner">
           <div class="hero-container">
-            <h1><a href="#">Shingo Eto<br><span>portfolio</span></a></h1>
+            <h1 class="hero-page-title"><a href="#" class="hero-page-link">Shingo Eto<br><span>portfolio</span></a></h1>
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- Works -->
-  <section id="works" class="section-bg-gray">
-    <div class="contents-inner">
+  <section id="works" class="section-background-gray section-padding">
+    <div class="inner">
       <div class="section-title">
         <h2 class="fadein">Works.</h2>
         <p class="fadein">This is my anthology. mainly, web design and video creating.</p>
@@ -259,13 +259,13 @@
             <div v-html="slotProps.imgInfo.modal"></div>
           </template>
         </open-modal>
-        <button class="works-more fadein"><a href="https://shingoeto.com/works.html">ALL WORKS</a></button>
+        <button class="works-more"><a href="https://shingoeto.com/works.html">ALL WORKS</a></button>
       </div>
     </div>
   </section>
   <!-- Skills -->
-  <section id="skills" class="section-bg-white">
-    <div class="contents-inner">
+  <section id="skills" class="section-background-white section-padding">
+    <div class="inner">
       <div class="section-title">
         <h2 class="fadein">Skills.</h2>
         <p class="fadein">My Self-judgement skills & my environments.</p>
@@ -365,8 +365,8 @@
     </div>
   </section>
   <!-- Carrer -->
-  <section id="carrer" class="section-bg-gray carrer-background">
-    <div class="contents-inner">
+  <section id="carrer" class="section-background-gray section-padding carrer-background ">
+    <div class="inner">
       <div class="section-title">
         <h2 class="fadein">Carrer.</h2>
         <p class="fadein">私の経歴について。</p>
@@ -375,26 +375,26 @@
         <div class="carrer-group">
           <div class="carrer-year fadein">
             <h3>2016</h3>
-            <p> - 高校卒業後、美容専門学校入学</p>
+            <p> 高校卒業後、美容専門学校入学</p>
           </div>
           <div class="carrer-year fadein">
             <h3>2018</h3>
-            <p> - 美容専門学校卒業
-              <br> - 株式会社assortへ入社（美容室）
+            <p>美容専門学校卒業
+              <br>株式会社assortへ入社（美容室）
             </p>
           </div>
           <div class="carrer-year fadein">
             <h3>2019</h3>
-            <p> - Esportsチーム運営 (アマチュア)
-              <br> - 香港支店（ASSORT Hong Kong）へ2ヶ月間美容師アシスタントとして勤務
-              <br> - 10月末美容室退社
+            <p>Esportsチーム運営 (アマチュア)
+              <br>香港支店（ASSORT Hong Kong）へ2ヶ月間美容師アシスタントとして勤務
+              <br>10月末美容室退社
             </p>
           </div>
           <div class="carrer-year fadein">
             <h3>2020</h3>
-            <p> - Esportsチーム運営脱退
-              <br> - webデザイン独学開始
-              <br> - 3ヶ月間限定でスタートアップ企業でアルバイト(web系研修など)
+            <p>Esportsチーム運営脱退
+              <br>webデザイン独学開始
+              <br>3ヶ月間限定でスタートアップ企業でアルバイト(web系研修など)
             </p>
           </div>
           <div class="carrer-year fadein">
@@ -406,15 +406,15 @@
     </div>
   </section>
   <!-- About -->
-  <section id="about" class="section-bg-white">
-    <div class="contents-inner">
+  <section id="about" class="section-background-white section-padding">
+    <div class="inner">
       <div class="section-title">
         <h2 class="fadein">About.</h2>
         <p class="fadein">私について。</p>
       </div>
       <div class="about-container">
         <div class="about-left">
-          <h3 class="fadein">エトーシンゴ / <span>Sheen</span></h3>
+          <h3 class="about-name fadein">エトーシンゴ / <span class="about-middle-name">Sheen</span></h3>
           <p class="about-text fadein">東京青山・香港で美容師として従事後、web業界への転身を試みる23歳。
             まだまだ駆け出しですが、いつかはディレクションもできるようになりたいと思っています。
             高校生の頃、アルバイトをし初給料で買ったPCで動画編集をしたりCMSでwebサイトを制作した事をきっかけに、デザインに興味を持ち始めました。
@@ -423,7 +423,7 @@
             少しずつですがデザインからコーディング、撮影に動画編集など、
             様々な領域でマルチに活躍できる人材を目指しています。
           </p>
-          <div class="contact fadein">Contact: <a href="mailto:shingoetohh@gmail.com">shingoetohh@gmail.com</a></div>
+          <div class="about-contact fadein">Contact: <a href="mailto:shingoetohh@gmail.com" class="about-email">shingoetohh@gmail.com</a></div>
         </div>
         <div class="about-right fadein">
           <img src="image/me.jpg" alt="エトーシンゴ">
@@ -432,14 +432,15 @@
     </div>
   </section>
   <!-- Footer -->
-  <footer id="footer">
-    <div class="contents-inner">
-      <div class="footer">
+  <footer id="footer" class="section-background-gray">
+    <div class="inner">
+      <div class="footer-container">
         <p class="footer-copyright">&copy; 2020 - 2021 Shingo Eto.</p>
         <ul class="footer-menu text-en">
-          <li><a href="#works">WORKS</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#about">ABOUT</a></li>
+          <li class="footer-nav"><a href="#works" class="footer-link">WORKS</a></li>
+          <li class="footer-nav"><a href="#skills" class="footer-link">SKILLS</a></li>
+          <li class="footer-nav"><a href="#carrer" class="footer-link">CARRER</a></li>
+          <li class="footer-nav"><a href="#about" class="footer-link">ABOUT</a></li>
         </ul>
       </div>
     </div>

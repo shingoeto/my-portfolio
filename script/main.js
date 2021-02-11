@@ -33,13 +33,13 @@ Vue.component('OpenModal', {
     },
   },
   template: `
-  <transition name="fade">
-  <div class="works-modal-overlay" @click="exitModal">
-  <div class="works-modal-content" @click="stopModal">
-  <slot name="img" :img-info="imgInfo"></slot>
-  <button type="button" class="works-modal-close" @click="exitModal">CLOSE</button>
-  </div>
-  </div>
+  <transition name="works-modal-fade">
+    <div class="works-modal-overlay" @click="exitModal">
+      <div class="works-modal-content" @click="stopModal">
+        <slot name="img" :img-info="imgInfo"></slot>
+        <button type="button" class="works-modal-close" @click="exitModal">CLOSE</button>
+      </div>
+    </div>
   </transition>
   `
 });

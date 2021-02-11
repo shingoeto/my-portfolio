@@ -19,13 +19,13 @@
 <body id="page-works">
   <!-- hero -->
   <section id="hero">
-    <div class="contents-inner">
-      <div id="hero-img">
-        <h2>Works.
+    <div class="inner">
+      <div class="hero-img">
+        <h2 class="sub-page-title">Works.
           <p>This is my anthology. mainly, web design and video creating.</p>
           <p>私の作品集。主にウェブデザイン、動画編集の作品など。</p>
         </h2>
-        <div class="contents-inner">
+        <div class="inner">
           <div class="hero-container">
           </div>
         </div>
@@ -33,26 +33,26 @@
     </div>
   </section>
   <!-- works -->
-  <section id="works">
-    <div class="contents-inner">
+  <section id="works" class="section-background-white section-padding">
+    <div class="inner">
       <div id="app">
-        <div class="works-thumbnail-wrap">
+        <div class="page-works-container">
           <!-- work 1 -->
-          <img class="works-thumbnail fadein" src="image/works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
+          <img class="page-works-thumbnail fadein" src="image/works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
           <!-- work 2 -->
-          <img class="works-thumbnail fadein" src="image/works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
+          <img class="page-works-thumbnail fadein" src="image/works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2">
           <!-- work 3 -->
-          <img class="works-thumbnail fadein" src="image/works-ibis.jpg" alt="IBIS webサイト" @click="openModal3">
+          <img class="page-works-thumbnail fadein" src="image/works-ibis.jpg" alt="IBIS webサイト" @click="openModal3">
           <!-- work 4 -->
-          <img class="works-thumbnail fadein" src="image/works-thailand-vlog.jpg" alt="Wonderful Land - Thailand" @click="openModal4">
+          <img class="page-works-thumbnail fadein" src="image/works-thailand-vlog.jpg" alt="Wonderful Land - Thailand" @click="openModal4">
           <!-- work 6 -->
-          <img class="works-thumbnail fadein" src="image/works-miratabi.jpg" alt="未来を創る旅社 ミラタビ webサイト" @click="openModal5">
+          <img class="page-works-thumbnail fadein" src="image/works-miratabi.jpg" alt="未来を創る旅社 ミラタビ webサイト" @click="openModal5">
           <!-- work 7 -->
-          <img class="works-thumbnail fadein" src="image/works-aw.jpg" alt="Hazuki Kondo - AW Collection 2019" @click="openModal6">
+          <img class="page-works-thumbnail fadein" src="image/works-aw.jpg" alt="Hazuki Kondo - AW Collection 2019" @click="openModal6">
           <!-- work 8 -->
-          <img class="works-thumbnail fadein" src="image/works-usa.jpg" alt="USA - Short Vlog" @click="openModal7">
+          <img class="page-works-thumbnail fadein" src="image/works-usa.jpg" alt="USA - Short Vlog" @click="openModal7">
           <!-- work 9 -->
-          <img class="works-thumbnail fadein" src="image/works-trek.jpg" alt="USA - Trek America" @click="openModal8">
+          <img class="page-works-thumbnail fadein" src="image/works-trek.jpg" alt="USA - Trek America" @click="openModal8">
         </div>
         <!--  work 1 contents -->
         <div class="works-modal-container">
@@ -288,19 +288,19 @@
           </template>
         </open-modal>
       </div>
-      <button class="work-back fadein"><a href="https://shingoeto.com/">BACK</a></button>
+      <button class="page-works-back"><a href="https://shingoeto.com/">BACK</a></button>
     </div>
   </section>
-  <!-- footer -->
-  <footer id="footer">
-    <div class="contents-inner">
-      <div class="footer">
-        <p class="footer-copyright text-en">© 2020 Shingo Eto.</p>
+  <!-- Footer -->
+  <footer id="footer" class="section-background-gray">
+    <div class="inner">
+      <div class="footer-container">
+        <p class="footer-copyright">&copy; 2020 - 2021 Shingo Eto.</p>
         <ul class="footer-menu text-en">
-          <li><a href="#works">WORKS</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#carrer">CARRER</a></li>
-          <li><a href="#about">ABOUT</a></li>
+          <li class="footer-nav"><a href="#works" class="footer-link">WORKS</a></li>
+          <li class="footer-nav"><a href="#skills" class="footer-link">SKILLS</a></li>
+          <li class="footer-nav"><a href="#carrer" class="footer-link">CARRER</a></li>
+          <li class="footer-nav"><a href="#about" class="footer-link">ABOUT</a></li>
         </ul>
       </div>
     </div>
