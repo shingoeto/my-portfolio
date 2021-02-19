@@ -31,11 +31,14 @@ Vue.component('OpenModal', {
     exitModal: function () {
       this.$emit('from-child');
     },
+    keepModal: function () {
+      event.stopPropagation();
+    },
   },
   template: `
   <transition name="works-modal-fade">
     <div class="works-modal-overlay" @click="exitModal">
-      <div class="works-modal-content" @click="stopModal">
+      <div class="works-modal-content" @click="stopModal" @click="keepModal">
         <slot name="img" :img-info="imgInfo"></slot>
         <button type="button" class="works-modal-close" @click="exitModal">CLOSE</button>
       </div>
