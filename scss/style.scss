@@ -80,8 +80,8 @@ p {
 }
 body,
 button {
-  font-family: "Cormorant Infant", "游ゴシック体", YuGothic, "游ゴシック Medium",
-    "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-family: 'Cormorant Infant', '游ゴシック体', YuGothic, '游ゴシック Medium',
+    sans-serif;
 }
 .fadein {
   opacity: 0;
@@ -312,6 +312,7 @@ button {
   &-link {
     font-size: 16px;
   }
+
   /* s */
   &-image-container,
   &-video,
