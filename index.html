@@ -71,12 +71,12 @@
             </p>
           </div>
           <div class="works-thumbnail fadein">
-            <img src="image/top-works-expl.jpg" alt="地球探検隊 webサイト" @click="openModal2" class="">
+            <img src="image/top-works-expl.jpg" alt="地球探検隊 webサイト イメージ" @click="openModal2" class="">
           </div>
         </div>
         <div class="works-container">
           <div class="works-thumbnail fadein">
-            <img src="image/top-works-my-portfolio.jpg" alt="My Portfolio" @click="openModal1">
+            <img src="image/top-works-my-portfolio.jpg" alt="My Portfolio イメージ" @click="openModal1">
           </div>
           <div class="works-about">
             <h3 class="works-number fadein">02.</h3>
@@ -106,12 +106,12 @@
             </p>
           </div>
           <div class="works-thumbnail fadein">
-            <img src="image/top-works-ibis.jpg" alt="SCOOBY webサイトデザイン" @click="openModal3">
+            <img src="image/top-works-ibis.jpg" alt="Cafe IBIS webサイト イメージ" @click="openModal3">
           </div>
         </div>
         <div class="works-container">
           <div class="works-thumbnail fadein">
-            <img src="image/top-works-thai.jpg" alt="Thailand Vlog" @click="openModal4">
+            <img src="image/top-works-thai.jpg" alt="Wonderful Land - Thailand サムネイル" @click="openModal4">
           </div>
           <div class="works-about fadein">
             <h3 class="works-number fadein">04.</h3>
@@ -127,6 +127,40 @@
         </div>
         <!--  Work 1 Contents -->
         <div class="works-modal-container">
+          <div ref="work2" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">CHIKYU TANKENTAI</span><br>
+              <span class="works-modal-link"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
+            </h4>
+            <div class="works-modal-image-container">
+              <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
+                <img src="image/works-expl-pc.jpg" alt="地球探検隊 webサイト (PC表示時ヒーロー画像)" class="works-modal-image">
+              </a>
+            </div>
+            <p class="works-modal-scope">
+              web design / direction: shingo eto
+              <br>photos: manabu
+              <br>html / scss / parcel / prettier
+              <br> eslint / htmllint / stylelint / editor config
+            </p>
+            <p class="works-modal-about">
+              僕も隊員でもあり、様々な影響を与えてくれた地球探検隊のウェブサイトを制作しました。
+              デザインからコーディングまで担当。ターゲットは20代〜50代と広め。
+              中年の方にも見やすいシンプルなデザイン、若者が惹かれるキャッチーな文章を隊員なりに考えたりブログから引用・アレンジし、
+              地球探検隊らしさを掴んでいただきたいと思い文章を設定しました。
+            </p>
+            <div class="works-modal-captures">
+              <div class="works-modal-capture-tab">
+                <img src="image/works-expl-tab.jpg" alt="地球探検隊 webサイト (タブレット表示時全体スクリーンショット)">
+              </div>
+              <div class="works-modal-capture-sp">
+                <img src="image/works-expl-sp.jpg" alt="地球探検隊 webサイト (スマホ表示時全体スクリーンショット)">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  Work 2 Contents -->
+        <div class="works-modal-container">
           <div ref="work1" class="works-modal-contents" v-scroll-lock="open">
             <h4 class="works-modal-titles">
               <span class="works-modal-title">MY PORTFOLIO</span><br>
@@ -134,7 +168,7 @@
             </h4>
             <div class="works-modal-image-container">
               <a href="https://shingoeto.com/" rel="noopenner" target="_blank">
-                <img src="image/my-portfolio-pc.jpg" alt="My Portfolio (PC表示)" class="works-modal-image">
+                <img src="image/works-my-portfolio-pc.jpg" alt="My Portfolio (PC表示時ヒーロー画像)" class="works-modal-image">
               </a>
             </div>
             <p class="works-modal-scope">
@@ -157,44 +191,10 @@
             </p>
             <div class="works-modal-captures">
               <div class="works-modal-capture-tab">
-                <img src="image/my-portfolio-tab.jpg" alt="My Portfolio (タブレット表示)">
+                <img src="image/works-my-portfolio-tab.jpg" alt="My Portfolio (タブレット表示時全体スクリーンショット)">
               </div>
               <div class="works-modal-capture-sp">
-                <img src="image/my-portfolio-sp.jpg" alt="My Portfolio (スマホ表示)">
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--  Work 2 Contents -->
-        <div class="works-modal-container">
-          <div ref="work2" class="works-modal-contents" v-scroll-lock="open">
-            <h4 class="works-modal-titles">
-              <span class="works-modal-title">CHIKYU TANKENTAI</span><br>
-              <span class="works-modal-link"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
-            </h4>
-            <div class="works-modal-image-container">
-              <a href="https://expl.co.jp/" rel="noopenner" target="_blank">
-                <img src="image/expl-pc.jpg" alt="地球探検隊 webサイト (PC表示)" class="works-modal-image">
-              </a>
-            </div>
-            <p class="works-modal-scope">
-              web design / direction: shingo eto
-              <br>photos: manabu
-              <br>html / scss / parcel / prettier
-              <br> eslint / htmllint / stylelint / editor config
-            </p>
-            <p class="works-modal-about">
-              僕も隊員でもあり、様々な影響を与えてくれた地球探検隊のウェブサイトを制作しました。
-              デザインからコーディングまで担当。ターゲットは20代〜50代と広め。
-              中年の方にも見やすいシンプルなデザイン、若者が惹かれるキャッチーな文章を隊員なりに考えたりブログから引用・アレンジし、
-              地球探検隊らしさを掴んでいただきたいと思い文章を設定しました。
-            </p>
-            <div class="works-modal-captures">
-              <div class="works-modal-capture-tab">
-                <img src="image/expl-tab.jpg" alt="地球探検隊 webサイト (タブレット表示)">
-              </div>
-              <div class="works-modal-capture-sp">
-                <img src="image/expl-sp.jpg" alt="地球探検隊 webサイト (スマホ表示)">
+                <img src="image/works-my-portfolio-sp.jpg" alt="My Portfolio (スマホ表示時全体スクリーンショット)">
               </div>
             </div>
           </div>
@@ -208,7 +208,7 @@
             </h4>
             <div class="works-modal-image-container">
               <a href="https://ibiscafe.com/" rel="noopenner" target="_blank">
-                <img src="image/ibis-pc.jpg" alt="Cafe IBIS webサイト (PC表示)" class="works-modal-image">
+                <img src="image/works-ibis-pc.jpg" alt="Cafe IBIS webサイト (PC表示時ヒーロー画像)" class="works-modal-image">
               </a>
             </div>
             <p class="works-modal-scope">
@@ -229,10 +229,10 @@
             </p>
             <div class="works-modal-captures">
               <div class="works-modal-capture-tab">
-                <img src="image/ibis-tab.jpg" alt="地球探検隊 webサイト (タブレット表示)">
+                <img src="image/works-ibis-tab.jpg" alt="地球探検隊 webサイト (タブレット表示時全体スクリーンショット)">
               </div>
               <div class="works-modal-capture-sp">
-                <img src="image/ibis-sp.jpg" alt="地球探検隊 webサイト (スマホ表示)">
+                <img src="image/works-ibis-sp.jpg" alt="地球探検隊 webサイト (スマホ表示時全体スクリーンショット)">
               </div>
             </div>
           </div>
@@ -281,10 +281,10 @@
         <!-- Markup -->
         <div class="skills-type">
           <div class="skills-type-images fadein">
-            <img src="/image/html5.png" alt="HTML5 Logo" class="skills-type-image">
-            <img src="/image/css3.png" alt="CSS3 Logo" class="skills-type-image">
-            <img src="/image/sass.png" alt="Sass Logo" class="skills-type-image">
-            <img src="/image/emmet.png" alt="Emmet Logo" class="skills-type-image">
+            <img src="/image/top-skills-html5.png" alt="HTML5 ロゴ" class="skills-type-image">
+            <img src="/image/top-skills-css3.png" alt="CSS3 ロゴ" class="skills-type-image">
+            <img src="/image/top-skills-sass.png" alt="Sass ロゴ" class="skills-type-image">
+            <img src="/image/top-skills-emmet.png" alt="Emmet ロゴ" class="skills-type-image">
           </div>
           <p class="fadein">基本的なマークアップ、
             レスポンシブデザインや、Sass (SCSS)、
@@ -294,9 +294,9 @@
         <!-- JavaScript -->
         <div class="skills-type">
           <div class="skills-type-images fadein">
-            <img src="/image/js.png" alt="JavaScript Logo" class="skills-type-image">
-            <img src="/image/jquery.png" alt="jQuery Logo" class="skills-type-image">
-            <img src="/image/vue.png" alt="Vue.js Logo" class="skills-type-image">
+            <img src="/image/top-skills-js.png" alt="JavaScript ロゴ" class="skills-type-image">
+            <img src="/image/top-skills-jquery.png" alt="jQuery ロゴ" class="skills-type-image">
+            <img src="/image/top-skills-vue.png" alt="Vue.js ロゴ" class="skills-type-image">
           </div>
           <p class="fadein">複雑なコードをスクラッチから書くことは難しいです。
             jQueryやVue.jsなどのフレームワーク、生のJavaScriptを使用したコーディングは調べながらの実装が可能です。
@@ -307,7 +307,7 @@
         <!-- Adobe Photoshop -->
         <div class="skills-type">
           <div class="skills-type-images fadein">
-            <img src="/image/ps.png" alt="Adobe Photoshop Logo" class="skills-type-image">
+            <img src="/image/top-skills-ps.png" alt="Adobe Photoshop ロゴ" class="skills-type-image">
           </div>
           <p class="fadein">オーバーレイを多用した複雑なグラフィックデザインは難しいですが、基本的な画像編集が可能です。
           </p>
@@ -315,7 +315,7 @@
         <!-- Adobe XD -->
         <div class="skills-type">
           <div class="skills-type-images fadein">
-            <img src="/image/xd.png" alt="Adobe XD Logo" class="skills-type-image">
+            <img src="/image/top-skills-xd.png" alt="Adobe XD ロゴ" class="skills-type-image">
           </div>
           <p class="fadein">web制作時のカンプ作成で使用しています。UI/UXを意識した設計を触りながら学習しています。
           </p>
@@ -323,7 +323,7 @@
         <!-- Adobe After Effects -->
         <div class="skills-type">
           <div class="skills-type-images fadein">
-            <img src="/image/ae.png" alt="Adobe After Effects Logo" class="skills-type-image">
+            <img src="/image/top-skills-ae.png" alt="Adobe After Effects ロゴ" class="skills-type-image">
           </div>
           <p class="fadein">基本的な編集が可能です。複雑なアニメーションでなければ、イージイーズや波形を意識したトランジションを使った編集、
             自然な3Dカメラトラッキングなどの編集が可能です。
@@ -332,7 +332,7 @@
         <!-- Adobe Premier Pro -->
         <div class="skills-type">
           <div class="skills-type-images fadein">
-            <img src="/image/pr.png" alt="Adobe After Effects Logo" class="skills-type-image">
+            <img src="/image/top-skills-pr.png" alt="Adobe Premier Pro ロゴ" class="skills-type-image">
           </div>
           <p class="fadein">カッティングやテロップ挿入やトランジションを入れた基本的な編集が可能です。
           </p>
@@ -340,7 +340,7 @@
         <!-- Adobe Illustrator -->
         <div class="skills-type">
           <div class="skills-type-images fadein">
-            <img src="/image/ai.png" alt="Adobe Illustrator Logo" class="skills-type-image">
+            <img src="/image/top-skills-ai.png" alt="Adobe Illustrator ロゴ" class="skills-type-image">
           </div>
           <p class="fadein">シンプルなロゴの作成が可能です。
           </p>
@@ -348,10 +348,11 @@
         <!-- Module Bundler -->
         <div class="skills-type">
           <div class="skills-type-images fadein">
-            <img src="/image/parcel.png" alt="Parcel Logo" class="skills-type-image">
-            <img src="/image/prettier.png" alt="Prettier Logo" class="skills-type-image">
-            <img src="/image/editorconfig.png" alt="EditorConfig Logo" class="skills-type-image">
-            <img src="/image/eslint.png" alt="ESLint Logo" class="skills-type-image">
+            <img src="/image/top-skills-parcel.png" alt="Parcel ロゴ" class="skills-type-image">
+            <img src="/image/top-skills-prettier.png" alt="Prettier ロゴ" class="skills-type-image">
+            <img src="/image/top-skills-editorconfig.png" alt="EditorConfig ロゴ" class="skills-type-image">
+            <img src="/image/top-skills-eslint.png" alt="ESLint ロゴ" class="skills-type-image">
+            <img src="/image/top-skills-stylelint.png" alt="stylelint ロゴ" class="skills-type-image">
           </div>
           <p class="fadein">Parcelをはじめとしたモジュールバンドラを使用し、雑然としたアセットを整理しています。
           </p>
@@ -359,10 +360,10 @@
         <!-- Environment -->
         <div class="skills-type">
           <div class="skills-type-images fadein">
-            <img src="image/vscode.png" alt="VSCode" class="skills-type-image">
-            <img src="image/github.png" alt="GitHub" class="skills-type-image">
-            <img src="image/git.png" alt="Git" class="skills-type-image">
-            <img src="image/todoist.png" alt="Todoist" class="skills-type-image">
+            <img src="image/top-skills-vscode.png" alt="VSCode ロゴ" class="skills-type-image">
+            <img src="image/top-skills-github.png" alt="GitHub ロゴ" class="skills-type-image">
+            <img src="image/top-skills-git.png" alt="Git ロゴ" class="skills-type-image">
+            <img src="image/top-skills-todoist.png" alt="Todoist ロゴ" class="skills-type-image">
           </div>
           <p class="fadein">MacBook Proを使用し、VSCodeでマークアップやコーディングをしています。GitとGitHubを使用し、バージョン管理をしています。タスク管理はTodoistでGTDを用いています。
           </p>
@@ -432,7 +433,7 @@
           <div class="about-contact fadein">Contact: <a href="mailto:shingoetohh@gmail.com" class="about-email">shingoetohh@gmail.com</a></div>
         </div>
         <div class="about-right fadein">
-          <img src="image/me.jpg" alt="エトーシンゴ">
+          <img src="image/top-about-me.jpg" alt="Shingo Eto プロフィール写真">
         </div>
       </div>
     </div>

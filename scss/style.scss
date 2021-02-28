@@ -80,7 +80,7 @@ p {
 }
 body,
 button {
-  font-family: 'Cormorant Infant', '游ゴシック体', YuGothic, '游ゴシック Medium',
+  font-family: "Cormorant Infant", "游ゴシック体", YuGothic, "游ゴシック Medium",
     sans-serif;
 }
 .fadein {
@@ -198,7 +198,7 @@ button {
 .hero {
   &-image {
     background: 50%;
-    background-image: url(/image/hero-bg.jpg);
+    background-image: url(/image/top-hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
@@ -395,7 +395,7 @@ button {
 // Carrer
 .carrer {
   &-background {
-    background-image: url(/image/carrer.jpg);
+    background-image: url(/image/top-carrer-bg.jpg);
     background-origin: content-box;
     background-position: 25% 100%;
     background-repeat: no-repeat;

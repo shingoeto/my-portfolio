@@ -2,7 +2,7 @@
 $White: #fff;
 // Common of Sub Page
 .sub-page-hero-image {
-  background-image: url(/image/works-hero.jpg);
+  background-image: url(/image/sub-works-hero.jpg);
 }
 // Works
 .page-works {
@@ -40,40 +40,44 @@ $White: #fff;
 // Tablet
 @media screen and (max-width: 1095px) {
   // Hero (Tablet)
-  #hero {
-    height: 900px;
-  }
-  .hero-image {
-    height: 100%;
+  .sub-page {
+    &-hero {
+      height: 900px;
+    }
+    &-hero-image {
+      height: 100%;
+    }
   }
   // Works (Tablet)
-  #works {
-    padding-top: 0;
-  }
   .page-works {
     &-container {
       margin-bottom: 100px;
     }
-  }
-  .page-works-thumbnail {
-    margin-bottom: 10%;
-    margin-right: 0;
-    width: 45%;
-    &:nth-child(n + 5) {
-      margin-bottom: 10%;
+    &-works {
+      padding-top: 0;
     }
-    &:nth-child(n + 7) {
-      margin-bottom: 0;
+    &-thumbnail {
+      margin-bottom: 10%;
+      margin-right: 0;
+      width: 45%;
+      &:nth-child(n + 5) {
+        margin-bottom: 10%;
+      }
+      &:nth-child(n + 7) {
+        margin-bottom: 0;
+      }
     }
   }
 }
 // Smart Phone
 @media screen and (max-width: 767px) {
   // Hero (Smart Phone)
-  #hero {
-    height: 500px;
-  }
-  .hero-image {
-    height: 100%;
+  .sub-page {
+    &-hero {
+      height: 500px;
+    }
+    &-hero-image {
+      height: 100%;
+    }
   }
 }
