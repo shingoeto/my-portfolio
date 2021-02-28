@@ -13,25 +13,25 @@ $White: #fff;
     margin-bottom: 150px;
   }
   &-thumbnail {
-    height: 25%;
-    width: 18%;
-    margin: 0 9% 10% 0;
     cursor: pointer;
+    height: 25%;
+    margin: 0 9% 10% 0;
     transition: 1s;
+    width: 18%;
     &:hover {
-      box-shadow: 0 0 50px rgba(0,0, 0, 0.3);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
     }
     &:nth-child(4n) {
       margin-right: 0;
     }
-    &:nth-child(n+5) {
+    &:nth-child(n + 5) {
       margin-bottom: 0;
     }
   }
   &-back {
-    padding-top: 30px;
-    padding-bottom: 30px;
     margin-top: 0;
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
   &-back a {
     color: $White;
@@ -56,13 +56,13 @@ $White: #fff;
     }
   }
   .page-works-thumbnail {
-    width: 45%;
-    margin-right: 0;
     margin-bottom: 10%;
-    &:nth-child(n+5) {
+    margin-right: 0;
+    width: 45%;
+    &:nth-child(n + 5) {
       margin-bottom: 10%;
     }
-    &:nth-child(n+7) {
+    &:nth-child(n + 7) {
       margin-bottom: 0;
     }
   }
