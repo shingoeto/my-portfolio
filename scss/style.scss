@@ -22,8 +22,8 @@ img {
   width: 100%;
 }
 a {
-  text-decoration: none;
   color: $Black;
+  text-decoration: none;
 }
 li {
   list-style: none;
@@ -32,13 +32,14 @@ li {
   font-style: italic;
 }
 button {
-  padding: 0 110px;
-  font-size: 20px;
-  border: none;
   background-color: $buttonBackground;
+  border: none;
   color: $White;
+  font-size: 20px;
+  padding: 0 110px;
 }
-h1, h2, {
+h1,
+h2 {
   font-style: italic;
 }
 h1 {
@@ -72,19 +73,20 @@ p {
   }
 }
 .inner {
-  width: 70%;
-  max-width: 100%;
+  height: 100%;
   margin: 0 auto;
-  height: 100%;
-  height: 100%;
+  max-width: 100%;
+  width: 70%;
 }
-body, button {
-  font-family: 'Cormorant Infant', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+body,
+button {
+  font-family: "Cormorant Infant", "游ゴシック体", YuGothic, "游ゴシック Medium",
+    "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
 }
 .fadein {
   opacity: 0;
-  transition: 1.5s;
   transform: translate(0, 400px);
+  transition: 1.5s;
 }
 .fadein.up {
   opacity: 1;
@@ -93,17 +95,16 @@ body, button {
 // Common of Sub Page
 .sub-page {
   &-hero-image {
+    align-items: center;
+    background-position: right 0% top 50%;
     background-repeat: no-repeat;
     background-size: 90%;
-    background-position: right 0% top 50%;
-    justify-content: center;
     display: flex;
-    align-items: center;
     height: 100%;
+    justify-content: center;
   }
   &-title {
     color: $Black;
-    text-align: left;
     margin-bottom: 0;
     text-align: left;
     width: 100%;
@@ -117,19 +118,19 @@ body, button {
 }
 // Drawer
 .hamburger {
+  cursor: pointer;
   height: 20px;
   position: fixed;
   right: 40px;
   top: 40px;
   width: 30px;
   z-index: 100000;
-  cursor: pointer;
   &-line {
     background: $Black;
     display: block;
     height: 2px;
     position: absolute;
-    transition:transform .8s;
+    transition: transform 0.8s;
     width: 100%;
     &-center {
       top: 9px;
@@ -164,7 +165,8 @@ body, button {
   width: 100%;
   z-index: 98;
   &-container {
-    align-items:center;
+    align-items: center;
+    color: #000;
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -172,16 +174,16 @@ body, button {
     width: 100%;
   }
   &-item {
-    margin: 40px 0;
     list-style: none;
+    margin: 40px 0;
   }
   &-item-link {
-    font-style: italic;
     color: $White;
     font-size: 30px;
+    font-style: italic;
     padding: 40px;
     text-decoration: none;
-    transition: .5s;
+    transition: 0.5s;
     &:hover {
       color: $White;
       text-shadow: 0 0 10px $White;
@@ -196,22 +198,22 @@ body, button {
 .hero {
   &-image {
     background: 50%;
-    width: 100%;
     background-image: url(/image/hero-bg.jpg);
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
   }
   &-page-link {
     color: $White;
     text-shadow: black 0 0 8px;
   }
   &-container {
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
     span {
       font-size: 16px;
     }
@@ -235,21 +237,22 @@ body, button {
     font-size: 60px;
     font-weight: lighter;
   }
-  &-role, &-used {
+  &-role,
+  &-used {
     letter-spacing: normal;
   }
   &-role {
     margin-bottom: 5%;
   }
   &-thumbnail {
-    width: 60%;
+    align-items: center;
     cursor: pointer;
-    transition: 1s;
     display: flex;
     justify-content: center;
-    align-items: center;
+    transition: 1s;
+    width: 60%;
     &:hover {
-      box-shadow: 0 0 50px rgba(0,0, 0, 0.3);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
       filter: brightness(50%);
     }
     img {
@@ -257,8 +260,8 @@ body, button {
     }
   }
   &-more {
-    padding-top: 30px;
     padding-bottom: 30px;
+    padding-top: 30px;
   }
   &-more a {
     color: $White;
@@ -267,40 +270,40 @@ body, button {
 // Works Modal Window
 .works-modal {
   &-overlay {
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    padding: 3%;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    padding: 3%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
   }
   &-content {
-    z-index: 100;
     background-color: $sectionBackgroundWhite;
-    padding: 0 8%;
-    max-height: 100%;
-    margin: 0 10%;
-    width: 60%;
-    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
     border-radius: 10px;
-    overflow-y: scroll;
-    text-align: center;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
     height: 100%;
+    margin: 0 10%;
+    max-height: 100%;
+    overflow-y: scroll;
+    padding: 0 8%;
+    text-align: center;
+    width: 60%;
+    z-index: 100;
   }
   &-contents {
     display: none;
+    height: 100%;
     overflow: auto;
-    width: 100%;
-    height: 100%;
     -webkit-overflow-scrolling: touch;
-    height: 100%;
+    width: 100%;
   }
-  &-titles, &-img {
+  &-titles,
+  &-img {
     margin: 10% 0;
   }
   &-title {
@@ -309,23 +312,28 @@ body, button {
   &-link {
     font-size: 16px;
   }
-  &-image-container, &-video, &-about, &-scope {
+  /* s */
+  &-image-container,
+  &-video,
+  &-about,
+  &-scope {
     margin-bottom: 10%;
   }
-  &-image, &-video {
+  &-image,
+  &-video {
     width: 100%;
   }
   &-video {
     height: 0;
-    position: relative;
-    padding-top: 56.25%;
     overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
     iframe {
+      height: 100%;
+      left: 0;
       position: absolute;
       top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
     }
   }
   &-scope {
@@ -335,27 +343,28 @@ body, button {
     display: flex;
     justify-content: space-between;
   }
-  &-capture-tab, &-capture-sp {
+  &-capture-tab,
+  &-capture-sp {
     img {
-      width: 100%;
       height: auto;
+      width: 100%;
     }
   }
   &-capture-tab {
-    width: 60%;
     height: 10%;
+    width: 60%;
   }
   &-capture-sp {
     width: 30%;
   }
   &-close {
-    padding-top: 20px;
-    padding-bottom: 20px;
     margin: 10% auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
   &-fade-enter-active,
   &-fade-leave-active {
-    transition: opacity .8s ease;
+    transition: opacity 0.8s ease;
   }
   &-fade-enter,
   &-fade-leave-to {
@@ -366,50 +375,53 @@ body, button {
 .skills {
   &-container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   &-type {
-    width: 45%;
     height: 200px;
     margin-bottom: 3%;
+    width: 45%;
   }
   &-type-images {
     margin-bottom: 2%;
   }
   &-type-image {
-    width: 40px;
     margin-right: 20px;
+    width: 40px;
   }
 }
 // Carrer
 .carrer {
   &-background {
     background-image: url(/image/carrer.jpg);
-    background-position: 25% 100%;
-    background-size: 40%;
-    background-repeat: no-repeat;
     background-origin: content-box;
+    background-position: 25% 100%;
+    background-repeat: no-repeat;
+    background-size: 40%;
   }
-  &-container { // contents
-    margin-bottom: 10px;
+  &-container {
     display: flex;
     justify-content: space-between;
+    // contents
+    margin-bottom: 10px;
   }
-  &-group { // right
+  &-group {
+    // right
     margin-left: auto;
     width: 50%;
   }
-  &-year { // box
+  &-year {
+    // box
     margin-bottom: 5%;
   }
 }
 // About
 .about {
   &-container {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
   &-left {
     width: 50%;
@@ -417,12 +429,13 @@ body, button {
   &-right {
     width: 40%;
   }
-  &-name, &-text {
+  &-name,
+  &-text {
     margin-bottom: 30px;
   }
   &-name {
-    font-weight: normal;
     font-size: 22px;
+    font-weight: normal;
   }
   &-middle-name {
     font-style: italic;
@@ -460,6 +473,6 @@ body, button {
   }
   &-link:hover {
     opacity: 0.6;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 }

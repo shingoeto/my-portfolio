@@ -19,8 +19,8 @@
   }
   // Drawer (Tablet)
   .hamburger {
-    top: 25px;
     right: 25px;
+    top: 25px;
   }
   // Hero (Tablet)
   #hero {
@@ -31,16 +31,16 @@
       height: 100%;
     }
     &-image {
-      background-size: cover;
       background-position: left;
+      background-size: cover;
       height: 100%;
     }
   }
   // Works (Tablet)
   .works {
     &-modal-content {
-      width: 90%;
       height: 90%;
+      width: 90%;
     }
     &-modal-overlay {
       padding: 10% 0;
@@ -54,13 +54,13 @@
   }
   // Carrer (Tablet)
   #carrer {
-    background-position: left 100%  bottom 30%;
+    background-position: left 100% bottom 30%;
     background-size: 70%;
   }
   .carrer {
     &-group {
-      width: 100%;
       left: 100px;
+      width: 100%;
     }
   }
   // About (Tablet)
@@ -81,7 +81,9 @@
 }
 // Smart Phone
 @media screen and (max-width: 767px) {
-  body, p, button {
+  body,
+  p,
+  button {
     font-size: 14px;
     letter-spacing: normal;
   }
@@ -105,9 +107,9 @@
         flex-direction: column;
       }
       &-about {
-        width: 100%;
-        order: 1;
         margin-bottom: 10%;
+        order: 1;
+        width: 100%;
       }
       &-number {
         font-size: 50px;
@@ -116,8 +118,8 @@
         font-size: 24px;
       }
       &-thumbnail {
-        width: 100%;
         order: 2;
+        width: 100%;
         &:nth-child(2n) {
           margin-right: 0;
         }
@@ -133,14 +135,14 @@
   // Skills (Smart Phone)
   .skills {
     &-container {
-      width: 100%;
-      margin-bottom: 50px;
       display: inline;
+      margin-bottom: 50px;
+      width: 100%;
     }
     &-type {
-      width: 100%;
       height: auto;
       margin-bottom: 8%;
+      width: 100%;
     }
     &-type-images {
       width: 100%;
@@ -148,7 +150,7 @@
   }
   // Carrer (Smart Phone)
   #carrer {
-    background-position: left 100%  bottom 20%;
+    background-position: left 100% bottom 20%;
     background-size: 80%;
   }
   // Footer (Smart Phone)
