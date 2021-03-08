@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
   <meta property="og:site_name" content="エトーシンゴの作品集" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="SHINGO ETO's PORTFOLIO" />
@@ -37,26 +38,58 @@
     <div class="inner">
       <div id="app">
         <div class="page-works-container">
+
+          <img class="page-works-thumbnail fadein" src="image/sub-works-this-year-is-yours.jpg" alt="this year is yours. イメージ" @click="openModal9">
           <!-- work 1 -->
-          <img class="page-works-thumbnail fadein" src="image/sub-works-my-portfolio.jpg" alt="My Portfolio イメージ" @click="openModal1">
+          <img class="page-works-thumbnail fadein" src="image/sub-works-my-portfolio.jpg" alt="My Portfolio イメージ" @click="openModal8">
           <!-- work 2 -->
-          <img class="page-works-thumbnail fadein" src="image/sub-works-expl.jpg" alt="地球探検隊 webサイト イメージ" @click="openModal2">
+          <img class="page-works-thumbnail fadein" src="image/sub-works-expl.jpg" alt="地球探検隊 webサイト イメージ" @click="openModal7">
           <!-- work 3 -->
-          <img class="page-works-thumbnail fadein" src="image/sub-works-ibis.jpg" alt="Cafe IBIS webサイト イメージ" @click="openModal3">
+          <img class="page-works-thumbnail fadein" src="image/sub-works-ibis.jpg" alt="Cafe IBIS webサイト イメージ" @click="openModal6">
           <!-- work 4 -->
-          <img class="page-works-thumbnail fadein" src="image/sub-works-thailand-vlog.jpg" alt="Wonderful Land - Thailand サムネイル" @click="openModal4">
+          <img class="page-works-thumbnail fadein" src="image/sub-works-thailand-vlog.jpg" alt="Wonderful Land - Thailand サムネイル" @click="openModal5">
           <!-- work 6 -->
-          <img class="page-works-thumbnail fadein" src="image/sub-works-miratabi.jpg" alt="未来を創る旅社 ミラタビ webサイト イメージ" @click="openModal5">
+          <img class="page-works-thumbnail fadein" src="image/sub-works-miratabi.jpg" alt="未来を創る旅社 ミラタビ webサイト イメージ" @click="openModal4">
           <!-- work 7 -->
-          <img class="page-works-thumbnail fadein" src="image/sub-works-aw.jpg" alt="Hazuki Kondo - AW Collection 2019 サムネイル" @click="openModal6">
+          <img class="page-works-thumbnail fadein" src="image/sub-works-aw.jpg" alt="Hazuki Kondo - AW Collection 2019 サムネイル" @click="openModal3">
           <!-- work 8 -->
-          <img class="page-works-thumbnail fadein" src="image/sub-works-usa.jpg" alt="USA - Short Vlog サムネイル" @click="openModal7">
+          <img class="page-works-thumbnail fadein" src="image/sub-works-usa.jpg" alt="USA - Short Vlog サムネイル" @click="openModal2">
           <!-- work 9 -->
-          <img class="page-works-thumbnail fadein" src="image/sub-works-trek.jpg" alt="USA - Trek America サムネイル" @click="openModal8">
+          <img class="page-works-thumbnail fadein" src="image/sub-works-trek.jpg" alt="USA - Trek America サムネイル" @click="openModal1">
         </div>
-        <!--  work 1 contents -->
+        <!-- Work 9 Contents -->
         <div class="works-modal-container">
-          <div ref="work1" class="works-modal-contents" v-scroll-lock="open">
+          <div ref="work9" class="works-modal-contents" v-scroll-lock="open">
+            <h4 class="works-modal-titles">
+              <span class="works-modal-title">THIS YEAR IS YOURS. - SHORT MOVIE</span>
+            </h4>
+            <div class="works-modal-video">
+              <iframe src="https://www.youtube.com/embed/dNUlmQR_z6E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="works-modal-scope">
+              model: daiana
+              <br>hair & make: sherry
+              <br>direction: sherry & shingo eto
+              <br>edit: shingo eto
+              <br>adobe after effects / davinci resolve
+            </p>
+            <p class="works-modal-about">
+              友人のシェリーと、「俺らもなんか動画やろうぜ」というところから始まり、モデルの選定、撮影を共にディレクションし、
+              シェリーがヘアメイク、私が編集と、2人で初めて作成したショートムービーです。
+              表コンセプトは「冬から春へ」。寒い冬から暖かい春への高揚感や、
+              別れや出会いの春への出発をイメージ。
+              裏コンセプトは「希望」。昨今のコロナ禍での希望。
+              日本国民が希望を持った2020年、未知のウイルスによって生活が一変しました。
+              今年はワクチンの接種も始まり、少しずつ希望が見えてきたように感じます。
+              コロナ禍で感じる「謎のモヤモヤ感」からの開放や、希望を持って進むというメッセージを裏にこめています。
+              あえて伝えたいコンセプトを全面には出さず、感情の抑揚を強く見せることで、
+              様々な受け取り方をしていただけるようにしました。
+            </p>
+          </div>
+        </div>
+        <!--  work 8 contents -->
+        <div class="works-modal-container">
+          <div ref="work8" class="works-modal-contents" v-scroll-lock="open">
             <h4 class="works-modal-titles">
               <span class="works-modal-title">MY PORTFOLIO</span><br>
               <span class="works-modal-link"><a href="https://shingoeto.com/" rel="noopenner" target="_blank">shingoeto.com</a></span>
@@ -94,9 +127,9 @@
             </div>
           </div>
         </div>
-        <!--  work 2 contents -->
+        <!--  work 7 contents -->
         <div class="works-modal-container">
-          <div ref="work2" class="works-modal-contents" v-scroll-lock="open">
+          <div ref="work7" class="works-modal-contents" v-scroll-lock="open">
             <h4 class="works-modal-titles">
               <span class="works-modal-title">CHIKYU TANKENTAI</span><br>
               <span class="works-modal-link"><a href="https://expl.co.jp/" rel="noopenner" target="_blank">expl.co.jp</a></span>
@@ -128,9 +161,9 @@
             </div>
           </div>
         </div>
-        <!--  work 3 contents -->
+        <!--  work 6 contents -->
         <div class="works-modal-container">
-          <div ref="work3" class="works-modal-contents" v-scroll-lock="open">
+          <div ref="work6" class="works-modal-contents" v-scroll-lock="open">
             <h4 class="works-modal-titles">
               <span class="works-modal-title">CAFE IBIS</span><br>
               <span class="works-modal-link"><a href="https://ibiscafe.com/" rel="noopenner" target="_blank">ibiscafe.com</a></span>
@@ -166,9 +199,9 @@
             </div>
           </div>
         </div>
-        <!--  work 4 contents -->
+        <!--  work 5 contents -->
         <div class="works-modal-container">
-          <div ref="work4" class="works-modal-contents" v-scroll-lock="open">
+          <div ref="work5" class="works-modal-contents" v-scroll-lock="open">
             <h4 class="works-modal-titles">
               <span class="works-modal-title">WONDERFUL LAMD "THAILAND"</span>
             </h4>
@@ -188,9 +221,9 @@
             </p>
           </div>
         </div>
-        <!--  work 5 contents -->
+        <!--  work 4 contents -->
         <div class="works-modal-container">
-          <div ref="work5" class="works-modal-contents" v-scroll-lock="open">
+          <div ref="work4" class="works-modal-contents" v-scroll-lock="open">
             <div class="works-modal-titles">
               <h4>
                 <span class="works-modal-title">MIRATABI</span><br>
@@ -222,9 +255,9 @@
             </div>
           </div>
         </div>
-        <!--  work 6 contents -->
+        <!--  work 3 contents -->
         <div class="works-modal-container">
-          <div ref="work6" class="works-modal-contents" v-scroll-lock="open">
+          <div ref="work3" class="works-modal-contents" v-scroll-lock="open">
             <h4 class="works-modal-titles">
               <span class="works-modal-title">HAZUKI KONDO - AW COLLECTION 2018</span>
             </h4>
@@ -244,9 +277,9 @@
             </p>
           </div>
         </div>
-        <!--  work 7 contents -->
+        <!--  work 2 contents -->
         <div class="works-modal-container">
-          <div ref="work7" class="works-modal-contents" v-scroll-lock="open">
+          <div ref="work2" class="works-modal-contents" v-scroll-lock="open">
             <h4 class="works-modal-titles">
               <span class="works-modal-title">USA - SHORT VLOG</span>
             </h4>
@@ -267,9 +300,9 @@
             </p>
           </div>
         </div>
-        <!--  work 8 contents -->
+        <!--  work 1 contents -->
         <div class="works-modal-container">
-          <div ref="work8" class="works-modal-contents" v-scroll-lock="open">
+          <div ref="work1" class="works-modal-contents" v-scroll-lock="open">
             <h4 class="works-modal-titles">
               <span class="works-modal-title">USA - TREK AMERICA</span>
             </h4>
