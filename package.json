@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/etsng/my-portfolio.git"
+    "url": "git+https://github.com/shingoeto/my-portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/etsng/my-portfolio/issues"
+    "url": "https://github.com/shingoeto/my-portfolio/issues"
   },
-  "homepage": "https://github.com/etsng/my-portfolio#readme",
+  "homepage": "https://github.com/shingoeto/my-portfolio#readme",
   "devDependencies": {
     "cssnano": "^4.1.10",
     "eslint": "^7.20.0",
